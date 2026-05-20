@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://touwaseitai.com/sitemap.xml
