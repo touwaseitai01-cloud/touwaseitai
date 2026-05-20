@@ -1,0 +1,2136 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>東和盛泰株式会社 | TOUWASEITAI CO., LTD. - ニット衣料の一貫供給</title>
+<meta name="description" content="東和盛泰株式会社は中国の自社工場と日本の卸窓口を一体で運営するニット衣料の専門商社です。企画から生産・輸入・卸まで仲介ゼロで一貫対応。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;700&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#5a4452;
+    --navy-deep:#3a2a34;
+    --copper:#b89484;
+    --coral:#d9a89a;
+    --gold:#d4b89a;
+    --rose:#d4b0b8;
+    --teal:#b8c0a8;
+    --plum:#a08894;
+    --bg:#fcf8f2;
+    --bg-warm:#fef9f4;
+    --ink:#3a2e34;
+    --ink-soft:#6a5a62;
+    --line:#e8dcd4;
+    --line-soft:#f0e6df;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Noto Sans JP',-apple-system,BlinkMacSystemFont,sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    line-height:1.7;
+    font-size:15px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .serif{font-family:'Noto Serif JP',serif}
+  .en{font-family:'Cormorant Garamond','Noto Serif JP',serif;letter-spacing:.18em;font-weight:500}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+
+  /* Header */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(247,244,239,.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line-soft);
+  }
+  .header-inner{
+    max-width:1200px;margin:0 auto;
+    padding:14px 24px;
+    display:flex;align-items:center;justify-content:space-between;gap:24px;
+  }
+  .brand{display:flex;align-items:center;gap:14px}
+  .brand-mark{
+    width:46px;height:46px;border-radius:50%;
+    background:linear-gradient(135deg,var(--navy) 0%,var(--copper) 100%);
+    color:#fff;display:flex;align-items:center;justify-content:center;
+    font-family:'Noto Serif JP',serif;font-size:24px;font-weight:700;
+    box-shadow:0 4px 12px rgba(74,46,58,.2);
+  }
+  .brand-name{font-family:'Noto Serif JP',serif;font-size:1.25rem;font-weight:700;color:var(--navy);line-height:1.2}
+  .brand-en{font-family:'Cormorant Garamond',serif;font-size:.72rem;letter-spacing:.2em;color:var(--copper);margin-top:2px}
+  .nav{display:flex;gap:28px;font-size:.85rem}
+  .nav a{color:var(--ink-soft);transition:color .2s}
+  .nav a:hover{color:var(--copper)}
+  .header-cta{
+    background:var(--navy);color:#fff;
+    padding:10px 22px;border-radius:2px;font-size:.82rem;letter-spacing:.05em;
+    transition:background .2s;
+  }
+  .header-cta:hover{background:var(--copper)}
+
+  /* Hero */
+  .hero{
+    position:relative;overflow:hidden;
+    padding:88px 24px 72px;
+    background:
+      radial-gradient(45% 60% at 10% 15%, rgba(217,168,154,.55), transparent 60%),
+      radial-gradient(42% 55% at 90% 78%, rgba(184,192,168,.38), transparent 60%),
+      radial-gradient(38% 45% at 95% 12%, rgba(212,176,184,.42), transparent 60%),
+      radial-gradient(50% 55% at 45% 105%, rgba(212,184,154,.32), transparent 60%),
+      linear-gradient(180deg, #fbeee2 0%, #fcf8f2 70%, var(--bg) 100%);
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(74,46,58,.045) 0 1px, transparent 1px 5px),
+      radial-gradient(circle at 1px 1px, rgba(74,46,58,.1) 1px, transparent 0);
+    background-size:auto, 28px 28px;
+    opacity:.65;
+    mask-image:linear-gradient(180deg, #000 0%, #000 65%, transparent 100%);
+    -webkit-mask-image:linear-gradient(180deg, #000 0%, #000 65%, transparent 100%);
+  }
+  .hero-inner{
+    max-width:1200px;margin:0 auto;
+    display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;
+    position:relative;
+  }
+  .hero-kicker{
+    display:inline-block;
+    font-family:'Cormorant Garamond',serif;
+    color:var(--copper);letter-spacing:.3em;font-size:.82rem;
+    margin-bottom:18px;
+  }
+  .hero-kicker::before{content:"— ";letter-spacing:0}
+  .hero h1{
+    font-family:'Noto Serif JP',serif;
+    font-size:clamp(1.8rem, 3.4vw, 2.7rem);
+    font-weight:700;color:var(--navy);
+    line-height:1.4;letter-spacing:.02em;
+    margin-bottom:24px;
+  }
+  .hero h1 .accent{color:var(--copper)}
+  .hero-lead{
+    font-size:1rem;color:var(--ink-soft);
+    line-height:1.9;max-width:520px;margin-bottom:32px;
+  }
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:14px 28px;border-radius:2px;
+    font-size:.9rem;font-weight:500;letter-spacing:.05em;
+    transition:all .2s;cursor:pointer;border:none;
+  }
+  .btn-primary{
+    background:var(--navy);color:#fff;
+  }
+  .btn-primary:hover{background:var(--copper);transform:translateY(-2px)}
+  .btn-secondary{
+    background:transparent;color:var(--navy);
+    border:1px solid var(--navy);
+  }
+  .btn-secondary:hover{background:var(--navy);color:#fff}
+  .btn-arrow{font-family:'Cormorant Garamond',serif;font-size:1.1em}
+
+  /* Hero visual frame */
+  .hero-visual{position:relative}
+  .frame{
+    position:relative;
+    aspect-ratio:4/5;
+    border-radius:2px;
+    overflow:hidden;
+    background:#2a1e26;
+    box-shadow:0 30px 60px -20px rgba(74,46,58,.3), 0 0 0 1px rgba(74,46,58,.08);
+  }
+  .frame-img{
+    position:absolute;inset:0;
+    width:100%;height:100%;
+    object-fit:cover;
+    filter:grayscale(100%) contrast(1.06) brightness(.96);
+    transition:filter .6s ease;
+  }
+  .frame:hover .frame-img{filter:grayscale(0%) contrast(1.04)}
+  .frame-label{
+    position:absolute;bottom:0;left:0;right:0;
+    background:linear-gradient(180deg, rgba(45,28,37,0) 0%, rgba(45,28,37,.92) 60%);
+    padding:32px 24px 20px;color:#fff;
+  }
+  .frame-label .en{
+    font-size:.72rem;color:var(--gold);letter-spacing:.3em;display:block;margin-bottom:6px;
+  }
+  .frame-label .jp{
+    font-family:'Noto Serif JP',serif;font-size:1.05rem;font-weight:500;
+  }
+  .color-stripe{
+    display:flex;height:6px;margin-top:0;
+  }
+  .color-stripe span{flex:1}
+  .color-stripe span:nth-child(1){background:var(--coral)}
+  .color-stripe span:nth-child(2){background:var(--gold)}
+  .color-stripe span:nth-child(3){background:var(--teal)}
+  .color-stripe span:nth-child(4){background:var(--rose)}
+  .color-stripe span:nth-child(5){background:var(--plum)}
+
+  .stat-card{
+    position:absolute;right:-28px;top:48px;
+    background:#fff;
+    padding:20px 24px;
+    border-radius:2px;
+    box-shadow:0 20px 40px -12px rgba(74,46,58,.2);
+    border-top:3px solid var(--coral);
+    min-width:180px;
+  }
+  .stat-card .en{font-size:.7rem;color:var(--coral);letter-spacing:.25em;display:block;margin-bottom:4px}
+  .stat-card .label{font-family:'Noto Serif JP',serif;font-size:.95rem;color:var(--navy);font-weight:700;line-height:1.4}
+  .stat-card .desc{font-size:.72rem;color:var(--ink-soft);margin-top:6px;line-height:1.6}
+
+  /* Meta strip */
+  .meta-strip{
+    background:var(--navy);color:#fff;
+    padding:0;
+    position:relative;
+  }
+  .meta-strip::before{
+    content:"";display:block;height:4px;
+    background:linear-gradient(90deg, var(--coral), var(--gold), var(--copper), var(--teal), var(--rose), var(--plum));
+  }
+  .meta-inner{
+    max-width:1200px;margin:0 auto;
+    padding:32px 24px;
+    display:grid;grid-template-columns:repeat(3, 1fr);gap:32px;
+  }
+  .meta-item{display:flex;flex-direction:column;gap:6px}
+  .meta-item .en{font-size:.72rem;color:var(--gold);letter-spacing:.3em}
+  .meta-item .jp{font-size:.9rem;line-height:1.6;opacity:.92}
+
+  /* Sections */
+  section{padding:88px 24px;position:relative}
+  .container{max-width:1100px;margin:0 auto}
+  .sec-head{margin-bottom:48px;text-align:center}
+  .sec-head .en{
+    display:block;color:var(--copper);font-size:.78rem;letter-spacing:.35em;margin-bottom:10px;
+  }
+  .sec-head h2{
+    font-family:'Noto Serif JP',serif;font-size:clamp(1.5rem, 2.6vw, 2rem);
+    color:var(--navy);font-weight:700;letter-spacing:.04em;
+    display:inline-block;position:relative;padding-bottom:14px;
+  }
+  .sec-head h2::after{
+    content:"";position:absolute;left:50%;bottom:0;
+    transform:translateX(-50%);
+    width:48px;height:2px;
+    background:linear-gradient(90deg, var(--coral), var(--copper));
+  }
+  .sec-lead{
+    text-align:center;color:var(--ink-soft);
+    max-width:680px;margin:0 auto;line-height:1.9;
+  }
+
+  /* About */
+  .about{
+    position:relative;overflow:hidden;
+    background:
+      radial-gradient(55% 50% at 88% 8%, rgba(217,168,154,.32), transparent 65%),
+      radial-gradient(50% 45% at 5% 100%, rgba(184,192,168,.26), transparent 65%),
+      linear-gradient(180deg, var(--bg) 0%, var(--bg-warm) 100%);
+  }
+  .about::before{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background-image:repeating-linear-gradient(0deg, rgba(74,46,58,.025) 0 1px, transparent 1px 6px);
+    opacity:.8;
+  }
+  .about>*{position:relative;z-index:1}
+  .flow-diagram{
+    display:grid;grid-template-columns:1fr auto 1fr auto 1fr;
+    gap:18px;align-items:stretch;
+    margin-top:48px;
+  }
+  .flow-node{
+    background:#fff;
+    border:1px solid var(--line-soft);
+    border-radius:2px;
+    padding:24px 20px;text-align:center;
+    box-shadow:0 4px 16px -8px rgba(74,46,58,.1);
+  }
+  .flow-node .en{font-size:.7rem;color:var(--copper);letter-spacing:.25em;display:block;margin-bottom:6px}
+  .flow-node .jp{font-family:'Noto Serif JP',serif;font-size:.95rem;color:var(--navy);font-weight:700;line-height:1.5}
+  .flow-node .desc{font-size:.78rem;color:var(--ink-soft);margin-top:8px;line-height:1.7}
+  .flow-arrow{
+    color:var(--copper);font-size:1.4rem;font-weight:300;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .about-note{
+    margin-top:28px;text-align:center;
+    background:linear-gradient(90deg, var(--navy) 0%, var(--copper) 100%);
+    color:#fff;padding:14px 24px;
+    font-size:.9rem;letter-spacing:.05em;
+  }
+
+  /* Strength */
+  .strength{background:#fff;position:relative}
+  .strength::before{
+    content:"";position:absolute;inset:0;
+    background:
+      radial-gradient(40% 30% at 10% 10%, rgba(217,156,140,.06), transparent 70%),
+      radial-gradient(40% 30% at 90% 90%, rgba(156,170,154,.06), transparent 70%);
+    pointer-events:none;
+  }
+  .strength .container{position:relative}
+  .steps{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:18px;
+    margin-bottom:48px;
+  }
+  .step{
+    background:var(--bg-warm);
+    border-radius:2px;
+    padding:28px 22px;
+    position:relative;
+    border-top:3px solid var(--coral);
+  }
+  .step:nth-child(2){border-top-color:var(--gold)}
+  .step:nth-child(3){border-top-color:var(--teal)}
+  .step:nth-child(4){border-top-color:var(--rose)}
+  .step .num{
+    font-family:'Cormorant Garamond',serif;
+    font-size:.78rem;letter-spacing:.3em;color:var(--copper);
+    margin-bottom:14px;
+  }
+  .step h3{
+    font-family:'Noto Serif JP',serif;font-size:1.05rem;
+    color:var(--navy);font-weight:700;margin-bottom:10px;line-height:1.5;
+  }
+  .step p{font-size:.85rem;color:var(--ink-soft);line-height:1.8}
+
+  .strength-band{
+    background:linear-gradient(90deg, var(--navy) 0%, var(--copper) 100%);
+    color:#fff;text-align:center;
+    padding:26px 24px;margin-bottom:48px;
+    position:relative;overflow:hidden;
+  }
+  .strength-band::before{
+    content:"";position:absolute;inset:0;
+    background:radial-gradient(50% 100% at 50% 50%, rgba(212,165,116,.3), transparent 70%);
+  }
+  .strength-band .en{
+    display:block;font-size:.78rem;letter-spacing:.4em;color:var(--gold);margin-bottom:8px;
+    position:relative;
+  }
+  .strength-band .jp{
+    font-family:'Noto Serif JP',serif;font-size:1.3rem;font-weight:700;letter-spacing:.06em;
+    position:relative;
+  }
+
+  .benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+  .benefit{padding:0 4px}
+  .benefit .num{
+    font-family:'Cormorant Garamond',serif;
+    color:var(--copper);font-size:.8rem;letter-spacing:.3em;
+    padding-bottom:10px;margin-bottom:14px;
+    border-bottom:2px solid;
+    display:inline-block;min-width:120px;
+  }
+  .benefit:nth-child(1) .num{border-bottom-color:var(--coral)}
+  .benefit:nth-child(2) .num{border-bottom-color:var(--gold)}
+  .benefit:nth-child(3) .num{border-bottom-color:var(--teal)}
+  .benefit h4{
+    font-family:'Noto Serif JP',serif;font-size:1.05rem;
+    color:var(--navy);font-weight:700;margin-bottom:10px;line-height:1.6;
+  }
+  .benefit p{font-size:.88rem;color:var(--ink-soft);line-height:1.9}
+
+  /* Products */
+  .products{
+    position:relative;overflow:hidden;
+    background:
+      radial-gradient(48% 50% at 5% 8%, rgba(212,176,184,.34), transparent 65%),
+      radial-gradient(48% 50% at 95% 92%, rgba(212,184,154,.32), transparent 65%),
+      var(--bg-warm);
+  }
+  .products::before{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background-image:repeating-linear-gradient(0deg, rgba(74,46,58,.025) 0 1px, transparent 1px 6px);
+    opacity:.8;
+  }
+  .products>*{position:relative;z-index:1}
+  .product-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:20px;
+  }
+  .prod{
+    background:#fff;border-radius:2px;overflow:hidden;
+    box-shadow:0 4px 16px -8px rgba(74,46,58,.1);
+    transition:transform .3s, box-shadow .3s;
+  }
+  .prod:hover{transform:translateY(-4px);box-shadow:0 12px 28px -12px rgba(74,46,58,.2)}
+  .prod .ph{
+    aspect-ratio:1/1;min-height:200px;position:relative;
+    background-size:cover;background-position:center top;
+    filter:grayscale(100%) contrast(1.05) brightness(.97);
+    transition:filter .5s ease;
+  }
+  .prod:hover .ph{filter:grayscale(0%) contrast(1.04)}
+  .prod:nth-child(1) .ph{background-image:url('images/product-vneck-black.jpg')}
+  .prod:nth-child(2) .ph{background-image:url('images/product-turtle-gray.jpg')}
+  .prod:nth-child(3) .ph{background-image:url('images/product-vneck-mustard.jpg')}
+  /* 4th tile (FABRIC QUALITY): keep colorful as accent */
+  .prod:nth-child(4) .ph{
+    background-image:url('images/fabric-strip.jpg');
+    filter:contrast(1.04) saturate(.92);
+  }
+  .prod:nth-child(4):hover .ph{filter:contrast(1.04) saturate(1)}
+  .prod .body{padding:20px}
+  .prod .en{font-size:.7rem;color:var(--copper);letter-spacing:.25em;margin-bottom:6px;display:block}
+  .prod h4{font-family:'Noto Serif JP',serif;font-size:1rem;color:var(--navy);font-weight:700;margin-bottom:8px}
+  .prod p{font-size:.82rem;color:var(--ink-soft);line-height:1.7}
+
+  .oem-note{
+    margin-top:36px;text-align:center;
+    padding:24px;background:#fff;border:1px dashed var(--copper);
+    border-radius:2px;
+  }
+  .oem-note .badge{
+    display:inline-block;background:var(--copper);color:#fff;
+    padding:4px 14px;font-size:.72rem;letter-spacing:.25em;margin-bottom:10px;
+  }
+  .oem-note p{color:var(--ink-soft);font-size:.9rem;line-height:1.8;max-width:600px;margin:0 auto}
+
+  /* Flow (取引フロー) */
+  .flow-section{background:#fff}
+  .flow-list{display:flex;flex-direction:column;gap:20px}
+  .flow-row{
+    display:grid;grid-template-columns:80px 1fr;gap:24px;align-items:start;
+    padding:24px;
+    background:var(--bg-warm);
+    border-radius:2px;
+    border-left:3px solid var(--coral);
+  }
+  .flow-row:nth-child(2){border-left-color:var(--gold)}
+  .flow-row:nth-child(3){border-left-color:var(--teal)}
+  .flow-row:nth-child(4){border-left-color:var(--rose)}
+  .flow-row .num{
+    font-family:'Cormorant Garamond',serif;
+    background:linear-gradient(135deg, var(--coral), var(--copper));
+    color:#fff;width:64px;height:64px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    font-size:1.6rem;font-weight:600;
+  }
+  .flow-row:nth-child(2) .num{background:linear-gradient(135deg, var(--gold), var(--copper))}
+  .flow-row:nth-child(3) .num{background:linear-gradient(135deg, var(--teal), var(--navy))}
+  .flow-row:nth-child(4) .num{background:linear-gradient(135deg, var(--rose), var(--plum))}
+  .flow-row h4{font-family:'Noto Serif JP',serif;font-size:1.05rem;color:var(--navy);font-weight:700;margin-bottom:6px}
+  .flow-row p{font-size:.88rem;color:var(--ink-soft);line-height:1.8}
+
+  /* CTA */
+  .cta{
+    position:relative;overflow:hidden;
+    background:
+      radial-gradient(45% 70% at 82% 50%, rgba(217,168,154,.5), transparent 70%),
+      radial-gradient(45% 70% at 18% 50%, rgba(212,184,154,.42), transparent 70%),
+      linear-gradient(135deg, var(--navy) 0%, var(--plum) 55%, var(--copper) 100%);
+    color:#fff;text-align:center;
+    padding:88px 24px;
+  }
+  .cta::before{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background-image:radial-gradient(circle at 1px 1px, rgba(255,255,255,.12) 1px, transparent 0);
+    background-size:28px 28px;
+    opacity:.5;
+  }
+  .cta>*{position:relative;z-index:1}
+  .cta h2{
+    font-family:'Noto Serif JP',serif;font-size:clamp(1.6rem, 2.8vw, 2.2rem);
+    margin-bottom:14px;font-weight:700;
+  }
+  .cta p{font-size:1rem;margin-bottom:32px;opacity:.92}
+  .cta .btn-primary{
+    background:#fff;color:var(--navy);
+    padding:18px 40px;font-size:1rem;
+  }
+  .cta .btn-primary:hover{background:var(--gold);color:#fff;transform:translateY(-2px)}
+
+  /* Contact */
+  .contact{background:var(--bg)}
+  .contact-grid{
+    display:grid;grid-template-columns:1.1fr .9fr;gap:48px;
+    align-items:start;
+  }
+  .contact-info{
+    background:#fff;padding:36px;border-radius:2px;
+    border-top:3px solid var(--copper);
+  }
+  .contact-info h3{
+    font-family:'Noto Serif JP',serif;font-size:1.15rem;
+    color:var(--navy);margin-bottom:24px;
+  }
+  .contact-info dl{display:grid;grid-template-columns:auto 1fr;gap:14px 20px}
+  .contact-info dt{
+    font-size:.78rem;letter-spacing:.15em;color:var(--copper);font-weight:500;
+    padding-top:3px;
+  }
+  .contact-info dd{font-size:.92rem;color:var(--ink);line-height:1.7}
+  .contact-info .tel{
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.6rem;color:var(--navy);font-weight:600;letter-spacing:.03em;
+  }
+  .contact-info .note{font-size:.78rem;color:var(--ink-soft);margin-top:4px}
+
+  form{
+    background:#fff;padding:36px;border-radius:2px;
+    border-top:3px solid var(--coral);
+  }
+  form h3{
+    font-family:'Noto Serif JP',serif;font-size:1.15rem;
+    color:var(--navy);margin-bottom:20px;
+  }
+  .field{margin-bottom:18px}
+  .field label{
+    display:flex;align-items:center;gap:8px;
+    font-size:.82rem;color:var(--navy);font-weight:500;margin-bottom:8px;
+  }
+  .req{
+    background:var(--coral);color:#fff;
+    font-size:.65rem;padding:2px 8px;border-radius:2px;letter-spacing:.1em;
+  }
+  .field input,.field textarea,.field select{
+    width:100%;padding:12px 14px;
+    border:1px solid var(--line);
+    border-radius:2px;font-size:.92rem;
+    font-family:inherit;color:var(--ink);
+    background:var(--bg);
+    transition:border-color .2s, background .2s;
+  }
+  .field input:focus,.field textarea:focus,.field select:focus{
+    outline:none;border-color:var(--copper);background:#fff;
+  }
+  .field textarea{min-height:120px;resize:vertical}
+  form .btn-primary{width:100%;padding:16px;font-size:.95rem}
+
+  /* Footer */
+  footer{
+    background:var(--navy-deep);color:rgba(255,255,255,.7);
+    padding:48px 24px 24px;
+  }
+  .footer-inner{
+    max-width:1100px;margin:0 auto;
+    display:flex;flex-direction:column;gap:24px;
+  }
+  .footer-brand{display:flex;align-items:center;gap:14px}
+  .footer-brand .brand-mark{background:linear-gradient(135deg, #fff 0%, var(--gold) 100%);color:var(--navy)}
+  .footer-brand .brand-name{color:#fff}
+  .footer-brand .brand-en{color:var(--gold)}
+  .footer-bottom{
+    border-top:1px solid rgba(255,255,255,.1);
+    padding-top:20px;
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;
+    font-size:.78rem;
+  }
+
+  /* Message (代表メッセージ) */
+  .message{
+    background:
+      radial-gradient(45% 55% at 92% 8%, rgba(212,176,184,.38), transparent 65%),
+      radial-gradient(45% 55% at 8% 95%, rgba(184,192,168,.32), transparent 65%),
+      radial-gradient(35% 40% at 50% 50%, rgba(212,184,154,.16), transparent 70%),
+      var(--bg-warm);
+    position:relative;overflow:hidden;
+  }
+  .message::before{
+    content:"";position:absolute;top:-80px;right:-80px;
+    width:320px;height:320px;border-radius:50%;
+    background:radial-gradient(circle, rgba(212,176,184,.3), transparent 70%);
+  }
+  .message::after{
+    content:"";position:absolute;bottom:-100px;left:-100px;
+    width:360px;height:360px;border-radius:50%;
+    background:radial-gradient(circle, rgba(184,192,168,.26), transparent 70%);
+  }
+  .message-inner{
+    max-width:1000px;margin:0 auto;
+    display:grid;grid-template-columns:.85fr 1.15fr;gap:64px;align-items:center;
+    position:relative;
+  }
+  .message-photo{
+    position:relative;
+    aspect-ratio:4/5;
+    background:url('images/hero-vneck.jpg') center/cover no-repeat, #e8d0d0;
+    border-radius:2px;
+    overflow:hidden;
+    box-shadow:0 30px 60px -24px rgba(74,46,58,.25);
+    filter:grayscale(100%) contrast(1.06) brightness(.95);
+    transition:filter .6s ease;
+  }
+  .message-photo:hover{filter:grayscale(0%) contrast(1.04)}
+  .message-photo::before{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg, rgba(58,42,52,0) 60%, rgba(58,42,52,.35) 100%);
+  }
+  .message-photo-label{
+    position:absolute;bottom:18px;left:18px;
+    background:rgba(255,255,255,.92);
+    padding:8px 14px;font-size:.7rem;
+    color:var(--navy);letter-spacing:.18em;
+    font-family:'Cormorant Garamond',serif;
+  }
+  .message-text .en{
+    color:var(--copper);font-size:.78rem;letter-spacing:.35em;display:block;margin-bottom:14px;
+  }
+  .message-text h2{
+    font-family:'Noto Serif JP',serif;
+    font-size:clamp(1.5rem, 2.4vw, 1.9rem);
+    color:var(--navy);font-weight:500;
+    line-height:1.6;margin-bottom:28px;letter-spacing:.04em;
+  }
+  .message-text .quote{
+    font-family:'Noto Serif JP',serif;
+    font-size:1.05rem;color:var(--ink);
+    line-height:2.1;margin-bottom:24px;
+    font-weight:400;
+  }
+  .message-text .signature{
+    margin-top:32px;padding-top:20px;
+    border-top:1px solid var(--line);
+    display:flex;align-items:baseline;gap:14px;
+  }
+  .message-text .signature .role{
+    font-size:.78rem;color:var(--ink-soft);letter-spacing:.1em;
+  }
+  .message-text .signature .name{
+    font-family:'Noto Serif JP',serif;
+    font-size:1.15rem;color:var(--navy);font-weight:700;letter-spacing:.06em;
+  }
+
+  /* Factory (自社工場) */
+  .factory{
+    position:relative;overflow:hidden;
+    background:
+      radial-gradient(50% 45% at 92% 6%, rgba(184,148,132,.22), transparent 65%),
+      radial-gradient(46% 42% at 6% 96%, rgba(184,192,168,.20), transparent 65%),
+      linear-gradient(180deg, var(--bg-warm) 0%, var(--bg) 100%);
+  }
+  .factory::before{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background-image:repeating-linear-gradient(0deg, rgba(74,46,58,.022) 0 1px, transparent 1px 6px);
+    opacity:.8;
+  }
+  .factory>*{position:relative;z-index:1}
+
+  /* Factory intro split */
+  .factory-hero{
+    display:grid;grid-template-columns:.82fr 1.18fr;gap:48px;align-items:center;
+    margin-top:8px;
+  }
+  .factory-hero-photo{
+    position:relative;border-radius:3px;overflow:hidden;
+    aspect-ratio:3/4;
+    box-shadow:0 26px 50px -24px rgba(74,46,58,.5);
+  }
+  .factory-hero-photo img{
+    width:100%;height:100%;object-fit:cover;
+    transition:transform 1.1s cubic-bezier(.2,.7,.2,1);
+  }
+  .factory-hero-photo:hover img{transform:scale(1.05)}
+  .factory-hero-photo::after{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background:linear-gradient(180deg, transparent 45%, rgba(58,42,52,.55) 100%);
+  }
+  .factory-hero-photo .photo-tag{
+    position:absolute;left:18px;bottom:16px;z-index:2;color:#fff;
+  }
+  .factory-hero-photo .photo-tag .en{
+    display:block;font-size:.62rem;letter-spacing:.24em;color:var(--gold);margin-bottom:3px;
+  }
+  .factory-hero-photo .photo-tag .jp{
+    font-family:'Noto Serif JP',serif;font-size:.95rem;font-weight:700;letter-spacing:.04em;
+  }
+  .factory-hero-text .en{
+    display:block;color:var(--copper);font-size:.76rem;letter-spacing:.32em;margin-bottom:12px;
+  }
+  .factory-hero-text h2{
+    font-family:'Noto Serif JP',serif;
+    font-size:clamp(1.4rem,2.4vw,1.95rem);
+    color:var(--navy);font-weight:700;line-height:1.5;letter-spacing:.03em;
+    margin-bottom:20px;
+  }
+  .factory-hero-text h2 .accent{color:var(--copper)}
+  .factory-hero-text p{
+    color:var(--ink-soft);line-height:1.95;margin-bottom:16px;max-width:520px;
+  }
+  .factory-points{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px;
+  }
+  .factory-point{
+    background:#fff;border:1px solid var(--line-soft);border-radius:2px;
+    padding:18px 16px;text-align:center;
+    box-shadow:0 6px 18px -12px rgba(74,46,58,.18);
+  }
+  .factory-point .big{
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.65rem;font-weight:600;color:var(--copper);line-height:1.1;
+  }
+  .factory-point .lbl{
+    font-size:.74rem;color:var(--ink-soft);margin-top:6px;letter-spacing:.04em;
+  }
+
+  /* Factory process flow */
+  .factory-flow-head{
+    text-align:center;margin:72px 0 14px;
+  }
+  .factory-flow-head .en{
+    display:block;color:var(--copper);font-size:.72rem;letter-spacing:.3em;margin-bottom:8px;
+  }
+  .factory-flow-head h3{
+    font-family:'Noto Serif JP',serif;font-size:1.25rem;color:var(--navy);font-weight:700;letter-spacing:.04em;
+  }
+  .factory-process{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:28px;
+  }
+  .fp-card{
+    background:#fff;border-radius:3px;overflow:hidden;
+    border:1px solid var(--line-soft);
+    box-shadow:0 10px 26px -18px rgba(74,46,58,.35);
+    transition:transform .35s ease, box-shadow .35s ease;
+  }
+  .fp-card:hover{transform:translateY(-5px);box-shadow:0 20px 36px -18px rgba(74,46,58,.42)}
+  .fp-photo{position:relative;aspect-ratio:4/3;overflow:hidden}
+  .fp-photo img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+  .fp-card:hover .fp-photo img{transform:scale(1.07)}
+  .fp-photo::after{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background:linear-gradient(180deg, rgba(58,42,52,.04) 0%, rgba(58,42,52,.22) 100%);
+  }
+  .fp-step{
+    position:absolute;top:12px;left:12px;z-index:2;
+    background:rgba(58,42,52,.78);color:#fff;backdrop-filter:blur(2px);
+    font-family:'Cormorant Garamond',serif;letter-spacing:.18em;
+    font-size:.66rem;padding:4px 10px;border-radius:2px;
+  }
+  .fp-body{padding:18px 18px 22px}
+  .fp-body .en{font-size:.62rem;color:var(--copper);letter-spacing:.22em;display:block;margin-bottom:5px}
+  .fp-body h4{
+    font-family:'Noto Serif JP',serif;font-size:1.02rem;color:var(--navy);font-weight:700;
+    letter-spacing:.03em;margin-bottom:8px;
+  }
+  .fp-body p{font-size:.8rem;color:var(--ink-soft);line-height:1.75}
+  .factory-note{
+    margin-top:36px;text-align:center;
+    background:linear-gradient(90deg, var(--navy) 0%, var(--copper) 100%);
+    color:#fff;padding:16px 24px;border-radius:2px;
+    font-size:.92rem;letter-spacing:.05em;
+  }
+  .factory-note .en{font-family:'Cormorant Garamond',serif;letter-spacing:.22em;font-size:.78rem;opacity:.85;display:block;margin-bottom:4px}
+
+  /* Gallery (工場・現場) */
+  .gallery{background:#fff}
+  .gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(6, 1fr);
+    grid-auto-rows:120px;
+    gap:14px;
+    margin-top:8px;
+  }
+  .gtile{
+    position:relative;
+    border-radius:2px;
+    overflow:hidden;
+    cursor:default;
+  }
+  .gtile::before{
+    content:"";position:absolute;inset:0;
+    background:
+      radial-gradient(circle at 30% 30%, rgba(255,255,255,.15), transparent 50%),
+      repeating-linear-gradient(45deg, rgba(255,255,255,.04) 0 2px, transparent 2px 8px),
+      repeating-linear-gradient(-45deg, rgba(0,0,0,.04) 0 2px, transparent 2px 8px);
+  }
+  .gtile-cap{
+    position:absolute;bottom:0;left:0;right:0;
+    background:linear-gradient(180deg, transparent, rgba(58,42,52,.88));
+    color:#fff;padding:24px 14px 12px;
+    font-size:.74rem;font-weight:500;letter-spacing:.03em;
+    opacity:0;transform:translateY(8px);
+    transition:opacity .35s ease, transform .35s ease;
+  }
+  .gtile:hover .gtile-cap{opacity:1;transform:translateY(0)}
+  @media (hover:none){
+    .gtile-cap{opacity:1;transform:none}
+  }
+  .gtile-cap .en{display:block;font-size:.62rem;color:var(--gold);letter-spacing:.2em;margin-bottom:2px}
+  /* Tile sizes - varied masonry feel */
+  .gtile{
+    background-size:cover;background-position:center top;
+    filter:grayscale(100%) contrast(1.05) brightness(.96);
+    transition:transform .6s ease, filter .6s ease;
+  }
+  .gtile:hover{
+    transform:scale(1.02);
+    filter:grayscale(0%) contrast(1.04);
+  }
+  .gtile.t1{grid-column:span 3;grid-row:span 2;background-image:url('images/hero-vneck.jpg')}
+  .gtile.t2{grid-column:span 3;grid-row:span 1;background-image:url('images/product-vneck-bordeaux.jpg')}
+  .gtile.t3{grid-column:span 2;grid-row:span 1;background-image:url('images/product-vneck-green.jpg')}
+  .gtile.t4{grid-column:span 1;grid-row:span 1;background-image:url('images/product-vneck-mustard.jpg')}
+  .gtile.t5{grid-column:span 2;grid-row:span 2;background-image:url('images/hero-turtle.jpg')}
+  .gtile.t6{grid-column:span 2;grid-row:span 1;background-image:url('images/product-turtle-gray.jpg')}
+  .gtile.t7{grid-column:span 2;grid-row:span 1;background-image:url('images/product-turtle-green.jpg')}
+
+  /* Fabric showcase */
+  .fabric-showcase{
+    background:var(--bg-warm);
+    position:relative;
+  }
+  .fabric-grid{
+    display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center;
+    max-width:1100px;margin:0 auto;
+  }
+  .fabric-photo{
+    aspect-ratio:1/1;
+    background-size:cover;background-position:center;
+    border-radius:2px;
+    box-shadow:0 30px 60px -24px rgba(74,46,58,.25);
+  }
+  .fabric-text .en{
+    color:var(--copper);font-size:.78rem;letter-spacing:.35em;display:block;margin-bottom:14px;
+  }
+  .fabric-text h2{
+    font-family:'Noto Serif JP',serif;
+    font-size:clamp(1.5rem, 2.4vw, 1.9rem);
+    color:var(--navy);font-weight:500;
+    margin-bottom:22px;line-height:1.5;letter-spacing:.02em;
+  }
+  .fabric-text p{
+    color:var(--ink-soft);line-height:2;letter-spacing:.04em;
+    margin-bottom:22px;
+  }
+  .fabric-text strong{color:var(--navy);font-weight:700}
+  .fabric-colors{
+    list-style:none;padding:0;margin:0;
+    display:grid;grid-template-columns:repeat(3, auto);gap:10px 22px;
+    font-family:'Cormorant Garamond',serif;font-size:.95rem;
+    color:var(--navy);letter-spacing:.04em;
+  }
+  .fabric-colors li{display:flex;align-items:center;gap:10px}
+  .cdot{
+    width:14px;height:14px;border-radius:50%;
+    box-shadow:inset 0 0 0 1px rgba(74,46,58,.18);
+    flex-shrink:0;
+  }
+  @media (max-width:880px){
+    .fabric-grid{grid-template-columns:1fr;gap:32px}
+    .fabric-photo{aspect-ratio:4/5;max-width:480px;margin:0 auto;width:100%}
+    .fabric-colors{grid-template-columns:repeat(2, auto)}
+  }
+
+  /* Cashmere (premium material) */
+  .cashmere{
+    margin-top:72px;max-width:1000px;margin-left:auto;margin-right:auto;
+    background:linear-gradient(135deg, #f6efe7 0%, #ede2d2 100%);
+    border:1px solid rgba(184,148,132,.35);
+    padding:48px 52px;
+    display:grid;grid-template-columns:auto 1fr;gap:48px;align-items:flex-start;
+    position:relative;overflow:hidden;
+  }
+  .cashmere::before{
+    content:"";position:absolute;right:-60px;top:-60px;
+    width:240px;height:240px;border-radius:50%;
+    background:radial-gradient(circle, rgba(212,184,154,.35), transparent 70%);
+    pointer-events:none;
+  }
+  .cashmere-mark{
+    border-right:1px solid rgba(184,148,132,.4);
+    padding-right:36px;text-align:center;flex-shrink:0;
+    min-width:120px;
+  }
+  .cashmere-mark .ck{
+    display:block;font-family:'Cormorant Garamond',serif;
+    font-size:1.35rem;color:var(--copper);
+    letter-spacing:.32em;font-weight:600;
+    margin-bottom:8px;
+  }
+  .cashmere-mark .cj{
+    display:block;font-family:'Noto Serif JP',serif;
+    color:var(--navy);font-weight:700;font-size:.92rem;
+    letter-spacing:.18em;
+  }
+  .cashmere-body h3{
+    font-family:'Noto Serif JP',serif;
+    font-size:clamp(1.25rem, 2vw, 1.55rem);
+    color:var(--navy);font-weight:600;
+    line-height:1.6;letter-spacing:.04em;
+    margin-bottom:18px;
+  }
+  .cashmere-body p{
+    color:var(--ink);line-height:1.95;
+    letter-spacing:.04em;margin-bottom:22px;
+  }
+  .cashmere-body strong{color:var(--navy-deep);font-weight:700}
+  .cashmere-points{
+    list-style:none;padding:0;margin:0;
+    display:flex;flex-direction:column;gap:10px;
+  }
+  .cashmere-points li{
+    display:flex;align-items:flex-start;gap:14px;
+    font-size:.94rem;color:var(--ink);line-height:1.7;
+  }
+  .cashmere-points .kp{
+    font-family:'Cormorant Garamond',serif;
+    color:var(--copper);font-size:1.05rem;font-weight:600;
+    letter-spacing:.06em;flex-shrink:0;
+    padding-top:1px;
+  }
+  .sp-only{display:none}
+  @media (max-width:760px){
+    .cashmere{grid-template-columns:1fr;gap:24px;padding:32px 24px}
+    .cashmere-mark{border-right:none;border-bottom:1px solid rgba(184,148,132,.4);padding:0 0 18px 0}
+    .sp-only{display:inline}
+  }
+
+  /* Company profile */
+  .company{
+    background:var(--bg);
+  }
+  .company-table-wrap{
+    max-width:780px;margin:36px auto 0;
+  }
+  .company-table{
+    width:100%;border-collapse:collapse;
+    background:#fff;border:1px solid var(--line);
+  }
+  .company-table th, .company-table td{
+    text-align:left;vertical-align:top;
+    padding:20px 24px;font-size:.96rem;
+    border-bottom:1px solid var(--line);line-height:1.85;
+  }
+  .company-table tr:last-child th, .company-table tr:last-child td{border-bottom:none}
+  .company-table th{
+    width:160px;
+    font-family:'Noto Serif JP',serif;
+    color:var(--navy);font-weight:600;
+    background:#faf4ee;
+    border-right:1px solid var(--line);
+    letter-spacing:.06em;
+  }
+  .company-table td{color:var(--ink);letter-spacing:.03em}
+  .cmp-en{
+    display:block;font-family:'Cormorant Garamond',serif;
+    color:var(--copper);font-size:.85rem;letter-spacing:.18em;
+    margin-top:4px;
+  }
+  @media (max-width:680px){
+    .company-table th, .company-table td{padding:14px 16px;font-size:.9rem}
+    .company-table th{width:104px}
+  }
+
+  /* History (ニットの歴史) */
+  .history{
+    background:#2a1e26 url('images/history-bg.jpg') center/cover no-repeat fixed;
+    color:#f3eee9;
+    position:relative;overflow:hidden;
+  }
+  .history::before{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background:
+      linear-gradient(180deg, rgba(42,30,38,.82) 0%, rgba(42,30,38,.88) 50%, rgba(42,30,38,.94) 100%),
+      radial-gradient(60% 50% at 12% 18%, rgba(212,184,154,.18), transparent 65%),
+      radial-gradient(50% 40% at 92% 88%, rgba(184,148,132,.14), transparent 65%);
+  }
+  @media (max-width:760px){
+    .history{background-attachment:scroll}
+  }
+  .history .container{position:relative;z-index:1}
+  .history .sec-head .en{color:var(--gold)}
+  .history .sec-head h2{color:#f7f1ea}
+  .history-lead{
+    color:rgba(243,238,233,.78);
+    line-height:2;letter-spacing:.04em;
+    text-align:center;max-width:760px;margin:0 auto;
+  }
+  .history-lead strong{color:#fff;font-weight:700}
+  .timeline{
+    margin:64px auto 0;max-width:880px;
+    position:relative;padding-left:32px;
+  }
+  .timeline::before{
+    content:"";position:absolute;left:6px;top:8px;bottom:8px;
+    width:1px;background:linear-gradient(180deg, rgba(212,184,154,.4), rgba(212,184,154,.08));
+  }
+  .tl-item{
+    position:relative;padding:0 0 38px 32px;
+  }
+  .tl-item:last-child{padding-bottom:0}
+  .tl-item::before{
+    content:"";position:absolute;left:-6px;top:8px;
+    width:13px;height:13px;border-radius:50%;
+    background:var(--copper);
+    box-shadow:0 0 0 4px rgba(184,148,132,.18);
+  }
+  .tl-era{
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.45rem;color:var(--gold);
+    font-weight:600;letter-spacing:.06em;
+    margin-bottom:6px;
+  }
+  .tl-title{
+    font-family:'Noto Serif JP',serif;
+    font-size:1.05rem;color:#f7f1ea;font-weight:700;
+    margin-bottom:8px;letter-spacing:.04em;
+  }
+  .tl-text{
+    color:rgba(243,238,233,.72);
+    font-size:.94rem;line-height:1.95;letter-spacing:.03em;
+  }
+  .history-virtues{
+    display:grid;grid-template-columns:repeat(3, 1fr);
+    gap:24px;margin-top:56px;max-width:920px;margin-left:auto;margin-right:auto;
+  }
+  .virtue{
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(212,184,154,.18);
+    padding:28px 22px;text-align:center;
+  }
+  .virtue .vt{
+    font-family:'Cormorant Garamond',serif;
+    color:var(--gold);font-size:.78rem;
+    letter-spacing:.22em;margin-bottom:10px;
+  }
+  .virtue .vh{
+    font-family:'Noto Serif JP',serif;
+    color:#f7f1ea;font-weight:700;font-size:1.05rem;
+    margin-bottom:10px;letter-spacing:.04em;
+  }
+  .virtue .vd{
+    color:rgba(243,238,233,.72);
+    font-size:.86rem;line-height:1.85;
+  }
+  @media (max-width:760px){
+    .timeline{padding-left:24px}
+    .history-virtues{grid-template-columns:1fr;gap:14px}
+  }
+
+  /* Stats (実績の数字) */
+  .stats{
+    background:var(--bg);
+    position:relative;
+  }
+  .stats-grid{
+    display:grid;grid-template-columns:repeat(4, 1fr);gap:0;
+    margin-top:24px;
+  }
+  .stat-item{
+    text-align:center;padding:32px 20px;
+    position:relative;
+  }
+  .stat-item + .stat-item::before{
+    content:"";position:absolute;left:0;top:24px;bottom:24px;
+    width:1px;background:var(--line);
+  }
+  .stat-item .num{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(2.8rem, 5vw, 4rem);
+    font-weight:600;color:var(--navy);
+    line-height:1;letter-spacing:.02em;
+    display:flex;align-items:baseline;justify-content:center;gap:4px;
+  }
+  .stat-item .num .unit{
+    font-size:.4em;color:var(--copper);letter-spacing:.08em;
+  }
+  .stat-item .label{
+    font-family:'Noto Serif JP',serif;
+    font-size:.92rem;color:var(--ink);font-weight:500;
+    margin-top:10px;
+  }
+  .stat-item .sub{
+    font-size:.74rem;color:var(--ink-soft);margin-top:4px;letter-spacing:.05em;
+  }
+
+  /* Clients (国内実績) */
+  .clients{
+    background:var(--bg-warm);
+    position:relative;
+  }
+  .clients::before{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background:
+      radial-gradient(50% 40% at 12% 18%, rgba(184,148,132,.10), transparent 65%),
+      radial-gradient(45% 35% at 88% 82%, rgba(184,192,168,.14), transparent 65%);
+  }
+  .clients .container{position:relative;z-index:1}
+  .clients-grid{
+    display:grid;grid-template-columns:repeat(2, 1fr);gap:24px;
+    max-width:880px;margin:36px auto 0;
+  }
+  .client-card{
+    background:#fff;
+    border:1px solid var(--line);
+    padding:36px 32px;
+    position:relative;
+    transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+  }
+  .client-card::before{
+    content:"";position:absolute;left:0;top:0;width:3px;height:36px;
+    background:var(--copper);
+  }
+  .client-card:hover{
+    transform:translateY(-2px);
+    box-shadow:0 12px 32px rgba(58,42,52,.08);
+    border-color:var(--copper);
+  }
+  .client-card .ctype{
+    font-family:'Cormorant Garamond',serif;
+    font-size:.78rem;color:var(--copper);
+    letter-spacing:.18em;text-transform:uppercase;
+    margin-bottom:10px;
+  }
+  .client-card .cname{
+    font-family:'Noto Serif JP',serif;
+    font-size:1.28rem;color:var(--navy-deep);
+    font-weight:700;line-height:1.5;letter-spacing:.02em;
+  }
+  .clients-note{
+    text-align:center;margin-top:28px;
+    font-size:.82rem;color:var(--ink-soft);letter-spacing:.06em;
+  }
+  @media (max-width:760px){
+    .clients-grid{grid-template-columns:1fr;gap:16px;max-width:520px}
+    .client-card{padding:28px 24px}
+    .client-card .cname{font-size:1.12rem}
+  }
+
+  /* FAQ */
+  .faq summary{list-style:none}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq{
+    background:
+      radial-gradient(40% 40% at 92% 10%, rgba(184,192,168,.22), transparent 65%),
+      radial-gradient(40% 40% at 8% 95%, rgba(217,168,154,.2), transparent 65%),
+      var(--bg-warm);
+  }
+  .faq-list{
+    max-width:820px;margin:8px auto 0;
+  }
+  .faq-item{
+    border-bottom:1px solid var(--line);
+    padding:0;
+  }
+  .faq-q{
+    display:flex;align-items:flex-start;gap:18px;
+    padding:22px 8px;
+    cursor:pointer;
+    user-select:none;
+  }
+  .faq-q .mark{
+    font-family:'Cormorant Garamond',serif;
+    color:var(--copper);font-size:1.2rem;font-weight:600;
+    line-height:1.5;flex-shrink:0;
+  }
+  .faq-q .text{
+    flex:1;font-family:'Noto Serif JP',serif;
+    font-size:1.02rem;color:var(--navy);font-weight:500;line-height:1.6;
+  }
+  .faq-q .arrow{
+    color:var(--copper);font-size:1.2rem;flex-shrink:0;
+    transition:transform .3s;
+  }
+  .faq-item[open] .faq-q .arrow{transform:rotate(180deg)}
+  .faq-a{
+    display:flex;gap:18px;
+    padding:0 8px 24px 8px;
+    color:var(--ink-soft);font-size:.94rem;line-height:1.95;
+  }
+  .faq-a .mark{
+    font-family:'Cormorant Garamond',serif;
+    color:var(--rose);font-size:1.2rem;font-weight:600;
+    line-height:1.5;flex-shrink:0;
+  }
+  .faq-a .text{flex:1}
+
+  /* Responsive — Tablet (≤980px) */
+  @media (max-width:980px){
+    .hero-inner{grid-template-columns:1fr;gap:40px}
+    .hero-visual{max-width:440px;margin:0 auto;width:100%}
+    .frame{aspect-ratio:4/3}
+    .stat-card{position:absolute;right:-20px;top:32px}
+    .flow-diagram{grid-template-columns:1fr;gap:12px}
+    .flow-arrow{transform:rotate(90deg);padding:4px 0}
+    .steps{grid-template-columns:repeat(2,1fr)}
+    .benefits{grid-template-columns:1fr;gap:24px}
+    .product-grid{grid-template-columns:repeat(2,1fr)}
+    .meta-inner{grid-template-columns:1fr;gap:18px;padding:24px}
+    .contact-grid{grid-template-columns:1fr;gap:28px}
+    .nav{display:none}
+    .message-inner{grid-template-columns:1fr;gap:40px;max-width:520px}
+    .message-photo{aspect-ratio:4/3;max-width:380px;margin:0 auto;width:100%}
+    .gallery-grid{grid-template-columns:repeat(4,1fr);grid-auto-rows:110px}
+    .gtile.t1{grid-column:span 2;grid-row:span 2}
+    .gtile.t2{grid-column:span 2;grid-row:span 1}
+    .gtile.t3{grid-column:span 2;grid-row:span 1}
+    .gtile.t4{grid-column:span 1;grid-row:span 1}
+    .gtile.t5{grid-column:span 1;grid-row:span 1}
+    .gtile.t6{grid-column:span 2;grid-row:span 1}
+    .gtile.t7{grid-column:span 2;grid-row:span 1}
+    .stats-grid{grid-template-columns:repeat(2,1fr);gap:20px 0}
+    .stat-item:nth-child(3)::before{display:none}
+    .stat-item:nth-child(2n+1)::before{display:none}
+  }
+
+  /* Responsive — Phone (≤640px) */
+  @media (max-width:640px){
+    body{font-size:14.5px}
+    header{position:relative}
+    .header-inner{padding:12px 18px;gap:12px}
+    .brand{gap:10px;min-width:0;flex:1}
+    .brand-mark{width:40px;height:40px;font-size:20px;flex-shrink:0}
+    .brand-name{font-size:1.02rem;letter-spacing:.02em}
+    .brand-en{font-size:.62rem;letter-spacing:.18em}
+    .header-cta{padding:9px 14px;font-size:.72rem;flex-shrink:0}
+
+    .hero{padding:44px 18px 36px}
+    .hero-inner{gap:32px}
+    .hero-kicker{font-size:.68rem;letter-spacing:.22em;margin-bottom:14px}
+    .hero h1{font-size:1.55rem;line-height:1.5;margin-bottom:18px}
+    .hero-lead{font-size:.92rem;line-height:1.85;margin-bottom:24px}
+    .hero-lead br{display:none}
+    .cta-row{gap:10px}
+    .btn{padding:13px 22px;font-size:.85rem;width:100%;justify-content:center}
+
+    .hero-visual{max-width:100%}
+    .frame{aspect-ratio:1/1;border-radius:2px}
+    .frame-label{padding:24px 18px 16px}
+    .frame-label .en{font-size:.65rem;letter-spacing:.25em}
+    .frame-label .jp{font-size:.95rem}
+    .stat-card{
+      position:static;display:block;
+      margin:18px 0 0;width:100%;
+      padding:16px 18px;text-align:left;
+    }
+    .stat-card .label{font-size:.92rem}
+
+    .meta-strip::before{height:3px}
+    .meta-inner{padding:22px 20px;gap:14px}
+    .meta-item .en{font-size:.66rem;letter-spacing:.25em}
+    .meta-item .jp{font-size:.85rem}
+
+    section{padding:56px 18px}
+    .sec-head{margin-bottom:32px}
+    .sec-head .en{font-size:.7rem;letter-spacing:.28em}
+    .sec-head h2{font-size:1.35rem;letter-spacing:.03em;padding-bottom:12px}
+    .sec-lead{font-size:.9rem;line-height:1.85}
+    .sec-lead br{display:none}
+
+    .flow-node{padding:18px 16px}
+    .flow-node .jp{font-size:.9rem}
+    .flow-node .desc{font-size:.74rem}
+    .flow-node .desc br{display:none}
+    .about-note{font-size:.82rem;padding:12px 18px;line-height:1.6}
+
+    .factory-hero{grid-template-columns:1fr;gap:28px}
+    .factory-hero-photo{aspect-ratio:4/5;max-width:440px;width:100%;margin:0 auto}
+    .factory-hero-text h2{font-size:1.3rem;line-height:1.55}
+    .factory-points{gap:10px;margin-top:22px}
+    .factory-point{padding:14px 8px}
+    .factory-point .big{font-size:1.35rem}
+    .factory-point .lbl{font-size:.66rem}
+    .factory-flow-head{margin:48px 0 10px}
+    .factory-flow-head h3{font-size:1.12rem}
+    .factory-process{grid-template-columns:1fr 1fr;gap:12px}
+    .fp-body{padding:14px 14px 18px}
+    .fp-body h4{font-size:.95rem}
+    .fp-body p{font-size:.76rem}
+    .factory-note{font-size:.82rem;padding:14px 18px;line-height:1.6}
+
+    .steps{grid-template-columns:repeat(2,1fr);gap:12px}
+    .step{padding:20px 16px}
+    .step .num{font-size:.7rem;letter-spacing:.22em;margin-bottom:10px}
+    .step h3{font-size:.95rem;margin-bottom:8px}
+    .step p{font-size:.78rem;line-height:1.7}
+
+    .strength-band{padding:22px 18px;margin-bottom:36px}
+    .strength-band .en{font-size:.7rem;letter-spacing:.28em}
+    .strength-band .jp{font-size:1.02rem;letter-spacing:.04em;line-height:1.5}
+
+    .benefits{gap:20px}
+    .benefit .num{font-size:.72rem;min-width:auto;padding-bottom:8px;margin-bottom:10px}
+    .benefit h4{font-size:.98rem}
+    .benefit p{font-size:.84rem;line-height:1.85}
+
+    .product-grid{grid-template-columns:repeat(2,1fr);gap:14px}
+    .prod .ph{min-height:120px}
+    .prod .body{padding:14px}
+    .prod .en{font-size:.62rem;letter-spacing:.2em}
+    .prod h4{font-size:.88rem;margin-bottom:6px;line-height:1.4}
+    .prod p{font-size:.74rem;line-height:1.6}
+    .oem-note{margin-top:28px;padding:20px 18px}
+    .oem-note .badge{font-size:.66rem;letter-spacing:.2em}
+    .oem-note p{font-size:.84rem}
+
+    .flow-row{grid-template-columns:52px 1fr;gap:14px;padding:18px 16px}
+    .flow-row .num{width:48px;height:48px;font-size:1.2rem}
+    .flow-row h4{font-size:.98rem;margin-bottom:4px}
+    .flow-row p{font-size:.82rem;line-height:1.7}
+
+    .cta{padding:60px 20px}
+    .cta h2{font-size:1.4rem;line-height:1.5;margin-bottom:12px}
+    .cta p{font-size:.92rem;margin-bottom:24px}
+    .cta p br{display:none}
+    .cta .btn-primary{max-width:340px;width:100%;padding:16px 24px;font-size:.95rem;justify-content:center}
+
+    .contact-info,form{padding:24px 20px}
+    .contact-info h3,form h3{font-size:1.02rem;margin-bottom:18px}
+    .contact-info dl{grid-template-columns:1fr;gap:6px 0}
+    .contact-info dt{
+      font-size:.68rem;letter-spacing:.18em;
+      background:var(--bg-warm);color:var(--copper);
+      padding:6px 10px;display:inline-block;
+      margin-top:8px;border-left:2px solid var(--copper);
+    }
+    .contact-info dt:first-child{margin-top:0}
+    .contact-info dd{padding-left:12px;font-size:.88rem;margin-bottom:6px}
+    .contact-info .tel{font-size:1.4rem}
+    .contact-info .note{font-size:.72rem}
+    .field input,.field textarea,.field select{padding:14px;font-size:16px}
+    form .btn-primary{padding:16px;font-size:.95rem}
+
+    footer{padding:36px 18px 20px}
+    .footer-bottom{flex-direction:column;gap:8px;font-size:.72rem}
+
+    .message-inner{gap:32px}
+    .message-text h2{font-size:1.3rem;line-height:1.7;margin-bottom:20px}
+    .message-text .quote{font-size:.95rem;line-height:1.95;margin-bottom:18px}
+    .message-text .quote br{display:none}
+    .message-text .signature .name{font-size:1.05rem}
+
+    .gallery-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:100px;gap:10px}
+    .gtile.t1{grid-column:span 2;grid-row:span 2}
+    .gtile.t2,.gtile.t6{grid-column:span 2;grid-row:span 1}
+    .gtile.t3,.gtile.t4,.gtile.t5,.gtile.t7{grid-column:span 1;grid-row:span 1}
+    .gtile-cap{padding:18px 12px 10px;font-size:.68rem}
+    .gtile-cap .en{font-size:.58rem;letter-spacing:.18em}
+
+    .stats-grid{gap:14px 0}
+    .stat-item{padding:18px 12px}
+    .stat-item .num{font-size:2.4rem}
+    .stat-item .label{font-size:.85rem}
+    .stat-item .sub{font-size:.68rem}
+
+    .faq-q{padding:18px 4px;gap:14px}
+    .faq-q .text{font-size:.95rem}
+    .faq-a{padding:0 4px 20px 4px;gap:14px;font-size:.88rem;line-height:1.85}
+  }
+
+  /* Responsive — Small phone (≤380px) */
+  @media (max-width:380px){
+    .header-inner{padding:10px 14px}
+    .brand-name{font-size:.94rem}
+    .brand-en{font-size:.58rem}
+    .hero h1{font-size:1.4rem}
+    .sec-head h2{font-size:1.2rem}
+    .product-grid{grid-template-columns:1fr}
+    .steps{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="#" class="brand">
+      <div class="brand-mark">和</div>
+      <div>
+        <div class="brand-name">東和盛泰株式会社</div>
+        <div class="brand-en">TOUWASEITAI CO., LTD.</div>
+      </div>
+    </a>
+    <nav class="nav">
+      <a href="#about">会社案内</a>
+      <a href="#history">沿革</a>
+      <a href="#strength">強み</a>
+      <a href="#factory-tour">工場紹介</a>
+      <a href="#gallery">コレクション</a>
+      <a href="#fabric">ファブリック</a>
+      <a href="#products">取扱品目</a>
+      <a href="#clients">国内実績</a>
+      <a href="#company">会社概要</a>
+      <a href="#flow">お取引の流れ</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">お問い合わせ</a>
+    </nav>
+    <a href="#contact" class="header-cta">CONTACT</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <span class="hero-kicker">KNITWEAR MANUFACTURING & WHOLESALE</span>
+      <h1>中間を介さない<br><span class="accent">ニット衣料</span>の一貫供給。</h1>
+      <p class="hero-lead">
+        中国の自社工場と日本の卸窓口をひとつの会社で。<br>
+        企画から生産・品質管理・輸入・卸まで商社や仲介業者を介さずに自社で一貫対応。<br>
+        だからやりとりは速く品質責任はひとつコスト構造は無駄がありません。
+      </p>
+      <div class="cta-row">
+        <a href="#contact" class="btn btn-primary">お問い合わせ<span class="btn-arrow">→</span></a>
+        <a href="#strength" class="btn btn-secondary">私たちの強み<span class="btn-arrow">→</span></a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="frame">
+        <video class="frame-img frame-video" autoplay muted loop playsinline preload="auto"
+               aria-label="ニット製造の工場映像">
+          <source src="images/hero-knit-machine.mp4" type="video/mp4">
+        </video>
+        <div class="frame-label">
+          <span class="en">OUR OWN FACTORY</span>
+          <span class="jp">自社工場による一貫生産体制</span>
+        </div>
+        <div class="color-stripe" style="position:absolute;bottom:0;left:0;right:0">
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+      <div class="stat-card">
+        <span class="en">ONE-STOP</span>
+        <div class="label">企画から卸まで<br>窓口ひとつ</div>
+        <div class="desc">仲介ゼロの一貫体制</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="meta-strip">
+  <div class="meta-inner">
+    <div class="meta-item">
+      <span class="en">BUSINESS</span>
+      <span class="jp">ニット衣料の企画・生産・卸販売</span>
+    </div>
+    <div class="meta-item">
+      <span class="en">PRODUCTION</span>
+      <span class="jp">中国・自社工場で一貫生産</span>
+    </div>
+    <div class="meta-item">
+      <span class="en">WINDOW</span>
+      <span class="jp">日本拠点でのスムーズな対応窓口</span>
+    </div>
+  </div>
+</div>
+
+<section class="message" id="message">
+  <div class="message-inner">
+    <div class="message-photo">
+      <div class="message-photo-label">REPRESENTATIVE</div>
+    </div>
+    <div class="message-text">
+      <span class="en">MESSAGE</span>
+      <h2>編み目のひとつまで丁寧に。</h2>
+      <p class="quote">
+        私たちは「ニットは肌に触れるもの」だと考えています。<br>
+        だからこそ糸の選び方から編立検品まで<br>
+        ひとつずつ自分たちの目と手で確かめる。<br>
+        着てくださる方が日々を心地よく過ごせるように<br>
+        現場で考え現場でつくる体制を大切にしています。
+      </p>
+      <p class="quote" style="font-size:.92rem;color:var(--ink-soft)">
+        小さなブランドさまから大手さまのOEMまで<br>
+        ものづくりに真摯な企業さまとお取引できることを<br>
+        いつも心から嬉しく思っています。
+      </p>
+      <div class="signature">
+        <span class="role">代表取締役</span>
+        <span class="name">周 暁菊</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="container">
+    <div class="sec-head">
+      <span class="en">ABOUT US</span>
+      <h2>つくる現場と届ける窓口をひとつの会社で。</h2>
+    </div>
+    <p class="sec-lead">
+      東和盛泰株式会社はニット衣料の卸販売を専門とする商社です。<br>
+      中国に自社工場を構え日本国内の取引窓口として東和盛泰が機能することで<br>
+      仲介業者を挟まずにBtoB取引先のニーズへ直接お応えします。
+    </p>
+    <div class="flow-diagram">
+      <div class="flow-node">
+        <span class="en">PRODUCTION</span>
+        <div class="jp">中国・自社工場</div>
+        <div class="desc">企画から生産<br>品質管理まで一貫対応</div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node">
+        <span class="en">WINDOW</span>
+        <div class="jp">東和盛泰株式会社</div>
+        <div class="desc">日本国内の取引窓口<br>輸入・卸を担当</div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node">
+        <span class="en">CLIENT</span>
+        <div class="jp">お取引先</div>
+        <div class="desc">アパレル各社・小売・<br>OEMニーズに対応</div>
+      </div>
+    </div>
+    <div class="about-note">商社・仲介業者を介さず自社で一貫対応</div>
+  </div>
+</section>
+
+<section class="history" id="history">
+  <div class="container">
+    <div class="sec-head">
+      <span class="en">HERITAGE OF KNIT</span>
+      <h2>編み目に宿る、長い物語。</h2>
+    </div>
+    <p class="history-lead">
+      ニットの歴史は紀元前にまでさかのぼると言われています。<br>
+      古代エジプトの遺跡から見つかった編み物の断片に始まり<br>
+      地中海・ヨーロッパへと広がり<strong>「身体に沿う衣」</strong>として人々の生活を支えてきました。<br>
+      機械化された現代でも編み目ひとつひとつには手しごとの記憶が息づいています。
+    </p>
+
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-era">3rd – 5th c.</div>
+        <div class="tl-title">古代エジプトに編み物のはじまり</div>
+        <div class="tl-text">エジプトの墳墓から発掘されたウールの靴下が現存最古の編み物のひとつ。糸を絡めて布を作るという原始的な技法はやがて地中海全域へ広まっていきました。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-era">12th – 16th c.</div>
+        <div class="tl-title">ヨーロッパで職業ギルドが誕生</div>
+        <div class="tl-text">中世ヨーロッパでは編み物が職人の仕事として確立。スペインやイギリスでは王侯貴族の靴下や手袋を作る編み師ギルドが組織され、ニットは「上品で実用的な布」として地位を築きました。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-era">1589</div>
+        <div class="tl-title">編み機の発明 — 産業へ</div>
+        <div class="tl-text">イギリスの牧師ウィリアム・リーが世界初の編み機(ストッキング・フレーム)を考案。手編みから機械編みへの大転換を生み、近代ニット産業の礎となりました。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-era">20th c.</div>
+        <div class="tl-title">ファッションとしてのニット</div>
+        <div class="tl-text">セーター・カーディガン・ニットドレスがワードローブの定番に。シャネルがジャージー素材を取り入れたことを契機にニットは「自由に動ける美しい衣」として現代のファッションを牽引してきました。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-era">Today</div>
+        <div class="tl-title">東和盛泰のものづくり</div>
+        <div class="tl-text">中国の自社工場と日本の卸窓口を一体運営。長い歴史で培われたリブ編みの美しさを守りつつ、現代のサイズ感とカラー展開で日本市場へ届けます。</div>
+      </div>
+    </div>
+
+    <div class="history-virtues">
+      <div class="virtue">
+        <div class="vt">FLEXIBLE</div>
+        <div class="vh">身体に寄り添う伸縮性</div>
+        <div class="vd">縦糸と横糸を直角に組む織物と違い編み目はループ。だからやわらかく身体に沿い動きを妨げません。</div>
+      </div>
+      <div class="virtue">
+        <div class="vt">WARMTH</div>
+        <div class="vh">空気を含む暖かさ</div>
+        <div class="vd">編み地はループの中に空気を抱え込みます。同じ厚みの織物より軽くて暖かいのがニットの本質です。</div>
+      </div>
+      <div class="virtue">
+        <div class="vt">CRAFT</div>
+        <div class="vh">編み目ひとつの誇り</div>
+        <div class="vd">数千年にわたって受け継がれてきた一本の糸を絡める仕事。その精神を私たちは大切にしています。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="strength" id="strength">
+  <div class="container">
+    <div class="sec-head">
+      <span class="en">OUR STRENGTH</span>
+      <h2>間を通さず一貫してできる。</h2>
+    </div>
+    <p class="sec-lead">
+      企画から卸売まですべての工程を自社で完結。<br>
+      ひとつの窓口でひとつの責任でニット衣料をお届けします。
+    </p>
+    <div class="steps">
+      <div class="step">
+        <div class="num">STEP 01</div>
+        <h3>企画・デザイン</h3>
+        <p>お取引先のニーズや市場動向を踏まえて自社で企画・デザインまで対応します。</p>
+      </div>
+      <div class="step">
+        <div class="num">STEP 02</div>
+        <h3>生産</h3>
+        <p>中国の自社工場で生産。素材選定から編立縫製まで一貫管理しています。</p>
+      </div>
+      <div class="step">
+        <div class="num">STEP 03</div>
+        <h3>品質管理・輸入</h3>
+        <p>出荷前の検品から輸入手配まで自社の責任で品質を担保します。</p>
+      </div>
+      <div class="step">
+        <div class="num">STEP 04</div>
+        <h3>卸売</h3>
+        <p>日本国内の取引窓口として納品・アフター対応までスムーズに行います。</p>
+      </div>
+    </div>
+    <div class="strength-band">
+      <span class="en">ZERO INTERMEDIARY</span>
+      <span class="jp">仲介ゼロ。窓口はひとつ責任もひとつ。</span>
+    </div>
+    <div class="benefits">
+      <div class="benefit">
+        <div class="num">BENEFIT 01</div>
+        <h4>やりとりが速い</h4>
+        <p>窓口がひとつなので要望や仕様変更を工場へダイレクトに伝えられます。商社経由のタイムロスがありません。</p>
+      </div>
+      <div class="benefit">
+        <div class="num">BENEFIT 02</div>
+        <h4>品質責任が一貫</h4>
+        <p>企画・生産・検品・輸入のすべてが自社の責任範囲。問題発生時の対応も迅速で責任の所在が明確です。</p>
+      </div>
+      <div class="benefit">
+        <div class="num">BENEFIT 03</div>
+        <h4>無駄のないコスト構造</h4>
+        <p>仲介マージンを挟まないのでその分を品質や納期に還元できます。透明な見積りでご提案します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="factory" id="factory-tour">
+  <div class="container">
+    <div class="sec-head">
+      <span class="en">OUR FACTORY</span>
+      <h2>中国の自社工場から、ひと針ずつ。</h2>
+    </div>
+    <p class="sec-lead">
+      編立から洗い・仕上げ・検品・出荷まで。<br>
+      ニット衣料のすべての工程を、東和盛泰の自社工場で一貫して行っています。
+    </p>
+
+    <div class="factory-hero">
+      <div class="factory-hero-photo">
+        <img src="images/factory-knit-floor.jpg" alt="ずらりと並ぶ横編み機 — 東和盛泰の自社編立工場" loading="lazy">
+        <div class="photo-tag">
+          <span class="en">KNITTING FLOOR</span>
+          <span class="jp">編立フロア</span>
+        </div>
+      </div>
+      <div class="factory-hero-text">
+        <span class="en">MADE IN OUR OWN PLANT</span>
+        <h2>「いい商品は、<span class="accent">いい現場</span>から。」</h2>
+        <p>
+          自社工場には最新の自動横編み機がずらりと並び、熟練のスタッフが一台ずつ編み目を見ながら生産しています。
+          糸の選定から編立・洗い・仕上げ・検品まで、すべての工程をひとつの工場で完結。
+          だからこそ、品質も納期も自社の責任で管理できます。
+        </p>
+        <p>
+          整理整頓された明るい現場、そして長く働くスタッフ。
+          安定した品質を生み出すのは、こうした日々の現場の積み重ねです。
+        </p>
+        <div class="factory-points">
+          <div class="factory-point">
+            <div class="big">5</div>
+            <div class="lbl">主要工程を<br>自社で一貫</div>
+          </div>
+          <div class="factory-point">
+            <div class="big">100<span style="font-size:1rem">%</span></div>
+            <div class="lbl">全数検品<br>体制</div>
+          </div>
+          <div class="factory-point">
+            <div class="big">自社</div>
+            <div class="lbl">編立から出荷まで<br>同一工場</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="factory-flow-head">
+      <span class="en">PRODUCTION PROCESS</span>
+      <h3>ひとつの工場で、つくりあげる。</h3>
+    </div>
+    <div class="factory-process">
+      <div class="fp-card">
+        <div class="fp-photo">
+          <span class="fp-step">STEP 01</span>
+          <img src="images/factory-knit-machine.jpg" alt="横編み機での編立工程" loading="lazy">
+        </div>
+        <div class="fp-body">
+          <span class="en">KNITTING</span>
+          <h4>編立</h4>
+          <p>自動横編み機で、糸から生地を編み上げます。デザインに合わせて編み目をひとつずつ調整します。</p>
+        </div>
+      </div>
+      <div class="fp-card">
+        <div class="fp-photo">
+          <span class="fp-step">STEP 02</span>
+          <img src="images/factory-washing.jpg" alt="洗い・乾燥工程" loading="lazy">
+        </div>
+        <div class="fp-body">
+          <span class="en">WASH & DRY</span>
+          <h4>洗い・乾燥</h4>
+          <p>編み上がった製品を専用設備で洗い・乾燥。風合いを整え、色味と質感を安定させます。</p>
+        </div>
+      </div>
+      <div class="fp-card">
+        <div class="fp-photo">
+          <span class="fp-step">STEP 03</span>
+          <img src="images/factory-finishing.jpg" alt="仕上げ・検品工程" loading="lazy">
+        </div>
+        <div class="fp-body">
+          <span class="en">FINISHING & QC</span>
+          <h4>仕上げ・検品</h4>
+          <p>一枚ずつ手に取り、縫製や編み目をていねいにチェック。基準を満たした製品だけを次の工程へ。</p>
+        </div>
+      </div>
+      <div class="fp-card">
+        <div class="fp-photo">
+          <span class="fp-step">STEP 04</span>
+          <img src="images/factory-inventory.jpg" alt="在庫・出荷準備" loading="lazy">
+        </div>
+        <div class="fp-body">
+          <span class="en">STOCK & SHIP</span>
+          <h4>在庫・出荷</h4>
+          <p>色・サイズごとに整理して保管し、ご注文に合わせて出荷。日本へスムーズにお届けします。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="factory-note">
+      <span class="en">ONE FACTORY, ONE RESPONSIBILITY</span>
+      ひとつの工場で一貫生産。だから、品質も納期も安心しておまかせいただけます。
+    </div>
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <div class="container">
+    <div class="sec-head">
+      <span class="en">COLLECTION</span>
+      <h2>コレクションから。</h2>
+    </div>
+    <p class="sec-lead">
+      リブ編みのVネックからハイネックまで定番のシルエットを<br>
+      豊富なカラーで展開しているのが東和盛泰のコレクションです。
+    </p>
+    <div class="gallery-grid">
+      <div class="gtile t1">
+        <div class="gtile-cap"><span class="en">V-NECK RIB</span>Vネック リブニット</div>
+      </div>
+      <div class="gtile t2">
+        <div class="gtile-cap"><span class="en">BORDEAUX</span>ボルドー</div>
+      </div>
+      <div class="gtile t3">
+        <div class="gtile-cap"><span class="en">GREEN</span>グリーン</div>
+      </div>
+      <div class="gtile t4">
+        <div class="gtile-cap"><span class="en">MUSTARD</span>マスタード</div>
+      </div>
+      <div class="gtile t5">
+        <div class="gtile-cap"><span class="en">HIGH NECK RIB</span>ハイネック リブニット</div>
+      </div>
+      <div class="gtile t6">
+        <div class="gtile-cap"><span class="en">GRAY</span>グレー</div>
+      </div>
+      <div class="gtile t7">
+        <div class="gtile-cap"><span class="en">GREEN</span>グリーン</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="fabric-showcase" id="fabric">
+  <div class="container">
+    <div class="fabric-grid">
+      <div class="fabric-photo" style="background-image:url('images/fabric-colors.jpg')"></div>
+      <div class="fabric-text">
+        <span class="en">FABRIC</span>
+        <h2>編み地のディテール。<br>豊富なカラー展開。</h2>
+        <p>
+          東和盛泰の主力リブニットは
+          <strong>9色を標準ラインで保有</strong>。<br>
+          シーズンやブランドのテーマに合わせて
+          パターンオーダー・別注カラーにも対応します。
+        </p>
+        <ul class="fabric-colors">
+          <li><span class="cdot" style="background:#a3b66f"></span>Green</li>
+          <li><span class="cdot" style="background:#d4b94c"></span>Mustard</li>
+          <li><span class="cdot" style="background:#bda28a"></span>Beige</li>
+          <li><span class="cdot" style="background:#efe5d8"></span>White</li>
+          <li><span class="cdot" style="background:#6e4a3a"></span>Brown</li>
+          <li><span class="cdot" style="background:#9ea9b3"></span>Gray</li>
+          <li><span class="cdot" style="background:#202028"></span>Black</li>
+          <li><span class="cdot" style="background:#7ba0c0"></span>Blue</li>
+          <li><span class="cdot" style="background:#9a2030"></span>Bordeaux</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cashmere">
+      <div class="cashmere-mark">
+        <span class="ck">PREMIUM</span>
+        <span class="cj">高級素材</span>
+      </div>
+      <div class="cashmere-body">
+        <h3>カシミヤ素材の<br class="sp-only">お取り扱いも可能です。</h3>
+        <p>
+          内モンゴル産を中心とした原毛を厳選し
+          <strong>軽くやわらかな風合いと上質な保温性</strong>を備えたカシミヤニットの企画・生産も承ります。<br>
+          100%カシミヤから混紡まで用途とご予算に合わせてご提案します。
+        </p>
+        <ul class="cashmere-points">
+          <li><span class="kp">01</span>軽く暖かい繊維構造 — ウールより細く繊細な毛質</li>
+          <li><span class="kp">02</span>独自の落ち感と滑らかな肌当たり</li>
+          <li><span class="kp">03</span>OEM・ブランド別注のサンプル製作にも対応</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="products" id="products">
+  <div class="container">
+    <div class="sec-head">
+      <span class="en">PRODUCTS</span>
+      <h2>取扱品目</h2>
+    </div>
+    <p class="sec-lead">
+      レディース・メンズを中心に季節を問わず幅広いニット衣料を取り扱っています。<br>
+      OEM・ODMにも対応可能ですのでブランド独自の仕様でもご相談ください。
+    </p>
+    <div class="product-grid">
+      <div class="prod">
+        <div class="ph"></div>
+        <div class="body">
+          <span class="en">V-NECK RIB</span>
+          <h4>Vネック リブニット</h4>
+          <p>美しいリブ編みのVネック。すっきりとした襟元で1枚でもインナーとしても活躍する定番アイテムです。</p>
+        </div>
+      </div>
+      <div class="prod">
+        <div class="ph"></div>
+        <div class="body">
+          <span class="en">HIGH NECK RIB</span>
+          <h4>ハイネック リブニット</h4>
+          <p>柔らかなネックラインで首元をきれいに見せるハイネック。秋冬の主役として安定した需要があります。</p>
+        </div>
+      </div>
+      <div class="prod">
+        <div class="ph"></div>
+        <div class="body">
+          <span class="en">COLOR LINEUP</span>
+          <h4>豊富なカラー展開</h4>
+          <p>ホワイト・ボルドー・グリーン・マスタード・グレー・ブラック等9色以上を標準ラインで保有。シーズン別のカスタムカラーにも対応します。</p>
+        </div>
+      </div>
+      <div class="prod">
+        <div class="ph"></div>
+        <div class="body">
+          <span class="en">FABRIC QUALITY</span>
+          <h4>ファブリックへのこだわり</h4>
+          <p>編み地の厚みと張りにこだわった素材選定。ボディラインを美しく見せる絶妙な肉感をご提案します。</p>
+        </div>
+      </div>
+    </div>
+    <div class="oem-note">
+      <div class="badge">OEM / ODM</div>
+      <p>ブランドごとの仕様・素材・カラー指定にも柔軟に対応します。サンプル製作からのご相談も歓迎しています。</p>
+    </div>
+  </div>
+</section>
+
+<section class="stats" id="stats">
+  <div class="container">
+    <div class="sec-head">
+      <span class="en">BY THE NUMBERS</span>
+      <h2>数字で見る東和盛泰。</h2>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="num">15<span class="unit">年+</span></div>
+        <div class="label">ニット製造一筋</div>
+        <div class="sub">（仮値・差し替え可）</div>
+      </div>
+      <div class="stat-item">
+        <div class="num">100<span class="unit">名</span></div>
+        <div class="label">自社工場スタッフ</div>
+        <div class="sub">中国・自社工場</div>
+      </div>
+      <div class="stat-item">
+        <div class="num">50<span class="unit">万着+</span></div>
+        <div class="label">年間生産点数</div>
+        <div class="sub">（仮値・差し替え可）</div>
+      </div>
+      <div class="stat-item">
+        <div class="num">80<span class="unit">社+</span></div>
+        <div class="label">国内取引先</div>
+        <div class="sub">（仮値・差し替え可）</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="clients" id="clients">
+  <div class="container">
+    <div class="sec-head">
+      <span class="en">DOMESTIC CLIENTS</span>
+      <h2>国内実績</h2>
+    </div>
+    <p class="sec-lead">
+      日本国内の信頼あるパートナー企業さまと継続的にお取引させていただいております。
+    </p>
+    <div class="clients-grid">
+      <div class="client-card">
+        <div class="ctype">Client</div>
+        <div class="cname">有限会社アミスタ・ケイ</div>
+      </div>
+      <div class="client-card">
+        <div class="ctype">Client</div>
+        <div class="cname">華陽株式会社</div>
+      </div>
+    </div>
+    <p class="clients-note">（敬称略・順不同）</p>
+  </div>
+</section>
+
+<section class="company" id="company">
+  <div class="container">
+    <div class="sec-head">
+      <span class="en">COMPANY PROFILE</span>
+      <h2>会社概要</h2>
+    </div>
+    <div class="company-table-wrap">
+      <table class="company-table">
+        <tbody>
+          <tr>
+            <th>商号</th>
+            <td>東和盛泰株式会社<span class="cmp-en">TOUWASEITAI CO., LTD.</span></td>
+          </tr>
+          <tr>
+            <th>代表取締役</th>
+            <td>周 暁菊</td>
+          </tr>
+          <tr>
+            <th>設立</th>
+            <td>平成26年(2014年)4月30日</td>
+          </tr>
+          <tr>
+            <th>資本金</th>
+            <td>500万円</td>
+          </tr>
+          <tr>
+            <th>従業員数</th>
+            <td>5名（正社員・パート含む）</td>
+          </tr>
+          <tr>
+            <th>事業内容</th>
+            <td>ニット衣料の企画・生産・輸入・卸販売<br>OEM / ODM受託・カシミヤ製品取扱</td>
+          </tr>
+          <tr>
+            <th>生産拠点</th>
+            <td>中国・自社工場</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="flow-section" id="flow">
+  <div class="container">
+    <div class="sec-head">
+      <span class="en">FLOW</span>
+      <h2>お取引の流れ</h2>
+    </div>
+    <p class="sec-lead">
+      初めてのお取引でもはじめにきちんとヒアリングをしてから進めますのでご安心ください。
+    </p>
+    <div class="flow-list" style="margin-top:36px">
+      <div class="flow-row">
+        <div class="num">01</div>
+        <div>
+          <h4>お問い合わせ</h4>
+          <p>フォームまたはお電話でお気軽にご連絡ください。ご要望の概要をお伺いします。</p>
+        </div>
+      </div>
+      <div class="flow-row">
+        <div class="num">02</div>
+        <div>
+          <h4>ヒアリング・ご提案</h4>
+          <p>ご希望の品目・数量・納期・予算感などを詳しくお伺いし最適なご提案を差し上げます。</p>
+        </div>
+      </div>
+      <div class="flow-row">
+        <div class="num">03</div>
+        <div>
+          <h4>サンプル確認・お見積り</h4>
+          <p>必要に応じてサンプルをご確認いただいたうえで正式なお見積りをご提示します。</p>
+        </div>
+      </div>
+      <div class="flow-row">
+        <div class="num">04</div>
+        <div>
+          <h4>生産・納品</h4>
+          <p>自社工場での生産から品質管理・輸入・納品まで窓口ひとつでスムーズに進めます。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="sec-head">
+      <span class="en">FAQ</span>
+      <h2>よくあるご質問。</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item" open>
+        <summary class="faq-q">
+          <span class="mark">Q.</span>
+          <span class="text">最小ロットはどのくらいですか？</span>
+          <span class="arrow">⌄</span>
+        </summary>
+        <div class="faq-a">
+          <span class="mark">A.</span>
+          <div class="text">アイテムや仕様によりますが目安として1型あたり100〜300枚からご相談いただけます。ブランドさまの規模や試作段階に合わせて柔軟に対応しますのでまずはお気軽にご相談ください。</div>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">
+          <span class="mark">Q.</span>
+          <span class="text">サンプル製作はどのくらいの期間で出来ますか？</span>
+          <span class="arrow">⌄</span>
+        </summary>
+        <div class="faq-a">
+          <span class="mark">A.</span>
+          <div class="text">基本仕様のサンプルでおよそ2〜3週間複雑な編み地や独自仕様の場合は3〜5週間ほどお時間をいただきます。素材手配の状況により前後しますのでお見積り時に正確な日数をご案内します。</div>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">
+          <span class="mark">Q.</span>
+          <span class="text">ブランドタグ・洗濯表示の縫い付けは対応できますか？</span>
+          <span class="arrow">⌄</span>
+        </summary>
+        <div class="faq-a">
+          <span class="mark">A.</span>
+          <div class="text">はい対応可能です。お客さまご支給のタグ・ラベル・下げ札の付属からネーム織りのご提案までブランドさまの仕様に合わせて承ります。下げ札のデザインからご相談いただくこともできます。</div>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">
+          <span class="mark">Q.</span>
+          <span class="text">レディース以外（メンズ・キッズ）は対応していますか？</span>
+          <span class="arrow">⌄</span>
+        </summary>
+        <div class="faq-a">
+          <span class="mark">A.</span>
+          <div class="text">レディース中心ではありますがメンズ・キッズもご相談いただけます。型紙・サイズ展開を含めご提案できますのでメンズライン・キッズラインの追加をお考えのブランドさまも遠慮なくお問い合わせください。</div>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">
+          <span class="mark">Q.</span>
+          <span class="text">納期はどのくらいかかりますか？</span>
+          <span class="arrow">⌄</span>
+        </summary>
+        <div class="faq-a">
+          <span class="mark">A.</span>
+          <div class="text">本生産は仕様確定後60〜90日が目安です。シーズン立ち上げに間に合わせるようご依頼時期から逆算してスケジュールをご提案します。繁忙期は早めのご相談をおすすめしています。</div>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">
+          <span class="mark">Q.</span>
+          <span class="text">工場の見学はできますか？</span>
+          <span class="arrow">⌄</span>
+        </summary>
+        <div class="faq-a">
+          <span class="mark">A.</span>
+          <div class="text">継続的なお取引をご検討中のお客さまには中国工場の見学をご案内しています。事前にスケジュール調整させていただきますのでご希望の場合はお問い合わせの際にお伝えください。</div>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>まずはお気軽にご相談ください</h2>
+  <p>OEM・ODM・卸取引のご相談サンプル製作のご依頼まで。<br>専門スタッフが丁寧にお応えします。</p>
+  <a href="#contact" class="btn btn-primary">お問い合わせはこちら<span class="btn-arrow">→</span></a>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="sec-head">
+      <span class="en">CONTACT</span>
+      <h2>お問い合わせ</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>お電話・お問い合わせ先</h3>
+        <dl>
+          <dt>TEL</dt>
+          <dd>
+            <div class="tel">00-0000-0000</div>
+            <div class="note">受付時間：平日 9:00〜18:00（※実際の番号を入力してください）</div>
+          </dd>
+          <dt>住所</dt>
+          <dd>〒000-0000<br>（所在地を入力してください）</dd>
+          <dt>MAIL</dt>
+          <dd>info@example.com<br><span class="note">（実際のメールアドレスを入力してください）</span></dd>
+          <dt>営業時間</dt>
+          <dd>平日 9:00〜18:00<br><span class="note">土日祝休</span></dd>
+        </dl>
+      </div>
+      <form onsubmit="event.preventDefault();alert('お問い合わせフォームの送信は公開時に設定します。');">
+        <h3>お問い合わせフォーム</h3>
+        <div class="field">
+          <label>会社名 <span class="req">必須</span></label>
+          <input type="text" required placeholder="株式会社○○">
+        </div>
+        <div class="field">
+          <label>ご担当者名 <span class="req">必須</span></label>
+          <input type="text" required placeholder="山田 太郎">
+        </div>
+        <div class="field">
+          <label>メールアドレス <span class="req">必須</span></label>
+          <input type="email" required placeholder="yamada@example.co.jp">
+        </div>
+        <div class="field">
+          <label>電話番号</label>
+          <input type="tel" placeholder="03-0000-0000">
+        </div>
+        <div class="field">
+          <label>お問い合わせ種別</label>
+          <select>
+            <option>卸取引について</option>
+            <option>OEM・ODMについて</option>
+            <option>サンプル製作について</option>
+            <option>その他</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>お問い合わせ内容 <span class="req">必須</span></label>
+          <textarea required placeholder="ご要望や品目・数量の目安などをご記入ください"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">送信する<span class="btn-arrow">→</span></button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="brand-mark">和</div>
+      <div>
+        <div class="brand-name">東和盛泰株式会社</div>
+        <div class="brand-en">TOUWASEITAI CO., LTD.</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 TOUWASEITAI CO., LTD. All Rights Reserved.</div>
+      <div>ニット衣料の企画・生産・卸販売</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
