@@ -9,6 +9,8 @@
     "clean": "node -e \"require('fs').rmSync('_site',{recursive:true,force:true})\""
   },
   "devDependencies": {
-    "@11ty/eleventy": "^3.0.0"
+    "@11ty/eleventy": "^3.0.0",
+    "gray-matter": "^4.0.3",
+    "markdown-it": "^14.1.1"
   }
 }
