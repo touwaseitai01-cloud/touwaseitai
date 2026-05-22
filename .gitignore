@@ -8,3 +8,8 @@ _open-mobile.bat
 # 動画制作の作業フォルダ（ffmpeg本体・元音声・スクリプト等。公開物はimages/に配置済み）
 video/
 images/Thumbs.db
+
+# ビルド成果物・依存パッケージ（GitHub Actionsで自動生成）
+node_modules/
+_site/
+.cache/

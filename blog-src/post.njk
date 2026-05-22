@@ -1,0 +1,57 @@
+---
+layout: base.njk
+pagination:
+  data: posts
+  size: 1
+  alias: post
+permalink: "/blog/{{ post.slug or post.id }}/index.html"
+ogType: article
+eleventyComputed:
+  title: "{{ post.title }}"
+  description: "{{ post.description or (post.body | excerpt) }}"
+  ogImage: "{{ post.eyecatch.url if post.eyecatch else site.ogImage }}"
+---
+<main class="article-wrap">
+  <article class="article">
+    <nav class="breadcrumb" aria-label="パンくず">
+      <a href="/">ホーム</a> <span>›</span> <a href="/blog/">ブログ</a> <span>›</span> <span>{{ post.title }}</span>
+    </nav>
+
+    <header class="article-head">
+      {% if post.category %}<span class="post-cat">{{ post.category }}</span>{% endif %}
+      <time datetime="{{ post.publishedAt | isoDate }}">{{ post.publishedAt | jpDate }}</time>
+      <h1>{{ post.title }}</h1>
+    </header>
+
+    {% if post.eyecatch %}
+      <img class="article-eyecatch" src="{{ post.eyecatch.url }}?w=1200" alt="">
+    {% endif %}
+
+    <div class="article-body">
+      {{ post.body | safe }}
+    </div>
+
+    <div class="article-foot">
+      <a href="/blog/" class="back-link">← ブログ一覧へ戻る</a>
+    </div>
+  </article>
+</main>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ post.title | dump | safe }},
+  "description": {{ (post.description or (post.body | excerpt)) | dump | safe }},
+  "datePublished": "{{ post.publishedAt }}",
+  "dateModified": "{{ post.updatedAt or post.publishedAt }}",
+  {% if post.eyecatch %}"image": "{{ post.eyecatch.url }}",{% endif %}
+  "author": { "@type": "Organization", "name": "{{ site.name }}" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ site.name }}",
+    "logo": { "@type": "ImageObject", "url": "{{ site.ogImage }}" }
+  },
+  "mainEntityOfPage": "{{ site.url }}/blog/{{ post.slug or post.id }}/"
+}
+</script>

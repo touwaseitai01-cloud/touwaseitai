@@ -1,0 +1,41 @@
+---
+layout: base.njk
+title: ブログ・お知らせ
+description: 東和盛泰株式会社の最新情報・お知らせ・ニット衣料に関するコラムをお届けします。
+permalink: /blog/index.html
+---
+<section class="blog-head">
+  <div class="blog-head-inner">
+    <span class="blog-kicker en">BLOG &amp; NEWS</span>
+    <h1>ブログ・お知らせ</h1>
+    <p>最新情報やお知らせ、ニット衣料・ものづくりに関するコラムをお届けします。</p>
+  </div>
+</section>
+
+<main class="blog-wrap">
+  {% if posts.length == 0 %}
+    <p class="blog-empty">記事は準備中です。まもなく公開します。</p>
+  {% else %}
+  <div class="post-grid">
+    {% for post in posts %}
+      <article class="post-card">
+        <a href="/blog/{{ post.slug or post.id }}/">
+          <div class="post-card-thumb">
+            {% if post.eyecatch %}
+              <img src="{{ post.eyecatch.url }}?w=640&h=420&fit=crop" alt="" loading="lazy">
+            {% else %}
+              <div class="post-card-thumb--placeholder"><span>和</span></div>
+            {% endif %}
+          </div>
+          <div class="post-card-body">
+            {% if post.category %}<span class="post-cat">{{ post.category }}</span>{% endif %}
+            <time datetime="{{ post.publishedAt | isoDate }}">{{ post.publishedAt | jpDate }}</time>
+            <h2>{{ post.title }}</h2>
+            <p>{{ post.description or (post.body | excerpt) }}</p>
+          </div>
+        </a>
+      </article>
+    {% endfor %}
+  </div>
+  {% endif %}
+</main>
