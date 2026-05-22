@@ -42,7 +42,7 @@
         <div class="brand-en">TOUWASEITAI CO., LTD.</div>
       </div>
     </a>
-    <nav class="nav">
+    <nav class="nav" id="site-nav">
       <a href="/#about">会社案内</a>
       <a href="/#strength">強み</a>
       <a href="/#products">取扱品目</a>
@@ -51,6 +51,9 @@
       <a href="/#contact">お問い合わせ</a>
     </nav>
     <a href="/#contact" class="header-cta">CONTACT</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
 
@@ -82,6 +85,26 @@
     </div>
   </div>
 </footer>
+
+<script>
+  (function () {
+    var header = document.querySelector('header');
+    var toggle = document.querySelector('.nav-toggle');
+    var nav = document.getElementById('site-nav');
+    if (!header || !toggle || !nav) return;
+    function setOpen(open) {
+      header.classList.toggle('nav-open', open);
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.setAttribute('aria-label', open ? 'メニューを閉じる' : 'メニューを開く');
+    }
+    toggle.addEventListener('click', function () {
+      setOpen(!header.classList.contains('nav-open'));
+    });
+    nav.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () { setOpen(false); });
+    });
+  })();
+</script>
 
 </body>
 </html>
