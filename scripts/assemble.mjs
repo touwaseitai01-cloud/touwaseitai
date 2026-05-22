@@ -7,7 +7,7 @@ import { cp, mkdir, access } from "node:fs/promises";
 const OUT = "_site";
 
 // _site にコピーする既存サイトのファイル/フォルダ
-const ITEMS = ["index.html", "images", "CNAME", "robots.txt"];
+const ITEMS = ["index.html", "images", "CNAME", "robots.txt", "favicon.ico"];
 
 await mkdir(OUT, { recursive: true });
 
