@@ -568,6 +568,10 @@
   .footer-brand .brand-mark{background:linear-gradient(135deg, #fff 0%, var(--gold) 100%);color:var(--navy)}
   .footer-brand .brand-name{color:#fff}
   .footer-brand .brand-en{color:var(--gold)}
+  .footer-top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px}
+  .footer-nav{display:flex;flex-wrap:wrap;gap:12px 22px;font-size:.85rem}
+  .footer-nav a{color:rgba(255,255,255,.75);transition:color .2s}
+  .footer-nav a:hover{color:var(--gold)}
   .footer-bottom{
     border-top:1px solid rgba(255,255,255,.1);
     padding-top:20px;
@@ -1339,6 +1343,8 @@
     form .btn-primary{padding:16px;font-size:.95rem}
 
     footer{padding:36px 18px 20px}
+    .footer-top{flex-direction:column;align-items:flex-start;gap:18px}
+    .footer-nav{width:100%;display:grid;grid-template-columns:repeat(2,1fr);gap:14px 16px}
     .footer-bottom{flex-direction:column;gap:8px;font-size:.72rem}
 
     .message-inner{gap:32px}
@@ -2218,12 +2224,23 @@
 
 <footer>
   <div class="footer-inner">
-    <div class="footer-brand">
-      <div class="brand-mark">和</div>
-      <div>
-        <div class="brand-name">東和盛泰株式会社</div>
-        <div class="brand-en">TOUWASEITAI CO., LTD.</div>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="brand-mark">和</div>
+        <div>
+          <div class="brand-name">東和盛泰株式会社</div>
+          <div class="brand-en">TOUWASEITAI CO., LTD.</div>
+        </div>
       </div>
+      <nav class="footer-nav">
+        <a href="#about">会社案内</a>
+        <a href="#strength">強み</a>
+        <a href="#factory-tour">工場紹介</a>
+        <a href="#products">取扱品目</a>
+        <a href="#company">会社概要</a>
+        <a href="/blog/">ブログ</a>
+        <a href="#contact">お問い合わせ</a>
+      </nav>
     </div>
     <div class="footer-bottom">
       <div>&copy; 2026 TOUWASEITAI CO., LTD. All Rights Reserved.</div>
