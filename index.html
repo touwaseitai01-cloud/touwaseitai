@@ -502,10 +502,21 @@
   }
   .contact-info dd{font-size:.92rem;color:var(--ink);line-height:1.7}
   .contact-info .tel{
-    font-family:'Cormorant Garamond',serif;
-    font-size:1.6rem;color:var(--navy);font-weight:600;letter-spacing:.03em;
+    font-family:'Noto Sans JP',sans-serif;
+    font-size:1.6rem;color:var(--navy);font-weight:700;letter-spacing:.03em;
+    display:inline-block;text-decoration:none;
   }
+  .contact-info .tel:hover{color:var(--copper)}
   .contact-info .note{font-size:.78rem;color:var(--ink-soft);margin-top:4px}
+
+  .contact-map{
+    margin-top:48px;border-radius:2px;overflow:hidden;
+    border-top:3px solid var(--navy);
+    box-shadow:0 2px 18px rgba(0,0,0,.06);
+  }
+  .contact-map iframe{
+    display:block;width:100%;height:380px;border:0;
+  }
 
   form{
     background:#fff;padding:36px;border-radius:2px;
@@ -1937,6 +1948,14 @@
             <td>周 暁菊</td>
           </tr>
           <tr>
+            <th>所在地</th>
+            <td>〒720-0822<br>広島県福山市川口町1-20-31</td>
+          </tr>
+          <tr>
+            <th>TEL</th>
+            <td><a href="tel:084-999-2390" style="color:inherit;text-decoration:none">084-999-2390</a></td>
+          </tr>
+          <tr>
             <th>設立</th>
             <td>平成26年(2014年)4月30日</td>
           </tr>
@@ -2099,38 +2118,38 @@
         <dl>
           <dt>TEL</dt>
           <dd>
-            <div class="tel">00-0000-0000</div>
-            <div class="note">受付時間：平日 9:00〜18:00（※実際の番号を入力してください）</div>
+            <a href="tel:084-999-2390" class="tel">084-999-2390</a>
+            <div class="note">受付時間：平日 9:00〜18:00</div>
           </dd>
           <dt>住所</dt>
-          <dd>〒000-0000<br>（所在地を入力してください）</dd>
+          <dd>〒720-0822<br>広島県福山市川口町1-20-31</dd>
           <dt>MAIL</dt>
-          <dd>info@example.com<br><span class="note">（実際のメールアドレスを入力してください）</span></dd>
+          <dd><a href="mailto:info@touwaseitai.com" class="mail">info@touwaseitai.com</a></dd>
           <dt>営業時間</dt>
           <dd>平日 9:00〜18:00<br><span class="note">土日祝休</span></dd>
         </dl>
       </div>
-      <form onsubmit="event.preventDefault();alert('お問い合わせフォームの送信は公開時に設定します。');">
+      <form onsubmit="sendContactMail(event)">
         <h3>お問い合わせフォーム</h3>
         <div class="field">
           <label>会社名 <span class="req">必須</span></label>
-          <input type="text" required placeholder="株式会社○○">
+          <input type="text" id="cf-company" required placeholder="株式会社○○">
         </div>
         <div class="field">
           <label>ご担当者名 <span class="req">必須</span></label>
-          <input type="text" required placeholder="山田 太郎">
+          <input type="text" id="cf-name" required placeholder="山田 太郎">
         </div>
         <div class="field">
           <label>メールアドレス <span class="req">必須</span></label>
-          <input type="email" required placeholder="yamada@example.co.jp">
+          <input type="email" id="cf-email" required placeholder="yamada@example.co.jp">
         </div>
         <div class="field">
           <label>電話番号</label>
-          <input type="tel" placeholder="03-0000-0000">
+          <input type="tel" id="cf-tel" placeholder="03-0000-0000">
         </div>
         <div class="field">
           <label>お問い合わせ種別</label>
-          <select>
+          <select id="cf-type">
             <option>卸取引について</option>
             <option>OEM・ODMについて</option>
             <option>サンプル製作について</option>
@@ -2139,10 +2158,40 @@
         </div>
         <div class="field">
           <label>お問い合わせ内容 <span class="req">必須</span></label>
-          <textarea required placeholder="ご要望や品目・数量の目安などをご記入ください"></textarea>
+          <textarea id="cf-message" required placeholder="ご要望や品目・数量の目安などをご記入ください"></textarea>
         </div>
         <button type="submit" class="btn btn-primary">送信する<span class="btn-arrow">→</span></button>
       </form>
+      <script>
+        function sendContactMail(e) {
+          e.preventDefault();
+          var company = document.getElementById('cf-company').value;
+          var name = document.getElementById('cf-name').value;
+          var email = document.getElementById('cf-email').value;
+          var tel = document.getElementById('cf-tel').value;
+          var type = document.getElementById('cf-type').value;
+          var message = document.getElementById('cf-message').value;
+          var subject = '【お問い合わせ】' + type + '（' + company + '）';
+          var body =
+            '会社名：' + company + '\n' +
+            'ご担当者名：' + name + '\n' +
+            'メールアドレス：' + email + '\n' +
+            '電話番号：' + tel + '\n' +
+            'お問い合わせ種別：' + type + '\n\n' +
+            'お問い合わせ内容：\n' + message + '\n';
+          window.location.href = 'mailto:info@touwaseitai.com'
+            + '?subject=' + encodeURIComponent(subject)
+            + '&body=' + encodeURIComponent(body);
+        }
+      </script>
+    </div>
+    <div class="contact-map">
+      <iframe
+        src="https://maps.google.com/maps?q=%E5%BA%83%E5%B3%B6%E7%9C%8C%E7%A6%8F%E5%B1%B1%E5%B8%82%E5%B7%9D%E5%8F%A3%E7%94%BA1-20-31&hl=ja&z=16&output=embed"
+        title="東和盛泰株式会社 所在地マップ"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        allowfullscreen></iframe>
     </div>
   </div>
 </section>
