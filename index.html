@@ -1206,6 +1206,39 @@
     .clients-sub{margin:44px 0 8px}
   }
 
+  /* Resources / download */
+  .resources{background:var(--bg-warm);position:relative}
+  .resource-card{
+    max-width:900px;margin:8px auto 0;background:#fff;
+    border:1px solid var(--line);border-top:3px solid var(--copper);
+    border-radius:2px;padding:36px 40px;
+    display:grid;grid-template-columns:1fr auto;gap:36px;align-items:center;
+    box-shadow:0 12px 30px -18px rgba(74,46,58,.18);
+  }
+  .resource-info .en{
+    display:block;font-family:'Cormorant Garamond',serif;
+    font-size:.72rem;letter-spacing:.28em;color:var(--copper);margin-bottom:8px;
+  }
+  .resource-info h3{
+    font-family:'Noto Serif JP',serif;font-size:1.25rem;color:var(--navy);
+    font-weight:700;margin-bottom:10px;letter-spacing:.03em;
+  }
+  .resource-info p{font-size:.9rem;color:var(--ink-soft);line-height:1.85}
+  .resource-actions{display:flex;flex-direction:column;gap:12px;min-width:210px}
+  .resource-actions .btn{justify-content:center}
+  .resource-note{
+    text-align:center;margin-top:22px;
+    font-size:.8rem;color:var(--ink-soft);letter-spacing:.04em;
+  }
+  @media (max-width:760px){
+    .resource-card{grid-template-columns:1fr;gap:24px;padding:28px 22px}
+    .resource-actions{flex-direction:row;min-width:0}
+    .resource-actions .btn{flex:1;padding:13px 16px}
+  }
+  @media (max-width:480px){
+    .resource-actions{flex-direction:column}
+  }
+
   /* FAQ */
   .faq summary{list-style:none}
   .faq summary::-webkit-details-marker{display:none}
@@ -1477,6 +1510,7 @@
       <a href="#clients">国内実績</a>
       <a href="#company">会社概要</a>
       <a href="#flow">お取引の流れ</a>
+      <a href="#resources">仕様書</a>
       <a href="#faq">FAQ</a>
       <a href="/blog/">ブログ</a>
       <a href="#contact">お問い合わせ</a>
@@ -2120,6 +2154,31 @@
   </div>
 </section>
 
+<section class="resources" id="resources">
+  <div class="container">
+    <div class="sec-head">
+      <span class="en">DOWNLOAD</span>
+      <h2>仕様書フォーマット</h2>
+    </div>
+    <p class="sec-lead">
+      OEM・ODMのご発注にお使いいただけるニット製品の仕様書フォーマットをご用意しています。<br>
+      ブラウザでそのまま入力でき、PDFでのダウンロードも可能です。
+    </p>
+    <div class="resource-card">
+      <div class="resource-info">
+        <span class="en">KNIT TECH PACK</span>
+        <h3>ニット製品 仕様書</h3>
+        <p>品名・素材・編み仕様・カラー展開・寸法表（S〜XXL）・付属・梱包までを1枚に整理。記入してそのままご送付いただけます。</p>
+      </div>
+      <div class="resource-actions">
+        <a href="resources/techpack-template.html" target="_blank" rel="noopener" class="btn btn-primary">ブラウザで入力<span class="btn-arrow">→</span></a>
+        <a href="resources/techpack.pdf" download class="btn btn-secondary">PDFダウンロード<span class="btn-arrow">↓</span></a>
+      </div>
+    </div>
+    <p class="resource-note">※ ご記入後はメールに添付、またはお問い合わせフォームよりお送りください。</p>
+  </div>
+</section>
+
 <section class="faq" id="faq">
   <div class="container">
     <div class="sec-head">
@@ -2309,6 +2368,7 @@
         <a href="#factory-tour">工場紹介</a>
         <a href="#products">取扱品目</a>
         <a href="#company">会社概要</a>
+        <a href="#resources">仕様書フォーマット</a>
         <a href="/blog/">ブログ</a>
         <a href="#contact">お問い合わせ</a>
       </nav>
