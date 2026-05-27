@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>東和盛泰株式会社 | TOUWASEITAI CO., LTD. - ニット衣料の一貫供給</title>
-<meta name="description" content="東和盛泰株式会社は中国の自社工場と日本の卸窓口を一体で運営するニット衣料の専門商社です。企画から生産・輸入・卸まで仲介ゼロで一貫対応。">
+<title>ニットOEM・ODM｜東和盛泰株式会社 - 自社工場で企画から一貫生産</title>
+<meta name="description" content="東和盛泰株式会社はニット衣料のOEM・ODMメーカー。中国の自社工場で企画・デザインから素材調達・生産・品質管理・輸入まで仲介ゼロの一貫受託。小ロット・カシミヤ製品にも対応します。">
 <link rel="canonical" href="https://touwaseitai.com/">
 <meta name="google-site-verification" content="DRP9LQV3TIjEcnYKviTfVwd_h3XkM6_ykrQygY8yZw8" />
 <meta name="robots" content="index, follow">
@@ -19,8 +19,8 @@
 <!-- Open Graph / SNS共有用 -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="東和盛泰株式会社">
-<meta property="og:title" content="東和盛泰株式会社 | TOUWASEITAI CO., LTD. - ニット衣料の一貫供給">
-<meta property="og:description" content="東和盛泰株式会社は中国の自社工場と日本の卸窓口を一体で運営するニット衣料の専門商社です。企画から生産・輸入・卸まで仲介ゼロで一貫対応。">
+<meta property="og:title" content="ニットOEM・ODM｜東和盛泰株式会社 - 自社工場で企画から一貫生産">
+<meta property="og:description" content="東和盛泰株式会社はニット衣料のOEM・ODMメーカー。中国の自社工場で企画・デザインから素材調達・生産・品質管理・輸入まで仲介ゼロの一貫受託。小ロット・カシミヤ製品にも対応します。">
 <meta property="og:url" content="https://touwaseitai.com/">
 <meta property="og:image" content="https://touwaseitai.com/images/hero-vneck-9colors.jpg">
 <meta property="og:locale" content="ja_JP">
@@ -36,7 +36,7 @@
   "url": "https://touwaseitai.com/",
   "logo": "https://touwaseitai.com/images/apple-touch-icon.png",
   "image": "https://touwaseitai.com/images/hero-vneck-9colors.jpg",
-  "description": "東和盛泰株式会社は中国の自社工場と日本の卸窓口を一体で運営するニット衣料の専門商社です。企画から生産・輸入・卸まで仲介ゼロで一貫対応。",
+  "description": "東和盛泰株式会社はニット衣料のOEM・ODMメーカー。中国の自社工場で企画・デザインから素材調達・生産・品質管理・輸入まで仲介ゼロの一貫受託。小ロット・カシミヤ製品にも対応します。",
   "foundingDate": "2014-04-30",
   "founder": { "@type": "Person", "name": "周 暁菊" },
   "numberOfEmployees": { "@type": "QuantitativeValue", "value": 5 },
@@ -765,32 +765,30 @@
     display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:28px;
   }
   .fp-card{
-    background:#fff;border-radius:3px;overflow:hidden;
+    background:#fff;border-radius:3px;position:relative;
     border:1px solid var(--line-soft);
+    border-top:3px solid var(--coral);
+    padding:30px 24px 28px;
     box-shadow:0 10px 26px -18px rgba(74,46,58,.35);
     transition:transform .35s ease, box-shadow .35s ease;
   }
+  .fp-card:nth-child(2){border-top-color:var(--gold)}
+  .fp-card:nth-child(3){border-top-color:var(--teal)}
+  .fp-card:nth-child(4){border-top-color:var(--rose)}
   .fp-card:hover{transform:translateY(-5px);box-shadow:0 20px 36px -18px rgba(74,46,58,.42)}
-  .fp-photo{position:relative;aspect-ratio:4/3;overflow:hidden}
-  .fp-photo img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
-  .fp-card:hover .fp-photo img{transform:scale(1.07)}
-  .fp-photo::after{
-    content:"";position:absolute;inset:0;pointer-events:none;
-    background:linear-gradient(180deg, rgba(58,42,52,.04) 0%, rgba(58,42,52,.22) 100%);
+  .fp-num{
+    font-family:'Cormorant Garamond',serif;
+    display:flex;align-items:baseline;gap:9px;
+    color:var(--copper);line-height:1;margin-bottom:16px;
   }
-  .fp-step{
-    position:absolute;top:12px;left:12px;z-index:2;
-    background:rgba(58,42,52,.78);color:#fff;backdrop-filter:blur(2px);
-    font-family:'Cormorant Garamond',serif;letter-spacing:.18em;
-    font-size:.66rem;padding:4px 10px;border-radius:2px;
+  .fp-num .n{font-size:2.5rem;font-weight:600;letter-spacing:.02em}
+  .fp-num .s{font-size:.6rem;letter-spacing:.26em;color:var(--ink-soft);font-weight:500}
+  .fp-card .en{font-size:.62rem;color:var(--copper);letter-spacing:.22em;display:block;margin-bottom:5px}
+  .fp-card h4{
+    font-family:'Noto Serif JP',serif;font-size:1.05rem;color:var(--navy);font-weight:700;
+    letter-spacing:.03em;margin-bottom:10px;
   }
-  .fp-body{padding:18px 18px 22px}
-  .fp-body .en{font-size:.62rem;color:var(--copper);letter-spacing:.22em;display:block;margin-bottom:5px}
-  .fp-body h4{
-    font-family:'Noto Serif JP',serif;font-size:1.02rem;color:var(--navy);font-weight:700;
-    letter-spacing:.03em;margin-bottom:8px;
-  }
-  .fp-body p{font-size:.8rem;color:var(--ink-soft);line-height:1.75}
+  .fp-card p{font-size:.82rem;color:var(--ink-soft);line-height:1.8}
   .factory-note{
     margin-top:36px;text-align:center;
     background:linear-gradient(90deg, var(--navy) 0%, var(--copper) 100%);
@@ -1168,10 +1166,44 @@
     text-align:center;margin-top:28px;
     font-size:.82rem;color:var(--ink-soft);letter-spacing:.06em;
   }
+  .client-cats{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:16px;
+    max-width:920px;margin:8px auto 0;
+  }
+  .cat-card{
+    background:#fff;border:1px solid var(--line);
+    padding:26px 18px;text-align:center;
+    border-top:3px solid var(--coral);
+    transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+  }
+  .cat-card:nth-child(4n+2){border-top-color:var(--gold)}
+  .cat-card:nth-child(4n+3){border-top-color:var(--teal)}
+  .cat-card:nth-child(4n){border-top-color:var(--rose)}
+  .cat-card:hover{transform:translateY(-3px);box-shadow:0 12px 28px -14px rgba(74,46,58,.22)}
+  .cat-card .cen{
+    font-family:'Cormorant Garamond',serif;font-size:.66rem;
+    letter-spacing:.2em;color:var(--copper);display:block;margin-bottom:9px;text-transform:uppercase;
+  }
+  .cat-card .cjp{
+    font-family:'Noto Serif JP',serif;font-size:.94rem;color:var(--navy);
+    font-weight:700;line-height:1.55;letter-spacing:.02em;
+  }
+  .clients-sub{text-align:center;margin:60px 0 8px}
+  .clients-sub .en{
+    display:block;color:var(--copper);font-size:.72rem;letter-spacing:.3em;margin-bottom:8px;
+  }
+  .clients-sub h3{
+    font-family:'Noto Serif JP',serif;font-size:1.15rem;color:var(--navy);
+    font-weight:700;letter-spacing:.04em;
+  }
   @media (max-width:760px){
     .clients-grid{grid-template-columns:1fr;gap:16px;max-width:520px}
     .client-card{padding:28px 24px}
     .client-card .cname{font-size:1.12rem}
+    .client-cats{grid-template-columns:repeat(2,1fr);gap:12px}
+    .cat-card{padding:20px 14px}
+    .cat-card .cjp{font-size:.88rem}
+    .clients-sub{margin:44px 0 8px}
   }
 
   /* FAQ */
@@ -1324,9 +1356,10 @@
     .factory-flow-head{margin:48px 0 10px}
     .factory-flow-head h3{font-size:1.12rem}
     .factory-process{grid-template-columns:1fr 1fr;gap:12px}
-    .fp-body{padding:14px 14px 18px}
-    .fp-body h4{font-size:.95rem}
-    .fp-body p{font-size:.76rem}
+    .fp-card{padding:22px 16px 20px}
+    .fp-num .n{font-size:2.1rem}
+    .fp-card h4{font-size:.95rem}
+    .fp-card p{font-size:.76rem}
     .factory-note{font-size:.82rem;padding:14px 18px;line-height:1.6}
 
     .steps{grid-template-columns:repeat(2,1fr);gap:12px}
@@ -1458,12 +1491,12 @@
 <section class="hero">
   <div class="hero-inner">
     <div>
-      <span class="hero-kicker">KNITWEAR MANUFACTURING & WHOLESALE</span>
-      <h1>中間を介さない<br><span class="accent">ニット衣料</span>の一貫供給。</h1>
+      <span class="hero-kicker">KNITWEAR OEM / ODM MANUFACTURER</span>
+      <h1>自社工場でつくる、<br><span class="accent">ニットのOEM・ODM</span>。</h1>
       <p class="hero-lead">
-        中国の自社工場と日本の卸窓口をひとつの会社で。<br>
-        企画から生産・品質管理・輸入・卸まで商社や仲介業者を介さずに自社で一貫対応。<br>
-        だからやりとりは速く品質責任はひとつコスト構造は無駄がありません。
+        企画・デザインから素材選定・生産・品質管理・輸入まで。<br>
+        中国の自社工場と日本の窓口を一体で運営し、ブランドさまのニットを一貫受託で形にします。<br>
+        商社や仲介を挟まないから、やりとりは速く、品質責任もコストもひとつにまとまります。
       </p>
       <div class="cta-row">
         <a href="#contact" class="btn btn-primary">お問い合わせ<span class="btn-arrow">→</span></a>
@@ -1485,9 +1518,9 @@
         </div>
       </div>
       <div class="stat-card">
-        <span class="en">ONE-STOP</span>
-        <div class="label">企画から卸まで<br>窓口ひとつ</div>
-        <div class="desc">仲介ゼロの一貫体制</div>
+        <span class="en">OEM / ODM</span>
+        <div class="label">企画から量産まで<br>まるごと受託</div>
+        <div class="desc">自社工場・仲介ゼロの一貫体制</div>
       </div>
     </div>
   </div>
@@ -1496,16 +1529,16 @@
 <div class="meta-strip">
   <div class="meta-inner">
     <div class="meta-item">
-      <span class="en">BUSINESS</span>
-      <span class="jp">ニット衣料の企画・生産・卸販売</span>
+      <span class="en">OEM / ODM</span>
+      <span class="jp">ニット衣料のOEM・ODM受託</span>
     </div>
     <div class="meta-item">
       <span class="en">PRODUCTION</span>
-      <span class="jp">中国・自社工場で一貫生産</span>
+      <span class="jp">中国・自社工場で企画から量産まで一貫</span>
     </div>
     <div class="meta-item">
       <span class="en">WINDOW</span>
-      <span class="jp">日本拠点でのスムーズな対応窓口</span>
+      <span class="jp">日本拠点のスムーズな対応窓口</span>
     </div>
   </div>
 </div>
@@ -1542,12 +1575,12 @@
   <div class="container">
     <div class="sec-head">
       <span class="en">ABOUT US</span>
-      <h2>つくる現場と届ける窓口をひとつの会社で。</h2>
+      <h2>自社工場を持つ、ニットOEM・ODMメーカー。</h2>
     </div>
     <p class="sec-lead">
-      東和盛泰株式会社はニット衣料の卸販売を専門とする商社です。<br>
-      中国に自社工場を構え日本国内の取引窓口として東和盛泰が機能することで<br>
-      仲介業者を挟まずにBtoB取引先のニーズへ直接お応えします。
+      東和盛泰株式会社はニット衣料のOEM・ODMを受託するメーカーです。<br>
+      中国に自社工場を構え日本国内の窓口として東和盛泰が機能することで<br>
+      仲介業者を挟まずブランドさまのものづくりへ直接お応えします。
     </p>
     <div class="flow-diagram">
       <div class="flow-node">
@@ -1756,48 +1789,28 @@
     </div>
     <div class="factory-process">
       <div class="fp-card">
-        <div class="fp-photo">
-          <span class="fp-step">STEP 01</span>
-          <img src="images/factory-knit-machine.jpg" alt="横編み機での編立工程" loading="lazy">
-        </div>
-        <div class="fp-body">
-          <span class="en">KNITTING</span>
-          <h4>編立</h4>
-          <p>自動横編み機で、糸から生地を編み上げます。デザインに合わせて編み目をひとつずつ調整します。</p>
-        </div>
+        <div class="fp-num"><span class="n">01</span><span class="s">STEP</span></div>
+        <span class="en">KNITTING</span>
+        <h4>編立</h4>
+        <p>自動横編み機で、糸から生地を編み上げます。デザインに合わせて編み目をひとつずつ調整します。</p>
       </div>
       <div class="fp-card">
-        <div class="fp-photo">
-          <span class="fp-step">STEP 02</span>
-          <img src="images/factory-washing.jpg" alt="洗い・乾燥工程" loading="lazy">
-        </div>
-        <div class="fp-body">
-          <span class="en">WASH & DRY</span>
-          <h4>洗い・乾燥</h4>
-          <p>編み上がった製品を専用設備で洗い・乾燥。風合いを整え、色味と質感を安定させます。</p>
-        </div>
+        <div class="fp-num"><span class="n">02</span><span class="s">STEP</span></div>
+        <span class="en">WASH & DRY</span>
+        <h4>洗い・乾燥</h4>
+        <p>編み上がった製品を専用設備で洗い・乾燥。風合いを整え、色味と質感を安定させます。</p>
       </div>
       <div class="fp-card">
-        <div class="fp-photo">
-          <span class="fp-step">STEP 03</span>
-          <img src="images/factory-finishing.jpg" alt="仕上げ・検品工程" loading="lazy">
-        </div>
-        <div class="fp-body">
-          <span class="en">FINISHING & QC</span>
-          <h4>仕上げ・検品</h4>
-          <p>一枚ずつ手に取り、縫製や編み目をていねいにチェック。基準を満たした製品だけを次の工程へ。</p>
-        </div>
+        <div class="fp-num"><span class="n">03</span><span class="s">STEP</span></div>
+        <span class="en">FINISHING & QC</span>
+        <h4>仕上げ・検品</h4>
+        <p>一枚ずつ手に取り、縫製や編み目をていねいにチェック。基準を満たした製品だけを次の工程へ。</p>
       </div>
       <div class="fp-card">
-        <div class="fp-photo">
-          <span class="fp-step">STEP 04</span>
-          <img src="images/factory-inventory.jpg" alt="在庫・出荷準備" loading="lazy">
-        </div>
-        <div class="fp-body">
-          <span class="en">STOCK & SHIP</span>
-          <h4>在庫・出荷</h4>
-          <p>色・サイズごとに整理して保管し、ご注文に合わせて出荷。日本へスムーズにお届けします。</p>
-        </div>
+        <div class="fp-num"><span class="n">04</span><span class="s">STEP</span></div>
+        <span class="en">STOCK & SHIP</span>
+        <h4>在庫・出荷</h4>
+        <p>色・サイズごとに整理して保管し、ご注文に合わせて出荷。日本へスムーズにお届けします。</p>
       </div>
     </div>
 
@@ -1957,7 +1970,7 @@
         <div class="sub">（仮値・差し替え可）</div>
       </div>
       <div class="stat-item">
-        <div class="num">100<span class="unit">名</span></div>
+        <div class="num">35<span class="unit">名</span></div>
         <div class="label">自社工場スタッフ</div>
         <div class="sub">中国・自社工場</div>
       </div>
@@ -1982,8 +1995,24 @@
       <h2>国内実績</h2>
     </div>
     <p class="sec-lead">
-      日本国内の信頼あるパートナー企業さまと継続的にお取引させていただいております。
+      レディース・メンズのアパレルブランドからセレクトショップ、小売・EC事業者まで。<br>
+      ニットOEM・ODMを通じて、さまざまな業態のお客さまのものづくりをお手伝いしています。
     </p>
+    <div class="client-cats">
+      <div class="cat-card"><span class="cen">Ladies Apparel</span><div class="cjp">レディース<br>アパレルブランド</div></div>
+      <div class="cat-card"><span class="cen">Mens Apparel</span><div class="cjp">メンズ<br>アパレルブランド</div></div>
+      <div class="cat-card"><span class="cen">Select Shop</span><div class="cjp">セレクトショップ</div></div>
+      <div class="cat-card"><span class="cen">Retail Chain</span><div class="cjp">小売・専門店<br>チェーン</div></div>
+      <div class="cat-card"><span class="cen">E-Commerce</span><div class="cjp">EC・通販事業者</div></div>
+      <div class="cat-card"><span class="cen">Lifestyle</span><div class="cjp">雑貨・ライフ<br>スタイルブランド</div></div>
+      <div class="cat-card"><span class="cen">Original Brand</span><div class="cjp">D2C・自社<br>ブランド立ち上げ</div></div>
+      <div class="cat-card"><span class="cen">Wholesale</span><div class="cjp">アパレル卸・<br>商社</div></div>
+    </div>
+
+    <div class="clients-sub">
+      <span class="en">MAIN PARTNERS</span>
+      <h3>主なお取引先</h3>
+    </div>
     <div class="clients-grid">
       <div class="client-card">
         <div class="ctype">Client</div>
@@ -2286,7 +2315,7 @@
     </div>
     <div class="footer-bottom">
       <div>&copy; 2026 TOUWASEITAI CO., LTD. All Rights Reserved.</div>
-      <div>ニット衣料の企画・生産・卸販売</div>
+      <div>ニット衣料のOEM・ODM／企画・生産・卸</div>
     </div>
   </div>
 </footer>
