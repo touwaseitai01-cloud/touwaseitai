@@ -120,7 +120,7 @@
   }
   .brand-name{font-family:'Noto Serif JP',serif;font-size:1.25rem;font-weight:700;color:var(--navy);line-height:1.2;white-space:nowrap}
   .brand-en{font-family:'Cormorant Garamond',serif;font-size:.72rem;letter-spacing:.2em;color:var(--copper);margin-top:2px;white-space:nowrap}
-  .nav{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:12px 16px;font-size:.8rem}
+  .nav{display:flex;flex-wrap:nowrap;justify-content:flex-end;align-items:center;gap:14px;font-size:.78rem}
   .nav a{color:var(--ink-soft);transition:color .2s;white-space:nowrap}
   .nav a:hover{color:var(--copper)}
   .header-cta{
@@ -1500,14 +1500,9 @@
       </div>
     </a>
     <nav class="nav" id="site-nav">
-      <a href="#about">会社案内</a>
-      <a href="#history">沿革</a>
+      <a href="#top">会社案内</a>
       <a href="#strength">強み</a>
       <a href="#factory-tour">工場紹介</a>
-      <a href="#gallery">コレクション</a>
-      <a href="#fabric">ファブリック</a>
-      <a href="#products">取扱品目</a>
-      <a href="#clients">国内実績</a>
       <a href="#company">会社概要</a>
       <a href="#flow">お取引の流れ</a>
       <a href="#resources">仕様書</a>
@@ -2396,7 +2391,14 @@
     });
     // メニュー内のリンクをタップしたら閉じる
     nav.querySelectorAll('a').forEach(function (a) {
-      a.addEventListener('click', function () { setOpen(false); });
+      a.addEventListener('click', function (e) {
+        setOpen(false);
+        // 「会社案内」(#top) はページ最上部へスクロール
+        if (a.getAttribute('href') === '#top') {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      });
     });
   })();
 </script>
