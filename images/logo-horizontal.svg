@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 120" width="460" height="120" role="img" aria-label="東和盛泰株式会社 ロゴ">
+  <defs>
+    <linearGradient id="tw-h-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5a4452"/>
+      <stop offset="1" stop-color="#b89484"/>
+    </linearGradient>
+  </defs>
+  <circle cx="60" cy="60" r="46" fill="url(#tw-h-grad)"/>
+  <circle cx="60" cy="60" r="39" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="1.1" stroke-dasharray="3.5 5"/>
+  <text x="60" y="61" text-anchor="middle" dominant-baseline="central"
+        font-family="'Noto Serif JP', serif" font-weight="700" font-size="44" fill="#fff">和</text>
+  <text x="124" y="52" font-family="'Noto Serif JP', serif" font-weight="700" font-size="34" fill="#5a4452" letter-spacing="2">東和盛泰株式会社</text>
+  <text x="126" y="84" font-family="'Cormorant Garamond', serif" font-weight="600" font-size="15" fill="#b89484" letter-spacing="5">TOUWASEITAI CO., LTD.</text>
+</svg>

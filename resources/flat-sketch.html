@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ニット企画 フラットスケッチ｜東和盛泰株式会社</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;700&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#5a4452;--copper:#b89484;--gold:#d4b89a;
+    --ink:#3a2e34;--ink-soft:#6a5a62;--line:#d9ccc2;--line-soft:#ece2da;
+    --bg:#fcf8f2;--head:#faf4ee;
+    --draw:#43363d;--detail:#a98e80;--fold:#c7b8ad;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Noto Sans JP',sans-serif;color:var(--ink);background:#e7e0d8;line-height:1.6;font-size:13px;padding:24px 12px;-webkit-font-smoothing:antialiased}
+  .toolbar{max-width:980px;margin:0 auto 16px;display:flex;gap:10px;justify-content:flex-end;align-items:center}
+  .toolbar .hint{margin-right:auto;color:#6a5a62;font-size:12px}
+  .btn{background:var(--navy);color:#fff;border:none;cursor:pointer;padding:10px 20px;border-radius:2px;font-size:12.5px;letter-spacing:.05em;font-family:inherit}
+  .btn.alt{background:#fff;color:var(--navy);border:1px solid var(--navy)}
+  .btn:hover{opacity:.88}
+
+  .sheet{max-width:980px;margin:0 auto;background:#fff;padding:40px 44px 48px;box-shadow:0 18px 50px rgba(0,0,0,.18)}
+  .doc-head{display:flex;justify-content:space-between;align-items:flex-start;border-bottom:2px solid var(--navy);padding-bottom:16px;margin-bottom:20px}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand-mark{width:42px;height:42px;border-radius:50%;flex-shrink:0;background:linear-gradient(135deg,var(--navy),var(--copper));color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Noto Serif JP',serif;font-size:22px;font-weight:700}
+  .brand-name{font-family:'Noto Serif JP',serif;font-size:15px;font-weight:700;color:var(--navy);line-height:1.3}
+  .brand-en{font-family:'Cormorant Garamond',serif;font-size:10px;letter-spacing:.18em;color:var(--copper)}
+  .doc-title{text-align:right}
+  .doc-title .en{display:block;font-size:11px;color:var(--copper);letter-spacing:.3em;margin-bottom:2px}
+  .doc-title h1{font-family:'Noto Serif JP',serif;font-size:20px;color:var(--navy);font-weight:700;letter-spacing:.06em}
+  .lead{font-size:12.5px;color:var(--ink-soft);margin-bottom:24px;line-height:1.7}
+  .lead b{color:var(--navy)}
+
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  .card{border:1px solid var(--line);border-radius:3px;overflow:hidden;display:flex;flex-direction:column}
+  .card-head{background:var(--head);padding:10px 14px;border-bottom:1px solid var(--line);display:flex;align-items:baseline;gap:9px}
+  .card-head .no{font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--copper);font-weight:600}
+  .card-head h2{font-family:'Noto Serif JP',serif;font-size:14px;color:var(--navy);font-weight:700}
+  .card-head .en{font-size:9px;color:var(--ink-soft);letter-spacing:.16em;margin-left:auto}
+  .draw-wrap{padding:16px 10px 4px;display:flex;justify-content:center}
+  .draw-wrap svg{width:100%;max-width:300px;height:auto}
+  .spec{padding:10px 14px 14px;font-size:11.5px;color:var(--ink-soft);line-height:1.65}
+  .spec dl{display:grid;grid-template-columns:64px 1fr;gap:2px 8px}
+  .spec dt{color:var(--copper);font-size:10px;letter-spacing:.06em;padding-top:1px}
+  .spec dd{color:var(--ink)}
+  .swatch{display:inline-block;width:13px;height:13px;border-radius:50%;margin-right:3px;border:1px solid rgba(0,0,0,.12);vertical-align:-2px}
+  .foot{margin-top:24px;padding-top:10px;border-top:1px solid var(--line);display:flex;justify-content:space-between;font-size:10px;color:var(--ink-soft);letter-spacing:.04em}
+
+  /* SVG strokes */
+  .o{fill:none;stroke:var(--draw);stroke-width:2.4;stroke-linejoin:round;stroke-linecap:round}
+  .seam{fill:none;stroke:var(--draw);stroke-width:1.1;stroke-linecap:round}
+  .fl{fill:none;stroke:var(--fold);stroke-width:1.1;stroke-linecap:round}
+  .rb{fill:none;stroke:var(--detail);stroke-width:.9;stroke-linecap:round;opacity:.85}
+  .btn-dot{fill:#7a6358}
+
+  @media print{
+    body{background:#fff;padding:0}
+    .toolbar{display:none}
+    .sheet{box-shadow:none;max-width:100%;padding:12mm}
+    .grid{gap:10px}
+    .card{break-inside:avoid}
+  }
+  @page{size:A4;margin:0}
+  @media (max-width:760px){
+    .sheet{padding:24px 16px}
+    .grid{grid-template-columns:1fr}
+    .doc-head{flex-direction:column;gap:10px}
+    .doc-title{text-align:left}
+  }
+</style>
+</head>
+<body>
+
+<!-- shared gradient / filter defs -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <linearGradient id="vol" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#ece3d9"/>
+    <stop offset="0.18" stop-color="#f6f0e9"/>
+    <stop offset="0.5" stop-color="#fdfaf6"/>
+    <stop offset="0.82" stop-color="#f6f0e9"/>
+    <stop offset="1" stop-color="#e7ddd2"/>
+  </linearGradient>
+  <linearGradient id="volRib" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#e6dcd1"/>
+    <stop offset="0.5" stop-color="#fbf6f0"/>
+    <stop offset="1" stop-color="#e2d7cb"/>
+  </linearGradient>
+  <radialGradient id="shadow" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0" stop-color="#000" stop-opacity="0.16"/>
+    <stop offset="1" stop-color="#000" stop-opacity="0"/>
+  </radialGradient>
+</defs></svg>
+
+<div class="toolbar">
+  <span class="hint">▶ 提案サンプル企画のフラットスケッチ（前面ビュー）。リラックスシルエットで立体表現しています。</span>
+  <button class="btn alt" onclick="window.print()">印刷 / PDF保存</button>
+</div>
+
+<div class="sheet">
+
+  <div class="doc-head">
+    <div class="brand">
+      <div class="brand-mark">和</div>
+      <div>
+        <div class="brand-name">東和盛泰株式会社</div>
+        <div class="brand-en">TOUWASEITAI CO., LTD.</div>
+      </div>
+    </div>
+    <div class="doc-title">
+      <span class="en">FLAT SKETCH ・ KNIT PROPOSAL</span>
+      <h1>ニット企画 フラットスケッチ</h1>
+    </div>
+  </div>
+
+  <p class="lead">
+    ターゲット：<b>30代から／レディース</b>　価格：<b>上代 2,490〜2,990円</b>　用途：<b>OEM/ODM 提案サンプル</b><br>
+    コンセプト：<b>「洗える・毛玉になりにくい」きれいめ実用ニット</b>。やや余裕のあるリラックスシルエットで、体型をひろわず大人世代に着やすい4型を提案します。
+  </p>
+
+  <div class="grid">
+
+    <!-- ① リブポロ -->
+    <div class="card">
+      <div class="card-head"><span class="no">01</span><h2>洗えるリブポロセーター</h2><span class="en">RIB POLO</span></div>
+      <div class="draw-wrap">
+        <svg viewBox="0 0 400 400" role="img" aria-label="リブポロの前面フラットスケッチ">
+          <ellipse cx="200" cy="372" rx="120" ry="10" fill="url(#shadow)"/>
+          <!-- garment body -->
+          <path fill="url(#volRib)" stroke="none" d="M158 86 C150 90 132 92 120 98 C96 144 70 210 60 266 L102 280 C116 252 126 226 132 206 C129 252 126 304 124 350 C172 368 228 368 276 350 C274 304 271 252 268 206 C274 226 284 252 298 280 L340 266 C330 210 304 144 280 98 C268 92 250 90 242 86 C226 104 174 104 158 86 Z"/>
+          <!-- shading hugging left edge & underarms -->
+          <path fill="#000" opacity=".05" d="M120 98 C96 144 70 210 60 266 L80 272 C92 212 110 150 130 110 Z"/>
+          <path fill="#000" opacity=".045" d="M124 200 C126 270 125 320 124 350 C140 358 150 360 150 360 C146 300 145 250 146 206 Z"/>
+          <!-- drape / fold lines -->
+          <path class="fl" d="M150 250 C185 266 215 266 250 250"/>
+          <path class="fl" d="M138 300 C175 312 225 312 262 300"/>
+          <path class="fl" d="M84 220 C96 226 104 230 112 232"/>
+          <path class="fl" d="M316 220 C304 226 296 230 288 232"/>
+          <!-- outline -->
+          <path class="o" d="M158 86 C150 90 132 92 120 98 C96 144 70 210 60 266 L102 280 C116 252 126 226 132 206"/>
+          <path class="o" d="M132 206 C129 252 126 304 124 350 C172 368 228 368 276 350 C274 304 271 252 268 206"/>
+          <path class="o" d="M268 206 C274 226 284 252 298 280 L340 266 C330 210 304 144 280 98 C268 92 250 90 242 86"/>
+          <!-- polo collar -->
+          <path class="o" d="M168 92 L150 74 L196 116 Z" fill="#f3ece4"/>
+          <path class="o" d="M232 92 L250 74 L204 116 Z" fill="#f3ece4"/>
+          <!-- placket + buttons -->
+          <path class="o" d="M188 116 L188 172 M212 116 L212 172" fill="none"/>
+          <line class="seam" x1="200" y1="116" x2="200" y2="172"/>
+          <circle class="btn-dot" cx="200" cy="132" r="3"/>
+          <circle class="btn-dot" cx="200" cy="156" r="3"/>
+          <!-- neckline rib -->
+          <path class="seam" d="M168 92 C176 104 224 104 232 92"/>
+          <!-- shoulder seams -->
+          <path class="seam" d="M158 88 C146 96 134 100 120 98"/>
+          <path class="seam" d="M242 88 C254 96 266 100 280 98"/>
+          <!-- hem rib -->
+          <path class="seam" d="M124 330 C172 348 228 348 276 330"/>
+          <g class="rb"><path d="M138 336 L137 358"/><path d="M152 340 L151 362"/><path d="M166 342 L165 364"/><path d="M182 343 L182 365"/><path d="M200 343 L200 366"/><path d="M218 343 L218 365"/><path d="M234 342 L235 364"/><path d="M248 340 L249 362"/><path d="M262 336 L263 358"/></g>
+          <!-- cuffs -->
+          <line class="seam" x1="74" y1="246" x2="112" y2="260"/>
+          <g class="rb"><path d="M70 254 L86 268"/><path d="M80 250 L96 264"/><path d="M90 247 L106 261"/></g>
+          <line class="seam" x1="326" y1="246" x2="288" y2="260"/>
+          <g class="rb"><path d="M330 254 L314 268"/><path d="M320 250 L304 264"/><path d="M310 247 L294 261"/></g>
+          <!-- body rib texture -->
+          <g class="rb" opacity=".5"><path d="M150 210 C149 270 148 320 148 344"/><path d="M174 206 C174 268 174 320 174 350"/><path d="M200 205 C200 268 200 320 200 352"/><path d="M226 206 C226 268 226 320 226 350"/><path d="M250 210 C251 270 252 320 252 344"/></g>
+        </svg>
+      </div>
+      <div class="spec">
+        <dl>
+          <dt>素材</dt><dd>アクリル60/ナイロン30/毛8/PU2（抗ピリング）</dd>
+          <dt>編み</dt><dd>2×2リブ／7〜12GG</dd>
+          <dt>衿/袖</dt><dd>リブ衿・2釦プラケット／長袖リブ口</dd>
+          <dt>上代</dt><dd>2,990円（原価 ¥1,800〜2,500）</dd>
+          <dt>カラー</dt><dd><span class="swatch" style="background:#efe9df"></span><span class="swatch" style="background:#c8a17a"></span><span class="swatch" style="background:#7a5a4a"></span><span class="swatch" style="background:#6e2230"></span> ｵﾌﾎﾜｲﾄ/ﾓｶ/ﾌﾞﾗｳﾝ/ﾎﾞﾙﾄﾞｰ</dd>
+        </dl>
+      </div>
+    </div>
+
+    <!-- ② タートル -->
+    <div class="card">
+      <div class="card-head"><span class="no">02</span><h2>きれいめタートルネック</h2><span class="en">TURTLENECK</span></div>
+      <div class="draw-wrap">
+        <svg viewBox="0 0 400 400" role="img" aria-label="タートルネックの前面フラットスケッチ">
+          <ellipse cx="200" cy="372" rx="120" ry="10" fill="url(#shadow)"/>
+          <path fill="url(#vol)" stroke="none" d="M160 96 C150 98 132 92 120 98 C96 144 70 210 60 266 L102 280 C116 252 126 226 132 206 C129 252 126 304 124 350 C172 368 228 368 276 350 C274 304 271 252 268 206 C274 226 284 252 298 280 L340 266 C330 210 304 144 280 98 C268 92 250 98 240 96 C232 110 168 110 160 96 Z"/>
+          <path fill="#000" opacity=".05" d="M120 98 C96 144 70 210 60 266 L80 272 C92 212 110 150 130 110 Z"/>
+          <path fill="#000" opacity=".045" d="M124 200 C126 270 125 320 124 350 C140 358 150 360 150 360 C146 300 145 250 146 206 Z"/>
+          <path class="fl" d="M150 252 C185 268 215 268 250 252"/>
+          <path class="fl" d="M138 302 C175 314 225 314 262 302"/>
+          <path class="fl" d="M84 220 C96 226 104 230 112 232"/>
+          <path class="fl" d="M316 220 C304 226 296 230 288 232"/>
+          <path class="o" d="M160 96 C150 98 132 92 120 98 C96 144 70 210 60 266 L102 280 C116 252 126 226 132 206"/>
+          <path class="o" d="M132 206 C129 252 126 304 124 350 C172 368 228 368 276 350 C274 304 271 252 268 206"/>
+          <path class="o" d="M268 206 C274 226 284 252 298 280 L340 266 C330 210 304 144 280 98 C268 92 250 98 240 96"/>
+          <!-- turtle neck (folded) -->
+          <path class="o" fill="url(#volRib)" d="M160 96 C158 60 166 46 200 44 C234 46 242 60 240 96 C232 110 168 110 160 96 Z"/>
+          <path class="seam" d="M162 78 C176 90 224 90 238 78"/>
+          <g class="rb"><path d="M172 50 L171 100"/><path d="M184 46 L184 104"/><path d="M200 45 L200 106"/><path d="M216 46 L216 104"/><path d="M228 50 L229 100"/></g>
+          <path class="seam" d="M160 92 C146 96 134 100 120 98"/>
+          <path class="seam" d="M240 92 C254 96 266 100 280 98"/>
+          <path class="seam" d="M124 330 C172 348 228 348 276 330"/>
+          <g class="rb"><path d="M138 336 L137 358"/><path d="M152 340 L151 362"/><path d="M166 342 L165 364"/><path d="M182 343 L182 365"/><path d="M200 343 L200 366"/><path d="M218 343 L218 365"/><path d="M234 342 L235 364"/><path d="M248 340 L249 362"/><path d="M262 336 L263 358"/></g>
+          <line class="seam" x1="74" y1="246" x2="112" y2="260"/>
+          <g class="rb"><path d="M70 254 L86 268"/><path d="M80 250 L96 264"/><path d="M90 247 L106 261"/></g>
+          <line class="seam" x1="326" y1="246" x2="288" y2="260"/>
+          <g class="rb"><path d="M330 254 L314 268"/><path d="M320 250 L304 264"/><path d="M310 247 L294 261"/></g>
+        </svg>
+      </div>
+      <div class="spec">
+        <dl>
+          <dt>素材</dt><dd>アクリル主体混（保温・発色）</dd>
+          <dt>編み</dt><dd>天竺〜ミラノリブ／12GG（最安原価）</dd>
+          <dt>衿</dt><dd>折り返しタートル（ぴったりすぎない設計）</dd>
+          <dt>上代</dt><dd>2,490円（原価 ¥1,500〜2,000）</dd>
+          <dt>カラー</dt><dd><span class="swatch" style="background:#2c2a2e"></span><span class="swatch" style="background:#8c8790"></span><span class="swatch" style="background:#6e2230"></span><span class="swatch" style="background:#efe9df"></span> ﾆｭｱﾝｽﾌﾞﾗｯｸ/ｸﾞﾚｰ/ﾎﾞﾙﾄﾞｰ/ｵﾌﾎﾜｲﾄ</dd>
+        </dl>
+      </div>
+    </div>
+
+    <!-- ③ 起毛Vネック -->
+    <div class="card">
+      <div class="card-head"><span class="no">03</span><h2>起毛糸 Vネック</h2><span class="en">BRUSHED V-NECK</span></div>
+      <div class="draw-wrap">
+        <svg viewBox="0 0 400 400" role="img" aria-label="起毛糸Vネックの前面フラットスケッチ">
+          <ellipse cx="200" cy="372" rx="120" ry="10" fill="url(#shadow)"/>
+          <path fill="url(#vol)" stroke="none" d="M158 86 C150 90 132 92 120 98 C96 144 70 210 60 266 L102 280 C116 252 126 226 132 206 C129 252 126 304 124 350 C172 368 228 368 276 350 C274 304 271 252 268 206 C274 226 284 252 298 280 L340 266 C330 210 304 144 280 98 C268 92 250 90 242 86 C232 92 220 96 200 150 C180 96 168 92 158 86 Z"/>
+          <path fill="#000" opacity=".05" d="M120 98 C96 144 70 210 60 266 L80 272 C92 212 110 150 130 110 Z"/>
+          <path fill="#000" opacity=".045" d="M124 200 C126 270 125 320 124 350 C140 358 150 360 150 360 C146 300 145 250 146 206 Z"/>
+          <!-- brushed soft texture -->
+          <g class="fl" opacity=".55"><path d="M150 200 C152 214 150 226 146 238"/><path d="M178 196 C180 212 178 226 174 240"/><path d="M222 196 C220 212 222 226 226 240"/><path d="M250 200 C248 214 250 226 254 238"/><path d="M170 270 C172 286 170 300 166 314"/><path d="M230 270 C228 286 230 300 234 314"/></g>
+          <path class="fl" d="M138 302 C175 314 225 314 262 302"/>
+          <path class="fl" d="M84 220 C96 226 104 230 112 232"/>
+          <path class="fl" d="M316 220 C304 226 296 230 288 232"/>
+          <path class="o" d="M158 86 C150 90 132 92 120 98 C96 144 70 210 60 266 L102 280 C116 252 126 226 132 206"/>
+          <path class="o" d="M132 206 C129 252 126 304 124 350 C172 368 228 368 276 350 C274 304 271 252 268 206"/>
+          <path class="o" d="M268 206 C274 226 284 252 298 280 L340 266 C330 210 304 144 280 98 C268 92 250 90 242 86"/>
+          <!-- V neck -->
+          <path class="o" d="M158 86 C168 92 180 96 200 150 C220 96 232 92 242 86"/>
+          <path class="seam" d="M166 88 C176 96 186 104 200 138 C214 104 224 96 234 88"/>
+          <path class="seam" d="M158 88 C146 96 134 100 120 98"/>
+          <path class="seam" d="M242 88 C254 96 266 100 280 98"/>
+          <path class="seam" d="M124 330 C172 348 228 348 276 330"/>
+          <g class="rb"><path d="M138 336 L137 358"/><path d="M152 340 L151 362"/><path d="M166 342 L165 364"/><path d="M182 343 L182 365"/><path d="M200 343 L200 366"/><path d="M218 343 L218 365"/><path d="M234 342 L235 364"/><path d="M248 340 L249 362"/><path d="M262 336 L263 358"/></g>
+          <line class="seam" x1="74" y1="246" x2="112" y2="260"/>
+          <line class="seam" x1="326" y1="246" x2="288" y2="260"/>
+        </svg>
+      </div>
+      <div class="spec">
+        <dl>
+          <dt>素材</dt><dd>アクリル混 起毛糸（ブラッシュドヤーン）</dd>
+          <dt>編み</dt><dd>天竺起毛／12GG</dd>
+          <dt>衿</dt><dd>Vネック（やわらか見え・安見えしない）</dd>
+          <dt>上代</dt><dd>2,490円（原価 ¥1,500〜2,000）</dd>
+          <dt>カラー</dt><dd><span class="swatch" style="background:#4a4750"></span><span class="swatch" style="background:#c8a17a"></span><span class="swatch" style="background:#7a5a4a"></span><span class="swatch" style="background:#e7c4cb"></span>  ﾀﾞｰｸｸﾞﾚｰ/ﾍﾞｰｼﾞｭ/ﾌﾞﾗｳﾝ/淡ﾋﾟﾝｸ</dd>
+        </dl>
+      </div>
+    </div>
+
+    <!-- ④ ハーフジップ -->
+    <div class="card">
+      <div class="card-head"><span class="no">04</span><h2>襟付きハーフジップ</h2><span class="en">HALF-ZIP</span></div>
+      <div class="draw-wrap">
+        <svg viewBox="0 0 400 400" role="img" aria-label="ハーフジップニットの前面フラットスケッチ">
+          <ellipse cx="200" cy="372" rx="120" ry="10" fill="url(#shadow)"/>
+          <path fill="url(#vol)" stroke="none" d="M162 100 C150 98 132 92 120 98 C96 144 70 210 60 266 L102 280 C116 252 126 226 132 206 C129 252 126 304 124 350 C172 368 228 368 276 350 C274 304 271 252 268 206 C274 226 284 252 298 280 L340 266 C330 210 304 144 280 98 C268 92 250 98 238 100 C228 112 172 112 162 100 Z"/>
+          <path fill="#000" opacity=".05" d="M120 98 C96 144 70 210 60 266 L80 272 C92 212 110 150 130 110 Z"/>
+          <path fill="#000" opacity=".045" d="M124 200 C126 270 125 320 124 350 C140 358 150 360 150 360 C146 300 145 250 146 206 Z"/>
+          <path class="fl" d="M150 252 C185 268 215 268 250 252"/>
+          <path class="fl" d="M138 302 C175 314 225 314 262 302"/>
+          <path class="fl" d="M84 220 C96 226 104 230 112 232"/>
+          <path class="fl" d="M316 220 C304 226 296 230 288 232"/>
+          <path class="o" d="M162 100 C150 98 132 92 120 98 C96 144 70 210 60 266 L102 280 C116 252 126 226 132 206"/>
+          <path class="o" d="M132 206 C129 252 126 304 124 350 C172 368 228 368 276 350 C274 304 271 252 268 206"/>
+          <path class="o" d="M268 206 C274 226 284 252 298 280 L340 266 C330 210 304 144 280 98 C268 92 250 98 238 100"/>
+          <!-- stand collar -->
+          <path class="o" fill="url(#volRib)" d="M162 100 C160 70 168 56 200 54 C232 56 240 70 238 100 C228 112 172 112 162 100 Z"/>
+          <!-- zipper -->
+          <line class="o" x1="200" y1="58" x2="200" y2="196"/>
+          <g class="rb" stroke-width="1.2"><path d="M194 120 L206 120"/><path d="M194 132 L206 132"/><path d="M194 144 L206 144"/><path d="M194 156 L206 156"/><path d="M194 168 L206 168"/><path d="M194 180 L206 180"/></g>
+          <rect x="195" y="190" width="10" height="14" rx="2" fill="#f3ece4" stroke="#7a6358" stroke-width="1.2"/>
+          <path class="seam" d="M162 96 C146 98 134 100 120 98"/>
+          <path class="seam" d="M238 96 C254 98 266 100 280 98"/>
+          <path class="seam" d="M124 330 C172 348 228 348 276 330"/>
+          <g class="rb"><path d="M138 336 L137 358"/><path d="M152 340 L151 362"/><path d="M166 342 L165 364"/><path d="M182 343 L182 365"/><path d="M200 343 L200 366"/><path d="M218 343 L218 365"/><path d="M234 342 L235 364"/><path d="M248 340 L249 362"/><path d="M262 336 L263 358"/></g>
+          <line class="seam" x1="74" y1="246" x2="112" y2="260"/>
+          <g class="rb"><path d="M70 254 L86 268"/><path d="M80 250 L96 264"/><path d="M90 247 L106 261"/></g>
+          <line class="seam" x1="326" y1="246" x2="288" y2="260"/>
+          <g class="rb"><path d="M330 254 L314 268"/><path d="M320 250 L304 264"/><path d="M310 247 L294 261"/></g>
+        </svg>
+      </div>
+      <div class="spec">
+        <dl>
+          <dt>素材</dt><dd>アクリル混（抗ピリング）</dd>
+          <dt>編み</dt><dd>リブ＋天竺／12GG</dd>
+          <dt>衿</dt><dd>スタンド衿・ハーフジップ（着回し最強）</dd>
+          <dt>上代</dt><dd>2,990円（原価 ¥1,800〜2,500）</dd>
+          <dt>カラー</dt><dd><span class="swatch" style="background:#efe9df"></span><span class="swatch" style="background:#c8a17a"></span><span class="swatch" style="background:#8c8790"></span><span class="swatch" style="background:#5b6b5e"></span> ｵﾌﾎﾜｲﾄ/ﾍﾞｰｼﾞｭ/ｸﾞﾚｰ/ｱｰｽｸﾞﾘｰﾝ</dd>
+        </dl>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="foot">
+    <span>東和盛泰株式会社　TOUWASEITAI CO., LTD.　ニット衣料 OEM・ODM　※提案サンプル企画（寸法・原価は要カウンターサンプル）</span>
+    <span>TEL 084-999-2390 / info@touwaseitai.com</span>
+  </div>
+
+</div>
+
+</body>
+</html>

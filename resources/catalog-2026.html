@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ニット展示会 企画書｜東和盛泰株式会社</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;700&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#5a4452;--copper:#b89484;--gold:#d4b89a;--ink:#3a2e34;--ink-soft:#6a5a62;--line:#d9ccc2;--head:#faf4ee;--draw:#43363d;--detail:#a98e80;}
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body{font-family:'Noto Sans JP',sans-serif;color:var(--ink);background:#cfc7bd;line-height:1.6;font-size:13px;-webkit-font-smoothing:antialiased}
+  .toolbar{max-width:210mm;margin:14px auto;display:flex;gap:10px;justify-content:flex-end}
+  .btn{background:var(--navy);color:#fff;border:none;cursor:pointer;padding:10px 22px;border-radius:2px;font-size:12.5px;letter-spacing:.05em;font-family:inherit}
+  .btn.alt{background:#fff;color:var(--navy);border:1px solid var(--navy)}
+  .btn:hover{opacity:.88}
+
+  .page{width:210mm;min-height:297mm;margin:0 auto 16px;background:#fff;padding:16mm 15mm;box-shadow:0 14px 40px rgba(0,0,0,.18);position:relative;overflow:hidden}
+  .serif{font-family:'Noto Serif JP',serif}
+  .en{font-family:'Cormorant Garamond',serif;letter-spacing:.18em}
+
+  /* running header */
+  .rhead{display:flex;justify-content:space-between;align-items:center;border-bottom:1.5px solid var(--navy);padding-bottom:8px;margin-bottom:14px}
+  .rhead .bn{font-family:'Noto Serif JP',serif;font-size:13px;font-weight:700;color:var(--navy)}
+  .rhead .bn small{font-family:'Cormorant Garamond',serif;font-size:9px;letter-spacing:.16em;color:var(--copper);display:block}
+  .rhead .pg{font-family:'Cormorant Garamond',serif;font-size:11px;color:var(--copper);letter-spacing:.2em}
+
+  /* COVER */
+  .cover{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;height:265mm}
+  .cover .mark{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--copper));color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Noto Serif JP',serif;font-size:34px;font-weight:700;margin-bottom:40px}
+  .cover .en-sm{font-family:'Cormorant Garamond',serif;letter-spacing:.34em;color:var(--copper);font-size:14px;margin-bottom:14px}
+  .cover h1{font-family:'Noto Serif JP',serif;font-size:40px;color:var(--navy);font-weight:700;line-height:1.35;letter-spacing:.04em}
+  .cover .sub{margin-top:22px;font-size:15px;color:var(--ink-soft);line-height:1.9}
+  .cover .sub b{color:var(--navy)}
+  .cover .cband{margin-top:40px;border-top:1px solid var(--line);padding-top:18px;font-size:12px;color:var(--ink-soft)}
+  .cover .cband .serif{color:var(--navy);font-size:14px}
+
+  /* concept */
+  .lead{font-size:13px;color:var(--ink-soft);line-height:1.9;margin-bottom:16px}
+  .lead b{color:var(--navy)}
+  .bigmsg{background:var(--head);border-left:4px solid var(--copper);padding:16px 20px;margin:14px 0;border-radius:2px}
+  .bigmsg .en{font-size:10px;color:var(--copper);letter-spacing:.2em;display:block;margin-bottom:6px}
+  .bigmsg p{font-family:'Noto Serif JP',serif;font-size:18px;color:var(--navy);font-weight:700;line-height:1.6}
+
+  table{width:100%;border-collapse:collapse;border:1px solid var(--line);margin-top:6px}
+  th,td{border:1px solid var(--line);padding:8px 10px;font-size:11.5px;text-align:left;vertical-align:top}
+  th{background:var(--head);color:var(--navy);font-weight:600;font-family:'Noto Serif JP',serif;white-space:nowrap}
+  td.c,th.c{text-align:center}
+  .tag{display:inline-block;background:var(--navy);color:#fff;font-size:9px;padding:1px 7px;border-radius:2px;letter-spacing:.06em}
+
+  /* type page */
+  .type-head{display:flex;align-items:baseline;gap:12px;margin-bottom:4px}
+  .type-head .no{font-family:'Cormorant Garamond',serif;font-size:30px;color:var(--copper);font-weight:600;line-height:1}
+  .type-head h2{font-family:'Noto Serif JP',serif;font-size:22px;color:var(--navy);font-weight:700}
+  .type-head .ent{font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:.18em;color:var(--ink-soft);margin-left:auto}
+  .type-body{display:grid;grid-template-columns:46% 54%;gap:18px;margin-top:14px}
+  .draw{border:1px solid var(--line);border-radius:3px;background:repeating-linear-gradient(45deg,rgba(184,148,132,.04) 0 6px,transparent 6px 12px);display:flex;align-items:center;justify-content:center;padding:16px}
+  .draw svg{width:100%;max-width:230px;height:auto}
+  .draw.duo{flex-direction:row;gap:6px}
+  .draw.duo svg{max-width:130px}
+  .info dl{display:grid;grid-template-columns:74px 1fr;gap:4px 10px;font-size:12px;margin-bottom:12px}
+  .info dt{color:var(--copper);font-size:10px;letter-spacing:.06em;padding-top:2px}
+  .info dd{color:var(--ink);line-height:1.5}
+  .swatch{display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:4px;border:1px solid rgba(0,0,0,.12);vertical-align:-2px}
+  .hookbox{background:#f7f1ea;border:1px solid #e7d8cb;border-radius:3px;padding:11px 14px;font-size:11.5px;color:var(--ink);line-height:1.7}
+  .hookbox b{color:var(--navy)}
+  .price{margin-top:12px;display:flex;gap:16px;align-items:baseline}
+  .price .up{font-family:'Noto Serif JP',serif;font-size:22px;color:var(--navy);font-weight:700}
+  .price .up small{font-size:12px;color:var(--ink-soft);font-weight:400}
+  .reasons{margin-top:12px;font-size:11.5px;color:var(--ink-soft);line-height:1.8;list-style:none}
+  .reasons li{padding-left:15px;position:relative}
+  .reasons li::before{content:"";position:absolute;left:2px;top:8px;width:6px;height:6px;background:var(--copper);border-radius:50%}
+  .reasons b{color:var(--navy)}
+
+  .o{fill:none;stroke:var(--draw);stroke-width:2.2;stroke-linejoin:round;stroke-linecap:round}
+  .d{fill:none;stroke:var(--detail);stroke-width:1;stroke-linecap:round}
+  .hole{fill:none;stroke:#9aa7b0;stroke-width:1}
+  .cab{fill:none;stroke:#8a7559;stroke-width:1.3;stroke-linecap:round;opacity:.85}
+  .rib{fill:none;stroke:#a8957f;stroke-width:.9;stroke-linecap:round;opacity:.8}
+  .mesh{fill:none;stroke:#9c8a72;stroke-width:.7;opacity:.7}
+
+  .foot{position:absolute;left:15mm;right:15mm;bottom:10mm;border-top:1px solid var(--line);padding-top:7px;display:flex;justify-content:space-between;font-size:9.5px;color:var(--ink-soft)}
+
+  @media print{
+    body{background:#fff}
+    .toolbar{display:none}
+    .page{margin:0;box-shadow:none;width:auto;min-height:auto;height:297mm;page-break-after:always}
+    .page:last-child{page-break-after:auto}
+  }
+  @page{size:A4;margin:0}
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <button class="btn alt" onclick="window.print()">印刷 / PDF保存</button>
+</div>
+
+<!-- ===== COVER ===== -->
+<section class="page">
+  <div class="cover">
+    <div class="mark">和</div>
+    <div class="en-sm">KNIT EXHIBITION ・ 2026–2027</div>
+    <h1>ニット 展示会<br>サンプル企画書</h1>
+    <div class="sub">
+      ターゲット：<b>30代から／レディース</b><br>
+      テーマ：<b>30代に刺さる“独自サンプル”</b> ＋ <b>他社に難しい技術</b><br>
+      価格：<b>上代 〜5,000円</b>（この技術を、この価格で）
+    </div>
+    <div class="cband">
+      <span class="serif">東和盛泰株式会社</span>　TOUWASEITAI CO., LTD.　ニット衣料 OEM・ODM<br>
+      TEL 084-999-2390 ／ info@touwaseitai.com
+    </div>
+  </div>
+  <div class="foot"><span>東和盛泰株式会社　ニット展示会 企画書</span><span>COVER</span></div>
+</section>
+
+<!-- ===== CONCEPT / LINEUP ===== -->
+<section class="page">
+  <div class="rhead"><div class="bn">東和盛泰株式会社<small>TOUWASEITAI CO., LTD.</small></div><div class="pg">CONCEPT &amp; LINEUP</div></div>
+
+  <p class="lead">本企画は、<b>30代からの女性</b>に実際に刺さり、かつ展示会で<b>アパレルバイヤーに技術力が伝わる</b>ニットサンプルです。SNS・国内市場のリサーチに基づき、<b>「定番もできる。その上で、他社が難しい編地もできる」</b>という御社の強みを軸に構成しています。</p>
+
+  <div class="bigmsg">
+    <span class="en">POSITIONING</span>
+    <p>この技術を、この価格で。<br>― 高度な編地を、上代〜5,000円で実現できることが最大の差別化。</p>
+  </div>
+
+  <table>
+    <tr><th class="c" style="width:34px">No.</th><th>アイテム</th><th style="width:30%">技術フック（他社に難しい点）</th><th style="width:24%">30代に刺さる理由</th><th class="c" style="width:74px">上代</th></tr>
+    <tr><td class="c">定番</td><td><b>洗えるリブポロ</b><br><span class="tag">定番できますアピール</span></td><td>抗ピリング・きれいめ実用の量産品質</td><td>衿で顔まわりきれい・オフ〜休日兼用・洗える</td><td class="c">¥2,990</td></tr>
+    <tr><td class="c">A</td><td><b>透かしシアーカーディガン</b></td><td>全面の透かし編み（ポワント／移し目）の安定生産</td><td>さりげない肌見せ・羽織りで通年・SNS映え</td><td class="c">¥3,900〜<br>4,900</td></tr>
+    <tr><td class="c">B</td><td><b>立体編地切替ニットベスト</b></td><td>ケーブル×リブ×メッシュの編地切替・立体成型</td><td>お腹/二の腕カバー・ジレ通勤・着回し</td><td class="c">¥3,500〜<br>4,500</td></tr>
+    <tr><td class="c">C</td><td><b>バイカラー編み込みプルオーバー</b></td><td>インターシャ（はめ込み配色）＋フレア袖振り出し</td><td>バイカラーで華奢見え・フレア袖で二の腕細見え</td><td class="c">¥3,900〜<br>4,900</td></tr>
+    <tr><td class="c">D</td><td><b>パフ袖ニットアンサンブル</b></td><td>共地2点の統一・パフ袖の増目成型</td><td>きちんと見え即完成・セットでも単品でも</td><td class="c">¥4,500〜<br>4,900</td></tr>
+  </table>
+
+  <p class="lead" style="margin-top:16px;font-size:11.5px">※ 上代は想定。寸法・原価・度目は参考値であり、確定はカウンターサンプル承認後とします。各型の詳細寸法（POM）・縫製仕様は別添の工業仕様図に記載。</p>
+
+  <div class="foot"><span>東和盛泰株式会社　ニット展示会 企画書</span><span>P.01</span></div>
+</section>
+
+<!-- ===== 定番：リブポロ ===== -->
+<section class="page">
+  <div class="rhead"><div class="bn">東和盛泰株式会社<small>TOUWASEITAI CO., LTD.</small></div><div class="pg">STANDARD ITEM</div></div>
+  <div class="type-head"><span class="no">00</span><h2>洗えるリブポロセーター</h2><span class="ent">RIB POLO</span></div>
+  <div class="type-body">
+    <div class="draw">
+      <svg viewBox="0 0 400 470" aria-label="リブポロ">
+        <ellipse cx="200" cy="440" rx="98" ry="8" fill="#000" opacity=".06"/>
+        <path fill="#c8a17a" stroke="none" d="M172 78 L138 86 C112 130 86 198 74 250 L108 262 C118 236 122 212 124 192 C123 252 122 332 124 410 C166 426 234 426 276 410 C278 332 277 252 276 192 C278 212 282 236 292 262 L326 250 C314 198 288 130 262 86 L228 78 C214 94 186 94 172 78 Z"/>
+        <path class="o" d="M172 78 L138 86 C112 130 86 198 74 250 L108 262 C118 236 122 212 124 192"/>
+        <path class="o" d="M124 192 C123 252 122 332 124 410 C166 426 234 426 276 410 C278 332 277 252 276 192"/>
+        <path class="o" d="M276 192 C278 212 282 236 292 262 L326 250 C314 198 288 130 262 86 L228 78"/>
+        <path class="o" fill="#bb9170" d="M174 80 L156 60 L200 112 Z"/>
+        <path class="o" fill="#bb9170" d="M226 80 L244 60 L200 112 Z"/>
+        <line class="o" x1="200" y1="58" x2="200" y2="112"/>
+        <line class="o" x1="188" y1="112" x2="188" y2="170"/>
+        <line class="o" x1="212" y1="112" x2="212" y2="170"/>
+        <circle cx="200" cy="128" r="3" fill="#6b5447"/>
+        <circle cx="200" cy="150" r="3" fill="#6b5447"/>
+        <path class="d" d="M124 390 C166 406 234 406 276 390"/>
+        <g class="d" opacity=".55"><path d="M150 196 C149 300 149 360 150 404"/><path d="M176 192 C176 300 176 360 176 414"/><path d="M200 191 C200 300 200 360 200 416"/><path d="M224 192 C224 300 224 360 224 414"/><path d="M250 196 C251 300 251 360 250 404"/></g>
+      </svg>
+    </div>
+    <div class="info">
+      <dl>
+        <dt>素材</dt><dd>アクリル60/ナイロン30/毛8/PU2（抗ピリング）</dd>
+        <dt>編み</dt><dd>2×2リブ／7GG</dd>
+        <dt>衿/袖</dt><dd>リブ衿・2釦プラケット／長袖リブ口</dd>
+        <dt>カラー</dt><dd><span class="swatch" style="background:#efe9df"></span><span class="swatch" style="background:#c8a17a"></span><span class="swatch" style="background:#7a5a4a"></span><span class="swatch" style="background:#6e2230"></span><span class="swatch" style="background:#2c2a2e"></span> 全5色</dd>
+      </dl>
+      <div class="hookbox"><b>位置づけ：</b>「定番もきちんと作れます」の証明枠。洗える・毛玉になりにくい実用品質で、まず取引の入口を作る。</div>
+      <ul class="reasons">
+        <li><b>30代に刺さる：</b>衿で顔まわりがきれい・オフィス〜休日兼用・家庭洗濯機で洗える</li>
+        <li><b>実勢：</b>同型2,990円が高レビュー多数の鉄板ゾーン</li>
+      </ul>
+      <div class="price"><span class="up">¥2,990 <small>上代</small></span><span class="up" style="font-size:14px;color:var(--ink-soft)">想定製造コスト ¥900〜1,300</span></div>
+    </div>
+  </div>
+  <div class="foot"><span>東和盛泰株式会社　ニット展示会 企画書</span><span>P.02</span></div>
+</section>
+
+<!-- ===== A シアーカーディガン ===== -->
+<section class="page">
+  <div class="rhead"><div class="bn">東和盛泰株式会社<small>TOUWASEITAI CO., LTD.</small></div><div class="pg">SAMPLE A</div></div>
+  <div class="type-head"><span class="no">A</span><h2>透かし編みシアーカーディガン</h2><span class="ent">SHEER CARDIGAN</span></div>
+  <div class="type-body">
+    <div class="draw">
+      <svg viewBox="0 0 400 470" aria-label="シアーカーディガン">
+        <ellipse cx="200" cy="442" rx="100" ry="8" fill="#000" opacity=".06"/>
+        <path fill="#eef1f3" stroke="none" d="M174 80 L140 88 C116 132 92 196 80 250 L116 262 C126 234 134 210 138 190 C137 252 136 332 138 410 C180 426 220 426 262 410 C264 332 263 252 262 190 C266 210 274 234 284 262 L320 250 C308 196 284 132 260 88 L226 80 C214 94 186 94 174 80 Z"/>
+        <g class="hole">
+          <circle cx="158" cy="210" r="3"/><circle cx="186" cy="206" r="3"/><circle cx="214" cy="206" r="3"/><circle cx="242" cy="210" r="3"/>
+          <circle cx="150" cy="250" r="3"/><circle cx="178" cy="246" r="3"/><circle cx="222" cy="246" r="3"/><circle cx="250" cy="250" r="3"/>
+          <circle cx="158" cy="292" r="3"/><circle cx="186" cy="288" r="3"/><circle cx="214" cy="288" r="3"/><circle cx="242" cy="292" r="3"/>
+          <circle cx="150" cy="332" r="3"/><circle cx="178" cy="328" r="3"/><circle cx="222" cy="328" r="3"/><circle cx="250" cy="332" r="3"/>
+          <circle cx="158" cy="372" r="3"/><circle cx="186" cy="368" r="3"/><circle cx="214" cy="368" r="3"/><circle cx="242" cy="372" r="3"/>
+        </g>
+        <path class="o" d="M174 80 L140 88 C116 132 92 196 80 250 L116 262 C126 234 134 210 138 190"/>
+        <path class="o" d="M138 190 C137 252 136 332 138 410 C180 426 220 426 262 410 C264 332 263 252 262 190"/>
+        <path class="o" d="M262 190 C266 210 274 234 284 262 L320 250 C308 196 284 132 260 88 L226 80"/>
+        <path class="o" d="M178 84 L196 150"/><path class="o" d="M222 84 L204 150"/>
+        <line class="o" x1="196" y1="150" x2="196" y2="412"/><line class="o" x1="204" y1="150" x2="204" y2="412"/>
+        <circle cx="200" cy="176" r="3.2" fill="#fff" stroke="#7d8a92" stroke-width="1.2"/>
+        <circle cx="200" cy="222" r="3.2" fill="#fff" stroke="#7d8a92" stroke-width="1.2"/>
+        <circle cx="200" cy="268" r="3.2" fill="#fff" stroke="#7d8a92" stroke-width="1.2"/>
+        <circle cx="200" cy="314" r="3.2" fill="#fff" stroke="#7d8a92" stroke-width="1.2"/>
+        <circle cx="200" cy="360" r="3.2" fill="#fff" stroke="#7d8a92" stroke-width="1.2"/>
+      </svg>
+    </div>
+    <div class="info">
+      <dl>
+        <dt>素材</dt><dd>アクリル・ナイロン混（シアー感＋抗ピリング）</dd>
+        <dt>編み</dt><dd>透かし編み（ポワント／移し目）全面／14〜16GG</dd>
+        <dt>衿/前立</dt><dd>Vネック・前立て1×1リブ・6釦</dd>
+        <dt>カラー</dt><dd><span class="swatch" style="background:#f4f1ea"></span><span class="swatch" style="background:#bfe0cf"></span><span class="swatch" style="background:#cfc6ba"></span> ｲﾉｾﾝﾄﾎﾜｲﾄ/ﾐﾝﾄ/ｸﾞﾚｰｼﾞｭ</dd>
+      </dl>
+      <div class="hookbox"><b>◎技術フック：</b>全面の透かし編みは、抜き目が崩れず端が安定するために編成プログラム精度と糸選定が要る。安価な工場ほど目飛び・歪みが出る。<b>「この繊細な透かし編みを、この価格で」</b>。</div>
+      <ul class="reasons">
+        <li><b>30代に刺さる：</b>さりげない肌見せで女らしさ・羽織りで通年・SNSの「シアーニット」直撃</li>
+      </ul>
+      <div class="price"><span class="up">¥3,900〜4,900 <small>上代</small></span></div>
+    </div>
+  </div>
+  <div class="foot"><span>東和盛泰株式会社　ニット展示会 企画書</span><span>P.03</span></div>
+</section>
+
+<!-- ===== B ベスト ===== -->
+<section class="page">
+  <div class="rhead"><div class="bn">東和盛泰株式会社<small>TOUWASEITAI CO., LTD.</small></div><div class="pg">SAMPLE B</div></div>
+  <div class="type-head"><span class="no">B</span><h2>立体編地切替ニットベスト</h2><span class="ent">TEXTURED VEST</span></div>
+  <div class="type-body">
+    <div class="draw">
+      <svg viewBox="0 0 380 470" aria-label="ニットベスト">
+        <ellipse cx="190" cy="442" rx="92" ry="8" fill="#000" opacity=".06"/>
+        <path fill="#e9e1d4" stroke="none" d="M158 78 L116 86 C106 128 100 164 110 202 C112 286 112 366 116 438 C166 452 214 452 264 438 C268 366 268 286 270 202 C280 164 274 128 264 86 L222 78 L190 166 L158 78 Z"/>
+        <!-- yoke mesh -->
+        <g class="mesh"><path d="M120 104 L184 146"/><path d="M130 98 L184 134"/><path d="M154 146 L120 124"/><path d="M260 104 L196 146"/><path d="M250 98 L196 134"/><path d="M226 146 L260 124"/></g>
+        <!-- center cables -->
+        <g class="cab"><path d="M168 174 C178 192 178 210 168 228 C158 246 158 264 168 282 C158 300 158 330 168 360 C178 388 178 418 168 438"/><path d="M180 174 C170 192 170 210 180 228 C190 246 190 264 180 282 C190 300 190 330 180 360 C170 388 170 418 180 438"/><path d="M200 174 C210 192 210 210 200 228 C190 246 190 264 200 282 C190 300 190 330 200 360 C210 388 210 418 200 438"/><path d="M212 174 C202 192 202 210 212 228 C222 246 222 264 212 282 C222 300 222 330 212 360 C202 388 202 418 212 438"/></g>
+        <!-- side ribs -->
+        <g class="rib"><path d="M132 206 L132 438"/><path d="M144 204 L144 440"/><path d="M248 206 L248 438"/><path d="M236 204 L236 440"/></g>
+        <path class="o" d="M158 78 L116 86 C106 128 100 164 110 202 C112 286 112 366 116 438 C166 452 214 452 264 438 C268 366 268 286 270 202 C280 164 274 128 264 86 L222 78"/>
+        <path class="o" d="M158 78 L190 166 L222 78"/>
+        <path class="d" d="M120 92 C110 128 106 160 114 200"/><path class="d" d="M260 92 C270 128 274 160 266 200"/>
+        <path class="d" d="M116 424 C166 438 214 438 264 424"/>
+      </svg>
+    </div>
+    <div class="info">
+      <dl>
+        <dt>素材</dt><dd>アクリル・ウール混（立体感・抗ピリング）</dd>
+        <dt>編み</dt><dd>中央ケーブル／脇リブ／肩ヨークメッシュ／7GG</dd>
+        <dt>衿</dt><dd>Vネック・アームホール/裾＝リブ</dd>
+        <dt>カラー</dt><dd><span class="swatch" style="background:#d8c3a3"></span><span class="swatch" style="background:#cfc6ba"></span><span class="swatch" style="background:#8a6a52"></span> ｻﾝﾄﾞﾍﾞｰｼﾞｭ/ｸﾞﾚｰｼﾞｭ/ﾌﾞﾗｳﾝ</dd>
+      </dl>
+      <div class="hookbox"><b>◎技術フック：</b>1枚の中で<b>ケーブル／リブ／メッシュの3編地を切替</b>、立体的に編む工程は編成プログラムと度目調整が複雑で、量産で破綻させない工場が限られる。技術力が<b>一目で伝わる</b>。</div>
+      <ul class="reasons">
+        <li><b>30代に刺さる：</b>お腹・二の腕カバー・ジレ感覚で通勤・着回し力</li>
+      </ul>
+      <div class="price"><span class="up">¥3,500〜4,500 <small>上代</small></span></div>
+    </div>
+  </div>
+  <div class="foot"><span>東和盛泰株式会社　ニット展示会 企画書</span><span>P.04</span></div>
+</section>
+
+<!-- ===== C バイカラー ===== -->
+<section class="page">
+  <div class="rhead"><div class="bn">東和盛泰株式会社<small>TOUWASEITAI CO., LTD.</small></div><div class="pg">SAMPLE C</div></div>
+  <div class="type-head"><span class="no">C</span><h2>バイカラー編み込みプルオーバー</h2><span class="ent">BICOLOR PULLOVER</span></div>
+  <div class="type-body">
+    <div class="draw">
+      <svg viewBox="0 0 400 400" aria-label="バイカラープルオーバー">
+        <ellipse cx="200" cy="372" rx="110" ry="8" fill="#000" opacity=".06"/>
+        <path fill="#f1eee8" stroke="none" d="M168 64 L142 70 C120 110 92 188 74 244 L106 252 C118 206 126 178 132 150 C133 196 134 256 136 318 C176 330 224 330 264 318 C266 256 267 196 268 150 C274 178 282 206 294 252 L326 244 C308 188 280 110 258 70 L232 64 C218 80 182 80 168 64 Z"/>
+        <path fill="#3a3a40" stroke="none" d="M142 70 C120 110 92 188 74 244 L106 252 C118 206 126 178 132 150 C136 124 144 92 142 70 Z"/>
+        <path fill="#3a3a40" stroke="none" d="M258 70 C280 110 308 188 326 244 L294 252 C282 206 274 178 268 150 C264 124 256 92 258 70 Z"/>
+        <path class="o" d="M168 64 L142 70 C120 110 92 188 74 244 L106 252 C118 206 126 178 132 150"/>
+        <path class="o" d="M132 150 C133 196 134 256 136 318 C176 330 224 330 264 318 C266 256 267 196 268 150"/>
+        <path class="o" d="M268 150 C274 178 282 206 294 252 L326 244 C308 188 280 110 258 70 L232 64"/>
+        <path class="o" d="M168 64 C182 80 218 80 232 64"/>
+        <path class="o" d="M132 150 C136 124 144 92 142 70" fill="none"/>
+        <path class="o" d="M268 150 C264 124 256 92 258 70" fill="none"/>
+        <path class="d" d="M136 304 C176 316 224 316 264 304"/>
+      </svg>
+    </div>
+    <div class="info">
+      <dl>
+        <dt>素材</dt><dd>アクリル混（抗ピリング）・2色使い</dd>
+        <dt>編み</dt><dd>天竺＋インターシャ（はめ込み配色）／フレア袖／12GG</dd>
+        <dt>衿</dt><dd>ボートネック（デコルテ見せ）・クロップド丈</dd>
+        <dt>カラー</dt><dd><span class="swatch" style="background:#f1eee8"></span>×<span class="swatch" style="background:#3a3a40"></span> ／ <span class="swatch" style="background:#cfc6ba"></span>×<span class="swatch" style="background:#efe9df"></span></dd>
+      </dl>
+      <div class="hookbox"><b>◎技術フック：</b>色切替を<b>プリントでなくインターシャ（はめ込み配色）</b>で。糸をからげ裏に渡り糸を出さず編むため境界のループ精度が要る。さらに<b>フレア袖の振り出し成型</b>を併用。</div>
+      <ul class="reasons">
+        <li><b>30代に刺さる：</b>バイカラー＝華奢見え・フレア袖＝二の腕細見え・1枚で様になる</li>
+      </ul>
+      <div class="price"><span class="up">¥3,900〜4,900 <small>上代</small></span></div>
+    </div>
+  </div>
+  <div class="foot"><span>東和盛泰株式会社　ニット展示会 企画書</span><span>P.05</span></div>
+</section>
+
+<!-- ===== D アンサンブル ===== -->
+<section class="page">
+  <div class="rhead"><div class="bn">東和盛泰株式会社<small>TOUWASEITAI CO., LTD.</small></div><div class="pg">SAMPLE D</div></div>
+  <div class="type-head"><span class="no">D</span><h2>パフスリーブ ニットアンサンブル</h2><span class="ent">PUFF-SLEEVE SET</span></div>
+  <div class="type-body">
+    <div class="draw duo">
+      <svg viewBox="0 0 250 420" aria-label="パフ袖カーディガン">
+        <path fill="#f3e7b8" stroke="none" d="M104 60 L84 66 C76 96 72 122 76 150 C77 230 78 320 80 384 C112 398 168 398 200 384 C202 320 203 230 204 150 C208 122 202 96 194 66 L160 60 C148 74 116 74 104 60 Z"/>
+        <path fill="#efe2ad" stroke="none" d="M84 66 C56 44 26 52 14 90 C8 118 12 150 36 178 L66 168 C70 150 74 150 86 146 C84 118 84 90 84 66 Z"/>
+        <path fill="#efe2ad" stroke="none" d="M194 66 C222 44 252 52 264 90 C270 118 266 150 242 178 L212 168 C208 150 204 150 192 146 C194 118 194 90 194 66 Z"/>
+        <path class="o" d="M104 60 L84 66 C76 96 72 122 76 150 C77 230 78 320 80 384 C112 398 168 398 200 384 C202 320 203 230 204 150 C208 122 202 96 194 66 L160 60 C148 74 116 74 104 60 Z"/>
+        <path class="o" d="M84 66 C56 44 26 52 14 90 C8 118 12 150 36 178 L66 168 C70 150 74 150 86 146"/>
+        <path class="o" d="M194 66 C220 46 246 54 246 92 C246 120 240 150 218 176 L188 166 C184 150 180 150 168 146"/>
+        <path class="o" d="M104 64 C116 76 148 76 160 64"/>
+        <line class="o" x1="124" y1="74" x2="124" y2="386"/><line class="o" x1="140" y1="74" x2="140" y2="386"/>
+        <circle cx="132" cy="104" r="3" fill="#fff" stroke="#9a8a55" stroke-width="1.1"/>
+        <circle cx="132" cy="150" r="3" fill="#fff" stroke="#9a8a55" stroke-width="1.1"/>
+        <circle cx="132" cy="196" r="3" fill="#fff" stroke="#9a8a55" stroke-width="1.1"/>
+        <circle cx="132" cy="242" r="3" fill="#fff" stroke="#9a8a55" stroke-width="1.1"/>
+        <circle cx="132" cy="288" r="3" fill="#fff" stroke="#9a8a55" stroke-width="1.1"/>
+      </svg>
+      <svg viewBox="0 0 220 420" aria-label="ノースリーブインナー">
+        <path fill="#efe9df" stroke="none" d="M150 60 L120 68 C112 104 108 134 116 168 C118 248 118 328 122 396 C150 408 170 408 198 396 C202 328 202 248 204 168 C212 134 208 104 200 68 L170 60 L160 130 L150 60 Z" transform="translate(-60,0)"/>
+        <path class="o" d="M90 60 L60 68 C52 104 48 134 56 168 C58 248 58 328 62 396 C90 408 130 408 158 396 C162 328 162 248 164 168 C172 134 168 104 160 68 L130 60 L110 130 L90 60 Z"/>
+        <path class="o" d="M94 70 L110 130 L126 70"/>
+        <path class="d" d="M64 90 C54 124 50 152 58 186"/><path class="d" d="M156 90 C166 124 170 152 162 186"/>
+        <path class="d" d="M62 380 C90 392 130 392 158 380"/>
+      </svg>
+    </div>
+    <div class="info">
+      <dl>
+        <dt>素材</dt><dd>アクリル・綿混（綿＝肌触り／アクリル＝抗ピリング）・2点共地</dd>
+        <dt>編み</dt><dd>天竺／カーデ袖＝パフ（袖山の増目成型）／12GG</dd>
+        <dt>構成</dt><dd>①パフ袖カーディガン＋②ノースリーブインナー（共地2点）</dd>
+        <dt>カラー</dt><dd><span class="swatch" style="background:#f3e7b8"></span><span class="swatch" style="background:#e7c4cb"></span><span class="swatch" style="background:#efe9df"></span> ﾊﾞﾀｰ/ﾊﾞﾚｴﾋﾟﾝｸ/ｵﾌﾎﾜｲﾄ</dd>
+      </dl>
+      <div class="hookbox"><b>◎技術フック：</b>カーデとインナーを<b>共地・統一デザインの2点</b>で仕上げ、<b>パフ袖（袖山の増目成型）</b>を量産で安定させる。型紙・度目・ボリュームを2点で揃える整合が要る。</div>
+      <ul class="reasons">
+        <li><b>30代に刺さる：</b>「きちんと見え」が即完成・セットでも単品でも着られる</li>
+      </ul>
+      <div class="price"><span class="up">¥4,500〜4,900 <small>上代（2点）</small></span></div>
+    </div>
+  </div>
+  <div class="foot"><span>東和盛泰株式会社　ニット展示会 企画書</span><span>P.06</span></div>
+</section>
+
+</body>
+</html>

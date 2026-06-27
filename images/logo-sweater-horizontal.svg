@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 140" width="500" height="140" role="img" aria-label="TOUWASEITAI 東和盛泰株式会社 KNITWEAR OEM ロゴ">
+  <defs>
+    <radialGradient id="tw-swh-fill" cx="42%" cy="30%" r="80%">
+      <stop offset="0" stop-color="#7fe0ff"/>
+      <stop offset=".4" stop-color="#2b8bf0"/>
+      <stop offset=".8" stop-color="#1745b8"/>
+      <stop offset="1" stop-color="#101a5c"/>
+    </radialGradient>
+    <radialGradient id="tw-swh-halo" cx="50%" cy="48%" r="50%">
+      <stop offset=".5" stop-color="#5ec8ff" stop-opacity=".45"/>
+      <stop offset="1" stop-color="#5ec8ff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="tw-swh-orbit" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9be8ff"/>
+      <stop offset="1" stop-color="#3a7bff"/>
+    </linearGradient>
+    <linearGradient id="tw-swh-text" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0e63d6"/>
+      <stop offset="1" stop-color="#3aa0ff"/>
+    </linearGradient>
+    <pattern id="tw-swh-knit" width="9" height="8" patternUnits="userSpaceOnUse">
+      <path d="M0 1 L4.5 7 L9 1" fill="none" stroke="#eafaff" stroke-opacity=".5" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </pattern>
+    <path id="tw-swh-sweater" d="M80 35 Q70 43 60 35 C54 33 49 35 44 41 L26 48 L17 90 Q15 96 21 97 L34 97 Q40 97 41 91 L47 65 L45 112 L95 112 L93 65 L99 91 Q100 97 106 97 L119 97 Q125 96 123 90 L114 48 L96 41 C91 35 86 33 80 35 Z"/>
+    <clipPath id="tw-swh-clip"><use href="#tw-swh-sweater"/></clipPath>
+  </defs>
+
+  <circle cx="70" cy="72" r="60" fill="url(#tw-swh-halo)"/>
+  <ellipse cx="70" cy="72" rx="58" ry="21" fill="none" stroke="url(#tw-swh-orbit)" stroke-opacity=".65" stroke-width="1.8" transform="rotate(-24 70 72)"/>
+  <use href="#tw-swh-sweater" fill="url(#tw-swh-fill)"/>
+  <rect x="14" y="33" width="112" height="82" fill="url(#tw-swh-knit)" clip-path="url(#tw-swh-clip)"/>
+  <g clip-path="url(#tw-swh-clip)" stroke="#cdeeff" stroke-opacity=".55" stroke-width="1">
+    <line x1="49" y1="104" x2="49" y2="112"/><line x1="55" y1="104" x2="55" y2="112"/>
+    <line x1="61" y1="104" x2="61" y2="112"/><line x1="67" y1="104" x2="67" y2="112"/>
+    <line x1="73" y1="104" x2="73" y2="112"/><line x1="79" y1="104" x2="79" y2="112"/>
+    <line x1="85" y1="104" x2="85" y2="112"/><line x1="91" y1="104" x2="91" y2="112"/>
+  </g>
+  <use href="#tw-swh-sweater" fill="none" stroke="#bfe9ff" stroke-opacity=".8" stroke-width="1.3" stroke-linejoin="round"/>
+
+  <text x="150" y="58" font-family="'Cormorant Garamond', serif" font-weight="600" font-size="34" fill="url(#tw-swh-text)" letter-spacing="7">TOUWASEITAI</text>
+  <text x="152" y="83" font-family="'Noto Sans JP', sans-serif" font-weight="500" font-size="14" fill="#5d7185" letter-spacing="6">東和盛泰株式会社</text>
+  <text x="152" y="104" font-family="'Noto Sans JP', sans-serif" font-weight="700" font-size="10.5" fill="#3aa0ff" letter-spacing="5">KNITWEAR OEM ／ ニットOEM</text>
+</svg>

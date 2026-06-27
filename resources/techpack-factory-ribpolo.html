@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>工場用仕様書（洗えるリブポロ・360°展開図付）｜東和盛泰株式会社</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;700&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#5a4452;--copper:#b89484;--gold:#d4b89a;
+    --ink:#3a2e34;--ink-soft:#6a5a62;--line:#d4c6bb;--line-soft:#ece2da;
+    --bg:#fcf8f2;--head:#f7f0e9;--draw:#42343c;--detail:#a98e80;--dim:#9a3b4a;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body{font-family:'Noto Sans JP',sans-serif;color:var(--ink);background:#d8d0c7;line-height:1.5;font-size:11px;-webkit-font-smoothing:antialiased}
+  .serif{font-family:'Noto Serif JP',serif}
+  .en{font-family:'Cormorant Garamond',serif;letter-spacing:.16em}
+  .toolbar{max-width:210mm;margin:14px auto;display:flex;gap:10px;justify-content:flex-end}
+  .btn{background:var(--navy);color:#fff;border:none;cursor:pointer;padding:10px 22px;border-radius:2px;font-size:12.5px;letter-spacing:.05em;font-family:inherit}
+  .btn.alt{background:#fff;color:var(--navy);border:1px solid var(--navy)}
+
+  .page{width:210mm;min-height:297mm;margin:0 auto 14px;background:#fff;padding:12mm 12mm 10mm;box-shadow:0 14px 40px rgba(0,0,0,.18);position:relative}
+
+  /* header */
+  .dh{display:flex;justify-content:space-between;align-items:flex-start;border-bottom:2px solid var(--navy);padding-bottom:9px;margin-bottom:8px}
+  .brand{display:flex;align-items:center;gap:10px}
+  .mk{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--copper));color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Noto Serif JP',serif;font-size:20px;font-weight:700;flex-shrink:0}
+  .bn{font-family:'Noto Serif JP',serif;font-size:13px;font-weight:700;color:var(--navy);line-height:1.25}
+  .bn small{font-family:'Cormorant Garamond',serif;font-size:8.5px;letter-spacing:.15em;color:var(--copper);display:block}
+  .dt{text-align:right}
+  .dt .en{display:block;font-size:9px;color:var(--copper);letter-spacing:.26em}
+  .dt h1{font-family:'Noto Serif JP',serif;font-size:16px;color:var(--navy);font-weight:700}
+  .dt .flag{display:inline-block;background:var(--navy);color:#fff;font-size:8.5px;letter-spacing:.1em;padding:2px 8px;border-radius:2px;margin-top:3px}
+
+  /* meta */
+  .meta{display:grid;grid-template-columns:repeat(6,1fr);border:1px solid var(--line);margin-bottom:9px}
+  .meta div{padding:5px 8px;border-right:1px solid var(--line)}
+  .meta div:last-child{border-right:none}
+  .meta label{display:block;font-size:7.5px;color:var(--copper);letter-spacing:.06em}
+  .meta b{font-size:11px;color:var(--ink);font-weight:600}
+
+  .sec{margin-top:11px;break-inside:avoid}
+  .st{display:flex;align-items:baseline;gap:8px;border-left:3px solid var(--copper);padding-left:8px;margin-bottom:6px}
+  .st .no{font-family:'Cormorant Garamond',serif;font-size:12px;color:var(--copper);font-weight:600}
+  .st h2{font-family:'Noto Serif JP',serif;font-size:12.5px;color:var(--navy);font-weight:700}
+  .st .en{font-size:8.5px;color:var(--ink-soft);letter-spacing:.16em}
+
+  table{width:100%;border-collapse:collapse;border:1px solid var(--line)}
+  th,td{border:1px solid var(--line);padding:4.5px 7px;font-size:10.5px;vertical-align:middle;text-align:left}
+  th{background:var(--head);color:var(--navy);font-weight:600;font-family:'Noto Serif JP',serif}
+  .sth{width:86px;background:var(--head);color:var(--navy);font-weight:600;font-family:'Noto Serif JP',serif}
+  td.c,th.c{text-align:center}
+  table.s td,table.s th{padding:3.5px 5px;font-size:10px}
+  .swatch{display:inline-block;width:13px;height:13px;border-radius:50%;margin-right:4px;border:1px solid rgba(0,0,0,.12);vertical-align:-2px}
+
+  .foot{position:absolute;left:12mm;right:12mm;bottom:6mm;border-top:1px solid var(--line);padding-top:5px;display:flex;justify-content:space-between;font-size:8.5px;color:var(--ink-soft)}
+
+  /* drawing styles */
+  .o{fill:none;stroke:var(--draw);stroke-width:2.2;stroke-linejoin:round;stroke-linecap:round}
+  .o2{fill:none;stroke:var(--draw);stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}
+  .d{fill:none;stroke:var(--detail);stroke-width:1;stroke-linecap:round}
+  .dim{fill:none;stroke:var(--dim);stroke-width:.8}
+  .dimt{fill:var(--dim);font-size:9px;font-family:'Cormorant Garamond',serif;font-weight:600}
+  .pt{fill:var(--dim);font-size:8.5px;font-weight:700}
+
+  .flats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .fb{border:1px solid var(--line);border-radius:3px;padding:14px 8px 8px;position:relative;background:repeating-linear-gradient(45deg,rgba(184,148,132,.035) 0 6px,transparent 6px 12px)}
+  .fb span.lbl{position:absolute;top:6px;left:9px;font-family:'Cormorant Garamond',serif;letter-spacing:.16em;color:var(--copper);font-size:9.5px}
+  .fb svg{width:100%;height:auto;display:block}
+
+  .photorow{display:grid;grid-template-columns:46% 54%;gap:12px;align-items:start}
+  .photo{width:100%;border:1px solid var(--line);border-radius:3px;background:#efeae3;object-fit:cover;display:block}
+  .pcap{font-size:9px;color:var(--ink-soft);margin-top:4px;text-align:center}
+
+  .panels{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}
+  .pl{border:1px solid var(--line);border-radius:3px;padding:14px 6px 6px;position:relative;text-align:center;background:#fcfaf7}
+  .pl span.lbl{position:absolute;top:5px;left:8px;font-size:9px;color:var(--copper);font-weight:700}
+  .pl svg{width:100%;height:auto}
+  .pl small{display:block;font-size:8.5px;color:var(--ink-soft);margin-top:3px}
+
+  .details{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}
+  .dc{border:1px solid var(--line);border-radius:3px;padding:14px 7px 7px;position:relative}
+  .dc span.lbl{position:absolute;top:5px;left:8px;font-size:9px;color:var(--copper);font-weight:700}
+  .dc svg{width:100%;height:auto}
+  .dc small{display:block;font-size:8.5px;color:var(--ink-soft);margin-top:4px;line-height:1.45}
+
+  ul.q{list-style:none;font-size:10px;line-height:1.7}
+  ul.q li{padding-left:13px;position:relative;margin-bottom:1px}
+  ul.q li:before{content:"";position:absolute;left:0;top:7px;width:5px;height:5px;background:var(--copper);border-radius:50%}
+  ul.q b{color:var(--navy)}
+
+  @media print{
+    body{background:#fff}
+    .toolbar{display:none}
+    .page{margin:0;box-shadow:none;width:auto;min-height:auto;height:297mm;page-break-after:always}
+    .page:last-child{page-break-after:auto}
+  }
+  @page{size:A4;margin:0}
+</style>
+</head>
+<body>
+<div class="toolbar"><button class="btn alt" onclick="window.print()">印刷 / PDF保存</button></div>
+
+<!-- ================= PAGE 1 : 概要・写真・360°展開 ================= -->
+<section class="page">
+  <div class="dh">
+    <div class="brand"><div class="mk">和</div><div class="bn">東和盛泰株式会社<small>TOUWASEITAI CO., LTD.</small></div></div>
+    <div class="dt"><span class="en">PRODUCTION TECH PACK</span><h1>工場用 製品仕様書</h1>
+      <span class="flag">FACTORY / 製造用・全3葉 1/3</span></div>
+  </div>
+
+  <div class="meta">
+    <div><label>品番 STYLE</label><b>TW-2026AW-001</b></div>
+    <div><label>品名 ITEM</label><b>洗えるリブポロ</b></div>
+    <div><label>シーズン</label><b>2026 A/W</b></div>
+    <div><label>作成日</label><b>2026/06/03</b></div>
+    <div><label>版 REV.</label><b>Ver.2.0</b></div>
+    <div><label>基準サイズ</label><b>M（見本）</b></div>
+  </div>
+  <div class="meta">
+    <div><label>ブランド</label><b>（提案先名）</b></div>
+    <div><label>企画担当</label><b>東和盛泰 企画</b></div>
+    <div><label>工場 FACTORY</label><b>自社工場（中国）</b></div>
+    <div><label>編機 M/C</label><b>横編 7GG（全成形）</b></div>
+    <div><label>サンプル承認</label><b>　/　 印</b></div>
+    <div><label>量産承認</label><b>　/　 印</b></div>
+  </div>
+
+  <!-- 製品概要 + 写真 -->
+  <div class="sec">
+    <div class="st"><span class="no">01</span><h2>製品概要・基準写真</h2><span class="en">PRODUCT &amp; REFERENCE PHOTO</span></div>
+    <div class="photorow">
+      <div>
+        <img class="photo" src="photos/ribpolo.jpg" alt="洗えるリブポロ 基準写真">
+        <div class="pcap">▲ 基準現品写真（色：モカ）。本写真と下記360°図・寸法を相違なきこと。</div>
+      </div>
+      <table class="s">
+        <tr><th class="sth">カテゴリ</th><td>長袖プルオーバー（ニットポロ衿・2釦プラケット）</td></tr>
+        <tr><th class="sth">対象</th><td>レディース 30〜40代前半（ユニセックス着用可）</td></tr>
+        <tr><th class="sth">シルエット</th><td>レギュラー〜やや長め丈。きれいめ・ヒップが半分隠れる丈。総リブで体型を拾わない。</td></tr>
+        <tr><th class="sth">編地</th><td>身頃・袖＝2×2リブ／衿・前立て＝1×1リブ。全成形（フルファッション）。</td></tr>
+        <tr><th class="sth">きかせ所</th><td>リブ衿＋2釦プラケットのきちんと感／総リブの縦落ち／抗ピリングで毛玉になりにくい／家庭洗濯機可。</td></tr>
+        <tr><th class="sth">想定上代</th><td>¥2,990（参考。製造原価・度目はカウンターサンプル承認後に確定）</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- 360°展開 -->
+  <div class="sec">
+    <div class="st"><span class="no">02</span><h2>360°展開図（前・後・側）</h2><span class="en">360° TECHNICAL FLATS ・ FRONT / BACK / SIDE</span></div>
+    <div class="flats">
+      <!-- FRONT -->
+      <div class="fb"><span class="lbl">FRONT / 前面</span>
+        <svg viewBox="0 0 400 470" role="img" aria-label="前面">
+          <ellipse cx="200" cy="442" rx="98" ry="8" fill="#000" opacity=".06"/>
+          <path fill="#f3ede5" d="M172 78 L138 86 C112 130 86 198 74 250 L108 262 C118 236 122 212 124 192 C123 252 122 332 124 410 C166 426 234 426 276 410 C278 332 277 252 276 192 C278 212 282 236 292 262 L326 250 C314 198 288 130 262 86 L228 78 C214 94 186 94 172 78 Z"/>
+          <path class="o" d="M172 78 L138 86 C112 130 86 198 74 250 L108 262 C118 236 122 212 124 192"/>
+          <path class="o" d="M124 192 C123 252 122 332 124 410 C166 426 234 426 276 410 C278 332 277 252 276 192"/>
+          <path class="o" d="M276 192 C278 212 282 236 292 262 L326 250 C314 198 288 130 262 86 L228 78"/>
+          <path class="o" fill="#ece4da" d="M174 80 L156 60 L200 112 Z"/>
+          <path class="o" fill="#ece4da" d="M226 80 L244 60 L200 112 Z"/>
+          <line class="o" x1="200" y1="58" x2="200" y2="112"/>
+          <line class="o" x1="188" y1="112" x2="188" y2="170"/>
+          <line class="o" x1="212" y1="112" x2="212" y2="170"/>
+          <line class="d" x1="200" y1="112" x2="200" y2="170"/>
+          <circle cx="200" cy="128" r="3.2" fill="#7a6358"/>
+          <circle cx="200" cy="152" r="3.2" fill="#7a6358"/>
+          <path class="d" d="M174 80 C184 92 216 92 226 80"/>
+          <path class="d" d="M124 390 C166 406 234 406 276 390"/>
+          <g class="d"><line x1="140" y1="396" x2="139" y2="416"/><line x1="158" y1="400" x2="158" y2="420"/><line x1="178" y1="402" x2="178" y2="422"/><line x1="200" y1="403" x2="200" y2="423"/><line x1="222" y1="402" x2="222" y2="422"/><line x1="242" y1="400" x2="242" y2="420"/><line x1="260" y1="396" x2="261" y2="416"/></g>
+          <path class="d" d="M82 240 L116 252"/><path class="d" d="M318 240 L284 252"/>
+          <g class="d" opacity=".55"><path d="M150 196 C149 300 149 360 150 404"/><path d="M176 192 C176 300 176 360 176 414"/><path d="M200 191 C200 300 200 360 200 416"/><path d="M224 192 C224 300 224 360 224 414"/><path d="M250 196 C251 300 251 360 250 404"/></g>
+        </svg>
+      </div>
+      <!-- BACK -->
+      <div class="fb"><span class="lbl">BACK / 背面</span>
+        <svg viewBox="0 0 400 470" role="img" aria-label="背面">
+          <ellipse cx="200" cy="442" rx="98" ry="8" fill="#000" opacity=".06"/>
+          <path fill="#f3ede5" d="M172 74 L138 84 C112 128 86 196 74 248 L108 260 C118 234 122 210 124 190 C123 250 122 330 124 408 C166 424 234 424 276 408 C278 330 277 250 276 190 C278 210 282 234 292 260 L326 248 C314 196 288 128 262 84 L228 74 C212 88 188 88 172 74 Z"/>
+          <path class="o" d="M172 74 L138 84 C112 128 86 196 74 248 L108 260 C118 234 122 210 124 190"/>
+          <path class="o" d="M124 190 C123 250 122 330 124 408 C166 424 234 424 276 408 C278 330 277 250 276 190"/>
+          <path class="o" d="M276 190 C278 210 282 234 292 260 L326 248 C314 196 288 128 262 84 L228 74"/>
+          <path class="o" d="M172 74 C188 88 212 88 228 74"/>
+          <path class="d" d="M176 84 C190 94 210 94 224 84"/>
+          <path class="d" d="M124 388 C166 404 234 404 276 388"/>
+          <g class="d"><line x1="140" y1="394" x2="139" y2="414"/><line x1="158" y1="398" x2="158" y2="418"/><line x1="178" y1="400" x2="178" y2="420"/><line x1="200" y1="401" x2="200" y2="421"/><line x1="222" y1="400" x2="222" y2="420"/><line x1="242" y1="398" x2="242" y2="418"/><line x1="260" y1="394" x2="261" y2="414"/></g>
+          <path class="d" d="M82 238 L116 250"/><path class="d" d="M318 238 L284 250"/>
+          <g class="d" opacity=".55"><path d="M150 194 C149 300 149 360 150 402"/><path d="M176 190 C176 300 176 360 176 412"/><path d="M200 189 C200 300 200 360 200 414"/><path d="M224 190 C224 300 224 360 224 412"/><path d="M250 194 C251 300 251 360 250 402"/></g>
+        </svg>
+      </div>
+      <!-- SIDE -->
+      <div class="fb"><span class="lbl">SIDE / 側面</span>
+        <svg viewBox="0 0 400 470" role="img" aria-label="側面">
+          <ellipse cx="208" cy="442" rx="70" ry="8" fill="#000" opacity=".06"/>
+          <!-- body side profile -->
+          <path fill="#f3ede5" d="M196 96 C176 100 168 120 168 150 C168 250 168 360 172 410 C200 422 246 422 270 410 C272 360 272 250 270 168 C270 132 256 108 232 100 C220 110 206 110 196 96 Z"/>
+          <path class="o" d="M196 96 C176 100 168 120 168 150 C168 250 168 360 172 410 C200 422 246 422 270 410 C272 360 272 250 270 168 C270 132 256 108 232 100"/>
+          <!-- collar side -->
+          <path class="o" fill="#ece4da" d="M198 92 C190 78 206 70 222 72 C214 84 224 98 232 100 C220 104 206 104 198 92 Z"/>
+          <!-- sleeve draped on front edge -->
+          <path fill="#ece4da" d="M168 150 C150 168 138 210 132 260 C128 300 130 350 138 396 L166 392 C160 350 160 300 164 262 C167 224 172 188 184 168 Z"/>
+          <path class="o2" d="M168 150 C150 168 138 210 132 260 C128 300 130 350 138 396 L166 392 C160 350 160 300 164 262 C167 224 172 188 184 168"/>
+          <!-- cuff rib -->
+          <path class="d" d="M133 372 L167 368"/>
+          <g class="d"><line x1="136" y1="374" x2="135" y2="394"/><line x1="146" y1="372" x2="145" y2="392"/><line x1="156" y1="370" x2="156" y2="390"/></g>
+          <!-- hem rib -->
+          <path class="d" d="M172 392 C200 404 246 404 270 392"/>
+          <g class="d"><line x1="186" y1="398" x2="186" y2="416"/><line x1="208" y1="400" x2="208" y2="418"/><line x1="230" y1="399" x2="230" y2="417"/><line x1="252" y1="397" x2="252" y2="415"/></g>
+          <!-- side seam -->
+          <line class="d" x1="270" y1="168" x2="270" y2="392" stroke-dasharray="4 3"/>
+          <!-- rib lines -->
+          <g class="d" opacity=".5"><path d="M196 168 C196 280 196 350 198 396"/><path d="M222 168 C222 280 222 350 224 396"/><path d="M246 172 C247 280 247 350 248 392"/></g>
+        </svg>
+      </div>
+    </div>
+    <p style="font-size:8.5px;color:var(--ink-soft);margin-top:4px">※ 側面はセットイン袖・脇直線（破線＝脇接ぎ位置）。袖は前振りなし。肩はリンキング接ぎ、見返し・台衿なし。</p>
+  </div>
+
+  <!-- パーツ展開 -->
+  <div class="sec">
+    <div class="st"><span class="no">03</span><h2>パーツ展開図（編立パネル）</h2><span class="en">PANEL DEVELOPMENT ・ KNIT PARTS</span></div>
+    <div class="panels">
+      <div class="pl"><span class="lbl">① 前身頃</span>
+        <svg viewBox="0 0 160 200"><path class="o2" d="M30 40 L30 30 C30 24 36 22 44 22 L60 22 C64 30 96 30 100 22 L116 22 C124 22 130 24 130 30 L130 40 C140 60 140 70 138 92 L138 182 L22 182 L22 92 C20 70 20 60 30 40 Z"/><line class="d" x1="80" y1="24" x2="80" y2="64"/><circle cx="80" cy="36" r="2.4" fill="#7a6358"/><circle cx="80" cy="50" r="2.4" fill="#7a6358"/><line class="d" x1="22" y1="168" x2="138" y2="168"/></svg>
+        <small>2×2リブ・成形<br>裾リブ5cm編込</small>
+      </div>
+      <div class="pl"><span class="lbl">② 後身頃</span>
+        <svg viewBox="0 0 160 200"><path class="o2" d="M30 40 L30 30 C30 24 36 22 44 22 L60 22 C66 30 94 30 100 22 L116 22 C124 22 130 24 130 30 L130 40 C140 60 140 70 138 92 L138 182 L22 182 L22 92 C20 70 20 60 30 40 Z"/><path class="d" d="M60 24 C72 32 88 32 100 24"/><line class="d" x1="22" y1="168" x2="138" y2="168"/></svg>
+        <small>2×2リブ・成形<br>後ろ衿ぐり浅</small>
+      </div>
+      <div class="pl"><span class="lbl">③ 袖 ×2</span>
+        <svg viewBox="0 0 160 200"><path class="o2" d="M50 24 C70 18 90 18 110 24 L128 150 C120 178 40 178 32 150 Z"/><line class="d" x1="40" y1="158" x2="120" y2="158"/><g class="d"><line x1="52" y1="160" x2="52" y2="174"/><line x1="68" y1="161" x2="68" y2="175"/><line x1="80" y1="162" x2="80" y2="176"/><line x1="92" y1="161" x2="92" y2="175"/><line x1="108" y1="160" x2="108" y2="174"/></g></svg>
+        <small>2×2リブ・成形<br>袖口リブ3.5cm</small>
+      </div>
+      <div class="pl"><span class="lbl">④ 衿 / 前立て</span>
+        <svg viewBox="0 0 160 200"><rect class="o2" x="24" y="40" width="112" height="34" rx="3"/><g class="d"><line x1="36" y1="42" x2="36" y2="72"/><line x1="48" y1="42" x2="48" y2="72"/><line x1="60" y1="42" x2="60" y2="72"/><line x1="72" y1="42" x2="72" y2="72"/><line x1="84" y1="42" x2="84" y2="72"/><line x1="96" y1="42" x2="96" y2="72"/><line x1="108" y1="42" x2="108" y2="72"/><line x1="120" y1="42" x2="120" y2="72"/></g><rect class="o2" x="64" y="92" width="32" height="78" rx="2"/><circle cx="80" cy="112" r="3" fill="#7a6358"/><circle cx="80" cy="140" r="3" fill="#7a6358"/></svg>
+        <small>1×1リブ<br>衿＋前立て別編</small>
+      </div>
+    </div>
+    <p style="font-size:8.5px;color:var(--ink-soft);margin-top:4px">※ 全パーツ横編全成形（カットロスなし）。接ぎ＝肩:リンキング／脇・袖下:オーバーロック＋本縫い／衿・前立て:リンキング付け。</p>
+  </div>
+
+  <div class="foot"><span>東和盛泰株式会社　工場用仕様書　TW-2026AW-001 洗えるリブポロ　Ver.2.0</span><span>P.1 / 3</span></div>
+</section>
+
+<!-- ================= PAGE 2 : 寸法・POM・グレーディング ================= -->
+<section class="page">
+  <div class="dh">
+    <div class="brand"><div class="mk">和</div><div class="bn">東和盛泰株式会社<small>TOUWASEITAI CO., LTD.</small></div></div>
+    <div class="dt"><span class="en">MEASUREMENT SPEC</span><h1>寸法・POM</h1><span class="flag">FACTORY / 製造用・全3葉 2/3</span></div>
+  </div>
+
+  <!-- POM図 -->
+  <div class="sec">
+    <div class="st"><span class="no">04</span><h2>採寸ポイント図（POM）</h2><span class="en">POINTS OF MEASURE ・ 平置き</span></div>
+    <div style="display:grid;grid-template-columns:54% 46%;gap:12px;align-items:start">
+      <div style="border:1px solid var(--line);border-radius:3px;padding:6px;background:repeating-linear-gradient(45deg,rgba(184,148,132,.03) 0 6px,transparent 6px 12px)">
+        <svg viewBox="0 0 460 470" role="img" aria-label="POM採寸図">
+          <path fill="#f3ede5" d="M192 88 L150 98 C120 142 92 208 80 258 L116 272 C126 246 132 222 134 200 C133 262 132 342 134 420 C178 436 282 436 326 420 C328 342 327 262 326 200 C328 222 334 246 344 272 L380 258 C368 208 340 142 310 98 L268 88 C252 104 208 104 192 88 Z"/>
+          <path class="o2" d="M192 88 L150 98 C120 142 92 208 80 258 L116 272 C126 246 132 222 134 200"/>
+          <path class="o2" d="M134 200 C133 262 132 342 134 420 C178 436 282 436 326 420 C328 342 327 262 326 200"/>
+          <path class="o2" d="M326 200 C328 222 334 246 344 272 L380 258 C368 208 340 142 310 98 L268 88"/>
+          <path class="o2" fill="#ece4da" d="M194 90 L172 66 L230 124 Z"/>
+          <path class="o2" fill="#ece4da" d="M266 90 L288 66 L230 124 Z"/>
+          <line class="o2" x1="230" y1="64" x2="230" y2="124"/>
+          <line class="o2" x1="216" y1="124" x2="216" y2="188"/><line class="o2" x1="244" y1="124" x2="244" y2="188"/>
+          <circle cx="230" cy="142" r="3" fill="#7a6358"/><circle cx="230" cy="168" r="3" fill="#7a6358"/>
+
+          <!-- dimension lines -->
+          <!-- A 着丈 -->
+          <line class="dim" x1="408" y1="100" x2="408" y2="428"/><line class="dim" x1="403" y1="100" x2="413" y2="100"/><line class="dim" x1="403" y1="428" x2="413" y2="428"/>
+          <text class="dimt" x="414" y="270">A</text>
+          <!-- B 身幅 -->
+          <line class="dim" x1="134" y1="312" x2="326" y2="312"/><line class="dim" x1="134" y1="307" x2="134" y2="317"/><line class="dim" x1="326" y1="307" x2="326" y2="317"/>
+          <text class="dimt" x="224" y="308">B</text>
+          <!-- C 肩幅 -->
+          <line class="dim" x1="150" y1="100" x2="310" y2="100"/><line class="dim" x1="150" y1="95" x2="150" y2="105"/><line class="dim" x1="310" y1="95" x2="310" y2="105"/>
+          <text class="dimt" x="224" y="96">C</text>
+          <!-- D 袖丈 -->
+          <line class="dim" x1="150" y1="98" x2="88" y2="262" stroke-dasharray="0"/><text class="dimt" x="96" y="200">D</text>
+          <!-- E 袖幅 -->
+          <line class="dim" x1="120" y1="150" x2="170" y2="168"/><text class="dimt" x="120" y="146">E</text>
+          <!-- F 袖口幅 -->
+          <line class="dim" x1="84" y1="262" x2="118" y2="274"/><text class="dimt" x="78" y="282">F</text>
+          <!-- G アームホール -->
+          <line class="dim" x1="150" y1="100" x2="134" y2="200"/><text class="dimt" x="156" y="158">G</text>
+          <!-- H 衿ぐり幅 -->
+          <line class="dim" x1="194" y1="78" x2="266" y2="78"/><line class="dim" x1="194" y1="73" x2="194" y2="83"/><line class="dim" x1="266" y1="73" x2="266" y2="83"/><text class="dimt" x="224" y="74">H</text>
+          <!-- I 前衿ぐり深さ -->
+          <line class="dim" x1="230" y1="64" x2="230" y2="124" stroke="#9a3b4a"/><text class="dimt" x="234" y="100">I</text>
+          <!-- M 裾リブ高 -->
+          <line class="dim" x1="350" y1="400" x2="350" y2="430"/><text class="dimt" x="354" y="420">M</text>
+          <!-- O 裾幅 -->
+          <line class="dim" x1="134" y1="430" x2="326" y2="430"/><text class="dimt" x="224" y="444">O</text>
+        </svg>
+      </div>
+      <table class="s">
+        <tr><th class="c" style="width:30px">記号</th><th>採寸箇所</th><th>採寸方法</th></tr>
+        <tr><td class="c">A</td><td>着丈</td><td>HPS（肩高点）→裾端</td></tr>
+        <tr><td class="c">B</td><td>身幅</td><td>脇下2.5cm下を直線</td></tr>
+        <tr><td class="c">C</td><td>肩幅</td><td>肩先→肩先 直線</td></tr>
+        <tr><td class="c">D</td><td>袖丈</td><td>肩先→袖口端</td></tr>
+        <tr><td class="c">E</td><td>袖幅</td><td>アームホール下を直線</td></tr>
+        <tr><td class="c">F</td><td>袖口幅</td><td>袖口リブ端を直線</td></tr>
+        <tr><td class="c">G</td><td>アームホール</td><td>肩先→脇下 直線</td></tr>
+        <tr><td class="c">H</td><td>衿ぐり幅</td><td>衿付け内寸 左右</td></tr>
+        <tr><td class="c">I</td><td>前衿ぐり深さ</td><td>HPS水平線→前衿底（前立含）</td></tr>
+        <tr><td class="c">J</td><td>後衿ぐり深さ</td><td>HPS水平線→後衿底</td></tr>
+        <tr><td class="c">K</td><td>衿高</td><td>衿付け→衿端（折前）</td></tr>
+        <tr><td class="c">L</td><td>前立て長</td><td>衿付け→前立て下端</td></tr>
+        <tr><td class="c">M</td><td>裾リブ高</td><td>裾端→リブ切替</td></tr>
+        <tr><td class="c">N</td><td>袖口リブ高</td><td>袖口端→リブ切替</td></tr>
+        <tr><td class="c">O</td><td>裾幅</td><td>裾端を直線</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- 寸法表 -->
+  <div class="sec">
+    <div class="st"><span class="no">05</span><h2>寸法表・グレーディング</h2><span class="en">SIZE SPEC &amp; GRADING ・ 単位 cm</span></div>
+    <table class="s">
+      <tr><th class="c" style="width:26px">記号</th><th>採寸箇所</th><th class="c">S</th><th class="c">M</th><th class="c">L</th><th class="c">XL</th><th class="c">XXL</th><th class="c" style="width:54px">許容差±</th><th class="c" style="width:66px">ピッチ</th></tr>
+      <tr><td class="c">A</td><th>着丈</th><td class="c">63</td><td class="c">65</td><td class="c">67</td><td class="c">69</td><td class="c">71</td><td class="c">1.5</td><td class="c">+2.0</td></tr>
+      <tr><td class="c">B</td><th>身幅</th><td class="c">46</td><td class="c">49</td><td class="c">52</td><td class="c">55</td><td class="c">58</td><td class="c">2.0</td><td class="c">+3.0</td></tr>
+      <tr><td class="c">C</td><th>肩幅</th><td class="c">37</td><td class="c">39</td><td class="c">41</td><td class="c">43</td><td class="c">45</td><td class="c">1.0</td><td class="c">+2.0</td></tr>
+      <tr><td class="c">D</td><th>袖丈</th><td class="c">58</td><td class="c">59</td><td class="c">60</td><td class="c">61</td><td class="c">62</td><td class="c">1.5</td><td class="c">+1.0</td></tr>
+      <tr><td class="c">E</td><th>袖幅</th><td class="c">18</td><td class="c">19</td><td class="c">20</td><td class="c">21</td><td class="c">22</td><td class="c">1.0</td><td class="c">+1.0</td></tr>
+      <tr><td class="c">F</td><th>袖口幅</th><td class="c">8.0</td><td class="c">8.5</td><td class="c">9.0</td><td class="c">9.5</td><td class="c">10.0</td><td class="c">0.5</td><td class="c">+0.5</td></tr>
+      <tr><td class="c">G</td><th>アームホール</th><td class="c">18</td><td class="c">19</td><td class="c">20</td><td class="c">21</td><td class="c">22</td><td class="c">1.0</td><td class="c">+1.0</td></tr>
+      <tr><td class="c">H</td><th>衿ぐり幅</th><td class="c">18.0</td><td class="c">18.5</td><td class="c">19.0</td><td class="c">19.5</td><td class="c">20.0</td><td class="c">0.7</td><td class="c">+0.5</td></tr>
+      <tr><td class="c">I</td><th>前衿ぐり深さ</th><td class="c">11.0</td><td class="c">11.5</td><td class="c">12.0</td><td class="c">12.5</td><td class="c">13.0</td><td class="c">0.7</td><td class="c">+0.5</td></tr>
+      <tr><td class="c">J</td><th>後衿ぐり深さ</th><td class="c">2.0</td><td class="c">2.0</td><td class="c">2.5</td><td class="c">2.5</td><td class="c">3.0</td><td class="c">0.5</td><td class="c">±</td></tr>
+      <tr><td class="c">K</td><th>衿高（折前）</th><td class="c">7.0</td><td class="c">7.0</td><td class="c">7.0</td><td class="c">7.0</td><td class="c">7.0</td><td class="c">0.5</td><td class="c">±</td></tr>
+      <tr><td class="c">L</td><th>前立て長</th><td class="c">12.0</td><td class="c">12.0</td><td class="c">12.5</td><td class="c">12.5</td><td class="c">13.0</td><td class="c">0.5</td><td class="c">+0.3</td></tr>
+      <tr><td class="c">M</td><th>裾リブ高</th><td class="c">5.0</td><td class="c">5.0</td><td class="c">5.0</td><td class="c">5.0</td><td class="c">5.0</td><td class="c">0.5</td><td class="c">±</td></tr>
+      <tr><td class="c">N</td><th>袖口リブ高</th><td class="c">3.5</td><td class="c">3.5</td><td class="c">3.5</td><td class="c">3.5</td><td class="c">3.5</td><td class="c">0.5</td><td class="c">±</td></tr>
+      <tr><td class="c">O</td><th>裾幅</th><td class="c">46</td><td class="c">49</td><td class="c">52</td><td class="c">55</td><td class="c">58</td><td class="c">2.0</td><td class="c">+3.0</td></tr>
+    </table>
+    <p style="font-size:9px;color:var(--ink-soft);margin-top:4px">※ 採寸は平置き・自然状態（リブを伸ばさない）。度目（編密度）で寸法調整。基準＝M。検反時は各サイズ抜取りで全POM実測し許容差内を確認。</p>
+  </div>
+
+  <!-- 編密度・成形 -->
+  <div class="sec">
+    <div class="st"><span class="no">06</span><h2>編密度・度目指示</h2><span class="en">KNITTING DENSITY</span></div>
+    <table class="s">
+      <tr><th class="sth">ゲージ</th><td>7GG 横編（全成形）</td><th class="sth">基準度目</th><td>10cm角：ヨコ約24目 × タテ約32段（2×2リブ・自然状態）</td></tr>
+      <tr><th class="sth">糸長(度目値)</th><td>カウンターサンプル時に実測・記録し量産固定</td><th class="sth">衿・前立て</th><td>1×1リブ・身頃より度目やや詰め（伸び止め）</td></tr>
+      <tr><th class="sth">成形</th><td colspan="3">前後身頃・袖とも増減目で全成形（フルファッションマーク露出可）。カットせず編立形状で寸法を出す。</td></tr>
+    </table>
+  </div>
+
+  <!-- カラー展開 -->
+  <div class="sec">
+    <div class="st"><span class="no">07</span><h2>カラー展開・色番</h2><span class="en">COLORWAY ・ 釦色合わせ</span></div>
+    <table class="s">
+      <tr><th class="c" style="width:34px">No.</th><th>カラー名</th><th class="c" style="width:74px">色番</th><th class="c" style="width:110px">PANTONE TPX</th><th>釦色</th><th>備考</th></tr>
+      <tr><td class="c">1</td><td><span class="swatch" style="background:#efe9df"></span>オフホワイト</td><td class="c">OFW</td><td class="c">11-0107</td><td>共布色</td><td>定番・最量産色（現品基準）</td></tr>
+      <tr><td class="c">2</td><td><span class="swatch" style="background:#c8a17a"></span>モカ</td><td class="c">MOC</td><td class="c">16-1235</td><td>共布色</td><td>★基準写真の色</td></tr>
+      <tr><td class="c">3</td><td><span class="swatch" style="background:#7a5a4a"></span>ブラウン</td><td class="c">BRN</td><td class="c">19-1217</td><td>共布色</td><td>大人世代の定番</td></tr>
+      <tr><td class="c">4</td><td><span class="swatch" style="background:#6e2230"></span>ボルドー</td><td class="c">BDX</td><td class="c">19-1521</td><td>共布色</td><td>A/W差し色</td></tr>
+      <tr><td class="c">5</td><td><span class="swatch" style="background:#e8b23a"></span>イエロー</td><td class="c">YEL</td><td class="c">14-0952</td><td>共布色</td><td>展示映え・アクセント</td></tr>
+    </table>
+    <p style="font-size:9px;color:var(--ink-soft);margin-top:4px">※ 色番・PANTONEは参考。確定はラボディップ（編地色見本）承認による。釦は各色とも共布くるみ釦で本体色に合わせる。</p>
+  </div>
+
+  <div class="foot"><span>東和盛泰株式会社　工場用仕様書　TW-2026AW-001 洗えるリブポロ　Ver.2.0</span><span>P.2 / 3</span></div>
+</section>
+
+<!-- ================= PAGE 3 : 素材・縫製ディテール・付属・検品 ================= -->
+<section class="page">
+  <div class="dh">
+    <div class="brand"><div class="mk">和</div><div class="bn">東和盛泰株式会社<small>TOUWASEITAI CO., LTD.</small></div></div>
+    <div class="dt"><span class="en">CONSTRUCTION &amp; QC</span><h1>素材・縫製・検品</h1><span class="flag">FACTORY / 製造用・全3葉 3/3</span></div>
+  </div>
+
+  <!-- 素材 -->
+  <div class="sec">
+    <div class="st"><span class="no">08</span><h2>素材・付属（BOM）</h2><span class="en">BILL OF MATERIALS</span></div>
+    <table class="s">
+      <tr><th class="sth">本体糸</th><td>アクリル60% / ナイロン30% / 毛8% / ポリウレタン2%（抗ピリング糸）</td><th class="sth">番手/本数</th><td>2/48 × 2本引揃え（約1/12Nm）</td></tr>
+      <tr><th class="sth">釦</th><td>共布くるみ釦 φ13mm × 2個（＋予備1個）</td><th class="sth">縫製糸</th><td>ウーリーナイロン／スパン#60 本縫い（色番:本体色合わせ）</td></tr>
+      <tr><th class="sth">織ネーム</th><td>ブランド織ネーム（縦型）後ろ衿中央付け</td><th class="sth">品質表示</th><td>サテン／組成・原産国・洗濯絵表示・整理番号</td></tr>
+      <tr><th class="sth">下げ札</th><td>主札＋品番札（右袖・ガンタッカ）</td><th class="sth">個包装</th><td>OPP袋＋台紙／予備釦は品質表示タグに添付</td></tr>
+    </table>
+  </div>
+
+  <!-- ディテール拡大 -->
+  <div class="sec">
+    <div class="st"><span class="no">09</span><h2>ディテール拡大・縫製指示</h2><span class="en">DETAIL CALLOUTS</span></div>
+    <div class="details">
+      <div class="dc"><span class="lbl">衿 / COLLAR</span>
+        <svg viewBox="0 0 150 110"><path class="o2" d="M20 70 C20 40 40 30 75 30 C110 30 130 40 130 70"/><path class="o2" d="M20 86 C20 56 40 46 75 46 C110 46 130 56 130 86"/><g class="d"><line x1="40" y1="44" x2="38" y2="78"/><line x1="60" y1="38" x2="59" y2="74"/><line x1="75" y1="36" x2="75" y2="72"/><line x1="90" y1="38" x2="91" y2="74"/><line x1="110" y1="44" x2="112" y2="78"/></g></svg>
+        <small>1×1リブ衿・折返し。台衿なし。衿高7cm（折前）。リンキング付け・衿付けは伸び止め度目。</small>
+      </div>
+      <div class="dc"><span class="lbl">前立て / PLACKET</span>
+        <svg viewBox="0 0 150 110"><rect class="o2" x="52" y="14" width="46" height="86" rx="2"/><line class="o2" x1="75" y1="14" x2="75" y2="100"/><circle cx="75" cy="36" r="5" fill="none" stroke="#7a6358" stroke-width="1.6"/><circle cx="75" cy="36" r="2" fill="#7a6358"/><circle cx="75" cy="70" r="5" fill="none" stroke="#7a6358" stroke-width="1.6"/><circle cx="75" cy="70" r="2" fill="#7a6358"/><line class="dim" x1="40" y1="36" x2="40" y2="70"/><text class="dimt" x="22" y="56">釦間</text></svg>
+        <small>2釦・釦間約3.4cm。前立幅2.5cm・上前/下前重ね。釦ホール＝リンキングループ。釦付け強度10N以上。</small>
+      </div>
+      <div class="dc"><span class="lbl">袖口 / CUFF</span>
+        <svg viewBox="0 0 150 110"><path class="o2" d="M30 26 L120 26 L112 96 L38 96 Z"/><line class="o2" x1="34" y1="64" x2="116" y2="64"/><g class="d"><line x1="44" y1="66" x2="43" y2="92"/><line x1="60" y1="66" x2="60" y2="93"/><line x1="75" y1="66" x2="75" y2="93"/><line x1="90" y1="66" x2="90" y2="93"/><line x1="106" y1="66" x2="107" y2="92"/></g><line class="dim" x1="128" y1="64" x2="128" y2="96"/><text class="dimt" x="131" y="84">3.5</text></svg>
+        <small>2×2リブ袖口・リブ高3.5cm。袖下＝オーバーロック＋本縫い。前振りなし。</small>
+      </div>
+      <div class="dc"><span class="lbl">裾 / HEM</span>
+        <svg viewBox="0 0 150 110"><rect class="o2" x="20" y="20" width="110" height="80"/><line class="o2" x1="20" y1="58" x2="130" y2="58"/><g class="d"><line x1="34" y1="60" x2="34" y2="96"/><line x1="52" y1="60" x2="52" y2="96"/><line x1="70" y1="60" x2="70" y2="96"/><line x1="88" y1="60" x2="88" y2="96"/><line x1="106" y1="60" x2="106" y2="96"/><line x1="120" y1="60" x2="120" y2="96"/></g><line class="dim" x1="138" y1="58" x2="138" y2="100"/><text class="dimt" x="140" y="82">5.0</text></svg>
+        <small>2×2リブ裾・リブ高5cm。脇＝オーバーロック＋本縫い。脇裾は閂(かんぬき)補強。</small>
+      </div>
+    </div>
+  </div>
+
+  <!-- 縫製仕様 -->
+  <div class="sec">
+    <div class="st"><span class="no">10</span><h2>縫製・接ぎ仕様</h2><span class="en">CONSTRUCTION</span></div>
+    <table class="s">
+      <tr><th class="sth">肩接ぎ</th><td>リンキング（目移し接ぎ・地縫い併用可）</td><th class="sth">脇・袖下</th><td>4本針オーバーロック＋本縫い（伸び対応）</td></tr>
+      <tr><th class="sth">袖付け</th><td>セットイン縫製（イセ込み少・左右対称）</td><th class="sth">衿・前立て付け</th><td>リンキング（衿ぐりに伸び止め）</td></tr>
+      <tr><th class="sth">縫目密度</th><td>本縫い 3.0mm/針（約8.5針/インチ）</td><th class="sth">仕上げ</th><td>ソフト仕上げ（過度な圧縮プレス不可）・整形セット</td></tr>
+    </table>
+  </div>
+
+  <!-- 洗濯・梱包 -->
+  <div class="sec">
+    <div class="st"><span class="no">11</span><h2>洗濯表示・梱包</h2><span class="en">CARE &amp; PACKING</span></div>
+    <table class="s">
+      <tr><th class="sth">洗濯表示</th><td colspan="3">液温40℃・洗濯機弱 ／ 漂白不可 ／ タンブラー乾燥不可 ／ アイロン中温（あて布）／ 日陰の平干し　※裏返し・ネット使用推奨</td></tr>
+      <tr><th class="sth">たたみ</th><td>三つ折り（台紙入り）</td><th class="sth">個包装</th><td>OPP個包装・シール留め</td></tr>
+      <tr><th class="sth">入数</th><td>1色1サイズ 20枚／カートン</td><th class="sth">アソート</th><td>カラー5 × サイズ5（指示書による）</td></tr>
+    </table>
+  </div>
+
+  <!-- 検品 -->
+  <div class="sec">
+    <div class="st"><span class="no">12</span><h2>検品基準・合否</h2><span class="en">QUALITY CONTROL</span></div>
+    <ul class="q">
+      <li><b>寸法：</b>全POMを上記許容差内。基準サイズMは±0方向で管理。左右対称必須。</li>
+      <li><b>編立：</b>度目不揃い・編キズ・目飛び・穴・色段（編段）は不良。フルファッションマークの位置は左右対称。</li>
+      <li><b>抗ピリング：</b>JIS L 1076（ICI法）3-4級以上を目標。</li>
+      <li><b>洗濯収縮：</b>タテ・ヨコとも ±3%以内（JIS L 1909相当）。</li>
+      <li><b>染色堅牢度：</b>摩擦・洗濯ともに4級以上を目標（濃色は別途確認）。</li>
+      <li><b>釦：</b>取付強度10N以上。予備釦添付を確認。糸切れ・ほつれなきこと。</li>
+      <li><b>付属・表示：</b>織ネーム/品質表示の位置・内容・整理番号を現品照合。</li>
+      <li><b>外観：</b>汚れ・油染み・異物混入・異臭なきこと。検針（金属探知）通過。</li>
+      <li style="margin-top:4px"><b>※本仕様書は提案兼製造指示。寸法・度目・原価は参考値を含み、<u>量産確定はカウンターサンプル承認後</u>とする。</b></li>
+    </ul>
+  </div>
+
+  <div class="foot"><span>東和盛泰株式会社　TOUWASEITAI CO., LTD.　TEL 084-999-2390 / info@touwaseitai.com</span><span>P.3 / 3</span></div>
+</section>
+
+</body>
+</html>

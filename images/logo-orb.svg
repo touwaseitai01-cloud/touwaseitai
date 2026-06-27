@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" width="140" height="140" role="img" aria-label="東和盛泰 ニットオーブマーク">
+  <defs>
+    <radialGradient id="tw-orb-fill" cx="40%" cy="34%" r="75%">
+      <stop offset="0" stop-color="#7fe0ff"/>
+      <stop offset=".4" stop-color="#2b8bf0"/>
+      <stop offset=".8" stop-color="#1745b8"/>
+      <stop offset="1" stop-color="#101a5c"/>
+    </radialGradient>
+    <radialGradient id="tw-orb-halo" cx="50%" cy="50%" r="50%">
+      <stop offset=".55" stop-color="#5ec8ff" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#5ec8ff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="tw-orbit" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9be8ff"/>
+      <stop offset="1" stop-color="#3a7bff"/>
+    </linearGradient>
+    <pattern id="tw-knit" width="9" height="8" patternUnits="userSpaceOnUse">
+      <path d="M0 1 L4.5 7 L9 1" fill="none" stroke="#eafaff" stroke-opacity=".55" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+    </pattern>
+    <clipPath id="tw-orb-clip"><circle cx="70" cy="70" r="38"/></clipPath>
+  </defs>
+
+  <!-- 発光ハロー -->
+  <circle cx="70" cy="70" r="62" fill="url(#tw-orb-halo)"/>
+
+  <!-- オーブ本体 -->
+  <circle cx="70" cy="70" r="38" fill="url(#tw-orb-fill)"/>
+
+  <!-- ニットの編み目（Vステッチ）テクスチャ -->
+  <rect x="30" y="30" width="80" height="80" fill="url(#tw-knit)" clip-path="url(#tw-orb-clip)"/>
+
+  <!-- ハイライトの三日月 -->
+  <path d="M52 44 A38 38 0 0 0 49 96" fill="none" stroke="#eafaff" stroke-opacity=".55" stroke-width="2.4" stroke-linecap="round"/>
+
+  <!-- 軌道リング（神秘性・グローバル）＝糸 -->
+  <ellipse cx="70" cy="70" rx="58" ry="22" fill="none" stroke="url(#tw-orbit)" stroke-width="2.2" transform="rotate(-26 70 70)"/>
+  <circle cx="124" cy="44" r="3.2" fill="#9be8ff"/>
+
+  <!-- 星 -->
+  <g fill="#dff4ff">
+    <circle cx="22" cy="34" r="1.6"/>
+    <circle cx="116" cy="100" r="2"/>
+    <circle cx="40" cy="116" r="1.4"/>
+    <circle cx="104" cy="22" r="1.3"/>
+  </g>
+</svg>

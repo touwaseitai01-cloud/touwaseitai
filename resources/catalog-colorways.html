@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ニット展示会 カラーバリエーション｜東和盛泰株式会社</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;700&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#5a4452;--copper:#b89484;--ink:#3a2e34;--ink-soft:#6a5a62;--line:#d9ccc2;--head:#faf4ee;}
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body{font-family:'Noto Sans JP',sans-serif;color:var(--ink);background:#cfc7bd;line-height:1.6;font-size:13px;-webkit-font-smoothing:antialiased}
+  .toolbar{max-width:210mm;margin:14px auto;display:flex;gap:10px;justify-content:flex-end}
+  .btn{background:var(--navy);color:#fff;border:none;cursor:pointer;padding:10px 22px;border-radius:2px;font-size:12.5px;letter-spacing:.05em;font-family:inherit}
+  .btn.alt{background:#fff;color:var(--navy);border:1px solid var(--navy)}
+  .page{width:210mm;min-height:297mm;margin:0 auto 16px;background:#fff;padding:15mm 14mm;box-shadow:0 14px 40px rgba(0,0,0,.18);position:relative;overflow:hidden}
+  .serif{font-family:'Noto Serif JP',serif}.en{font-family:'Cormorant Garamond',serif;letter-spacing:.18em}
+  .rhead{display:flex;justify-content:space-between;align-items:center;border-bottom:1.5px solid var(--navy);padding-bottom:8px;margin-bottom:12px}
+  .rhead .bn{font-family:'Noto Serif JP',serif;font-size:13px;font-weight:700;color:var(--navy)}
+  .rhead .bn small{font-family:'Cormorant Garamond',serif;font-size:9px;letter-spacing:.16em;color:var(--copper);display:block}
+  .rhead .pg{font-family:'Cormorant Garamond',serif;font-size:11px;color:var(--copper);letter-spacing:.2em}
+  .cover{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;height:265mm}
+  .cover .mark{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--copper));color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Noto Serif JP',serif;font-size:34px;font-weight:700;margin-bottom:36px}
+  .cover .en-sm{font-family:'Cormorant Garamond',serif;letter-spacing:.34em;color:var(--copper);font-size:14px;margin-bottom:14px}
+  .cover h1{font-family:'Noto Serif JP',serif;font-size:38px;color:var(--navy);font-weight:700;line-height:1.35;letter-spacing:.04em}
+  .cover .sub{margin-top:22px;font-size:15px;color:var(--ink-soft);line-height:1.9}.cover .sub b{color:var(--navy)}
+  .cover .cband{margin-top:36px;border-top:1px solid var(--line);padding-top:18px;font-size:12px;color:var(--ink-soft)}.cover .cband .serif{color:var(--navy);font-size:14px}
+  .type-head{display:flex;align-items:baseline;gap:12px;margin-bottom:6px}
+  .type-head .no{font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--copper);font-weight:600;line-height:1}
+  .type-head h2{font-family:'Noto Serif JP',serif;font-size:20px;color:var(--navy);font-weight:700}
+  .type-head .ent{font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:.18em;color:var(--ink-soft);margin-left:auto}
+  .cw-img{width:100%;height:158mm;object-fit:contain;background:#efeae3;border:1px solid var(--line);border-radius:3px;display:block;margin-top:6px}
+  .cw-info{margin-top:12px;display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+  .colorline{font-size:12px;line-height:2.1}
+  .colorline .c{display:inline-flex;align-items:center;margin-right:14px;white-space:nowrap}
+  .swatch{display:inline-block;width:16px;height:16px;border-radius:50%;margin-right:5px;border:1px solid rgba(0,0,0,.15);vertical-align:-3px}
+  .bright{font-weight:700;color:var(--navy)}
+  .btag{display:inline-block;background:#d62f2f;color:#fff;font-size:8.5px;padding:0 5px;border-radius:2px;margin-left:3px;letter-spacing:.04em}
+  .specrow{font-size:12px;color:var(--ink);line-height:1.7}
+  .specrow b{color:var(--copper);font-weight:500;font-size:10.5px;letter-spacing:.04em}
+  .hookbox{background:#f7f1ea;border:1px solid #e7d8cb;border-radius:3px;padding:10px 13px;font-size:11px;color:var(--ink);line-height:1.65;margin-top:4px}.hookbox b{color:var(--navy)}
+  .price{margin-top:8px}.price .up{font-family:'Noto Serif JP',serif;font-size:18px;color:var(--navy);font-weight:700}.price .up small{font-size:11px;color:var(--ink-soft);font-weight:400}
+  .foot{position:absolute;left:14mm;right:14mm;bottom:9mm;border-top:1px solid var(--line);padding-top:7px;display:flex;justify-content:space-between;font-size:9.5px;color:var(--ink-soft)}
+  table{width:100%;border-collapse:collapse;border:1px solid var(--line);margin-top:6px}
+  th,td{border:1px solid var(--line);padding:7px 9px;font-size:11.5px;text-align:left;vertical-align:middle}
+  th{background:var(--head);color:var(--navy);font-weight:600;font-family:'Noto Serif JP',serif}
+  td.c,th.c{text-align:center}
+  @media print{body{background:#fff}.toolbar{display:none}.page{margin:0;box-shadow:none;width:auto;min-height:auto;height:297mm;page-break-after:always}.page:last-child{page-break-after:auto}}
+  @page{size:A4;margin:0}
+</style>
+</head>
+<body>
+<div class="toolbar"><button class="btn alt" onclick="window.print()">印刷 / PDF保存</button></div>
+
+<!-- COVER -->
+<section class="page"><div class="cover">
+  <div class="mark">和</div>
+  <div class="en-sm">KNIT ・ COLORWAY COLLECTION ・ 2026–2027</div>
+  <h1>ニット 展示会<br>カラーバリエーション</h1>
+  <div class="sub">全10型 × 各カラー展開（<b>明るい差し色入り</b>）<br>ターゲット：<b>30代から／レディース</b>　上代：<b>〜5,000円</b></div>
+  <div class="cband"><span class="serif">東和盛泰株式会社</span>　TOUWASEITAI CO., LTD.　ニット衣料 OEM・ODM<br>TEL 084-999-2390 ／ info@touwaseitai.com</div>
+</div><div class="foot"><span>東和盛泰株式会社　カラーバリエーション</span><span>COVER</span></div></section>
+
+<!-- COLOR STRATEGY -->
+<section class="page">
+  <div class="rhead"><div class="bn">東和盛泰株式会社<small>TOUWASEITAI CO., LTD.</small></div><div class="pg">COLOR STRATEGY</div></div>
+  <div class="type-head"><h2>カラー戦略</h2><span class="ent">10 STYLES × COLORWAYS</span></div>
+  <p style="font-size:12.5px;color:var(--ink-soft);line-height:1.9;margin:8px 0 4px">各型は<b style="color:var(--navy)">ベーシック3色＋明るい差し色1色</b>を基本展開とします。定番色で数を確保しつつ、<b style="color:var(--navy)">明るい1色で展示会の見栄え・SNS映え・回転</b>を取る設計です（2026トレンドの差し色）。</p>
+  <table>
+    <tr><th class="c" style="width:30px">No.</th><th>アイテム</th><th>ベーシック</th><th>明るい色（差し色）</th></tr>
+    <tr><td class="c">定番</td><td>リブポロ</td><td>オフホワイト／モカ／ボルドー</td><td class="bright">イエロー <span class="btag">明</span></td></tr>
+    <tr><td class="c">A</td><td>シアーカーディガン</td><td>ホワイト／グレージュ／ミント</td><td class="bright">コーラルピンク <span class="btag">明</span></td></tr>
+    <tr><td class="c">B</td><td>編地切替ベスト</td><td>サンドベージュ／グレージュ／ブラウン</td><td class="bright">テラコッタ <span class="btag">明</span></td></tr>
+    <tr><td class="c">C</td><td>ジャカード柄ニット</td><td>ベージュ×ブラウン／グレー系</td><td class="bright">レッド系 <span class="btag">明</span></td></tr>
+    <tr><td class="c">D</td><td>ニットワンピース</td><td>モカ／グレージュ／ブラック</td><td class="bright">エメラルドグリーン <span class="btag">明</span></td></tr>
+    <tr><td class="c">E</td><td>水色シースルー</td><td>サックスブルー／ホワイト／ミント</td><td class="bright">レモンイエロー <span class="btag">明</span></td></tr>
+    <tr><td class="c">F</td><td>ケーブルカーディガン</td><td>オフホワイト／ベージュ／グレー</td><td class="bright">バターイエロー <span class="btag">明</span></td></tr>
+    <tr><td class="c">G</td><td>ロングニットガウン</td><td>モカ／グレージュ／ブラック</td><td class="bright">テラコッタ <span class="btag">明</span></td></tr>
+    <tr><td class="c">H</td><td>タートルネック</td><td>ボルドー／ブラック／グレー</td><td class="bright">エナジーレッド <span class="btag">明</span></td></tr>
+    <tr><td class="c">I</td><td>ケーブル柄プルオーバー</td><td>キャメル／グレー</td><td class="bright">レッド <span class="btag">明</span></td></tr>
+  </table>
+  <p style="font-size:11px;color:var(--ink-soft);margin-top:10px">※ 各型の実物カラーは次ページ以降の写真でご確認ください。色番・PANTONEは量産時に確定。</p>
+  <div class="foot"><span>東和盛泰株式会社　カラーバリエーション</span><span>P.01</span></div>
+</section>
+
+<!-- type pages -->
+<section class="page"><div class="rhead"><div class="bn">東和盛泰株式会社<small>TOUWASEITAI CO., LTD.</small></div><div class="pg">COLORWAY ・ STANDARD</div></div>
+  <div class="type-head"><span class="no">00</span><h2>洗えるリブポロ</h2><span class="ent">RIB POLO</span></div>
+  <img class="cw-img" src="photos/cw-ribpolo.jpg" alt="リブポロ カラバリ">
+  <div class="cw-info">
+    <div><div class="specrow"><b>素材/編み</b><br>アクリル混（抗ピリング）／2×2リブ・7GG</div>
+      <div class="colorline" style="margin-top:6px"><span class="c"><span class="swatch" style="background:#efe9df"></span>ｵﾌﾎﾜｲﾄ</span><span class="c"><span class="swatch" style="background:#8a6a52"></span>ﾓｶ</span><span class="c"><span class="swatch" style="background:#6e2230"></span>ﾎﾞﾙﾄﾞｰ</span><span class="c bright"><span class="swatch" style="background:#e8b23a"></span>ｲｴﾛｰ<span class="btag">明</span></span></div></div>
+    <div><div class="hookbox"><b>定番枠：</b>衿で顔まわりきれい・洗える実用品質。明るいイエローで展示の引きを作る。</div><div class="price"><span class="up">¥2,990 <small>上代</small></span></div></div>
+  </div>
+  <div class="foot"><span>東和盛泰株式会社　カラーバリエーション</span><span>P.02</span></div></section>
+
+<section class="page"><div class="rhead"><div class="bn">東和盛泰株式会社<small>TOUWASEITAI CO., LTD.</small></div><div class="pg">COLORWAY ・ A</div></div>
+  <div class="type-head"><span class="no">A</span><h2>透かしシアーカーディガン</h2><span class="ent">SHEER CARDIGAN</span></div>
+  <img class="cw-img" src="photos/cw-cardigan.jpg" alt="シアーカーデ カラバリ">
+  <div class="cw-info">
+    <div><div class="specrow"><b>素材/編み</b><br>アクリル・ナイロン混／透かし編み・14〜16GG</div>
+      <div class="colorline" style="margin-top:6px"><span class="c"><span class="swatch" style="background:#f4f1ea"></span>ﾎﾜｲﾄ</span><span class="c"><span class="swatch" style="background:#cfc6ba"></span>ｸﾞﾚｰｼﾞｭ</span><span class="c"><span class="swatch" style="background:#bfe0cf"></span>ﾐﾝﾄ</span><span class="c bright"><span class="swatch" style="background:#ef9a8a"></span>ｺｰﾗﾙﾋﾟﾝｸ<span class="btag">明</span></span></div></div>
+    <div><div class="hookbox"><b>◎技術：</b>全面の透かし編み。明るいコーラルで春夏の華やぎ・SNS映え。</div><div class="price"><span class="up">¥3,900〜4,900 <small>上代</small></span></div></div>
+  </div>
+  <div class="foot"><span>東和盛泰株式会社　カラーバリエーション</span><span>P.03</span></div></section>
+
+<section class="page"><div class="rhead"><div class="bn">東和盛泰株式会社<small>TOUWASEITAI CO., LTD.</small></div><div class="pg">COLORWAY ・ B</div></div>
+  <div class="type-head"><span class="no">B</span><h2>立体編地切替ベスト</h2><span class="ent">TEXTURED VEST</span></div>
+  <img class="cw-img" src="photos/cw-vest.jpg" alt="ベスト カラバリ">
+  <div class="cw-info">
+    <div><div class="specrow"><b>素材/編み</b><br>アクリル・ウール混／ケーブル×リブ×メッシュ・7GG</div>
+      <div class="colorline" style="margin-top:6px"><span class="c"><span class="swatch" style="background:#d8c3a3"></span>ｻﾝﾄﾞﾍﾞｰｼﾞｭ</span><span class="c"><span class="swatch" style="background:#cfc6ba"></span>ｸﾞﾚｰｼﾞｭ</span><span class="c"><span class="swatch" style="background:#8a6a52"></span>ﾌﾞﾗｳﾝ</span><span class="c bright"><span class="swatch" style="background:#c0622e"></span>ﾃﾗｺｯﾀ<span class="btag">明</span></span></div></div>
+    <div><div class="hookbox"><b>◎技術：</b>3編地切替の立体ベスト。明るいテラコッタで秋冬の差し色に。</div><div class="price"><span class="up">¥3,500〜4,500 <small>上代</small></span></div></div>
+  </div>
+  <div class="foot"><span>東和盛泰株式会社　カラーバリエーション</span><span>P.04</span></div></section>
+
+<section class="page"><div class="rhead"><div class="bn">東和盛泰株式会社<small>TOUWASEITAI CO., LTD.</small></div><div class="pg">COLORWAY ・ C</div></div>
+  <div class="type-head"><span class="no">C</span><h2>ジャカード柄ニット</h2><span class="ent">JACQUARD KNIT</span></div>
+  <img class="cw-img" src="photos/cw-jacquard.jpg" alt="ジャカード カラバリ">
+  <div class="cw-info">
+    <div><div class="specrow"><b>素材/編み</b><br>アクリル混／ジャカード編み込み柄・12GG</div>
+      <div class="colorline" style="margin-top:6px"><span class="c"><span class="swatch" style="background:#e8dcc4"></span>ﾍﾞｰｼﾞｭ系</span><span class="c"><span class="swatch" style="background:#8c8790"></span>ｸﾞﾚｰ系</span><span class="c bright"><span class="swatch" style="background:#b23a3a"></span>ﾚｯﾄﾞ系<span class="btag">明</span></span></div></div>
+    <div><div class="hookbox"><b>◎技術：</b>編み込み柄の柄出し精度。明るいレッド系で柄物の華を強調。</div><div class="price"><span class="up">¥3,900〜4,900 <small>上代</small></span></div></div>
+  </div>
+  <div class="foot"><span>東和盛泰株式会社　カラーバリエーション</span><span>P.05</span></div></section>
+
+<section class="page"><div class="rhead"><div class="bn">東和盛泰株式会社<small>TOUWASEITAI CO., LTD.</small></div><div class="pg">COLORWAY ・ D</div></div>
+  <div class="type-head"><span class="no">D</span><h2>ニットワンピース</h2><span class="ent">KNIT DRESS</span></div>
+  <img class="cw-img" src="photos/cw-dress.jpg" alt="ワンピース カラバリ">
+  <div class="cw-info">
+    <div><div class="specrow"><b>素材/編み</b><br>アクリル混（とろみ）／天竺・ウエスト切替・12GG</div>
+      <div class="colorline" style="margin-top:6px"><span class="c"><span class="swatch" style="background:#8a6a52"></span>ﾓｶ</span><span class="c"><span class="swatch" style="background:#cfc6ba"></span>ｸﾞﾚｰｼﾞｭ</span><span class="c"><span class="swatch" style="background:#2c2a2e"></span>ﾌﾞﾗｯｸ</span><span class="c bright"><span class="swatch" style="background:#2e8b6e"></span>ｴﾒﾗﾙﾄﾞ<span class="btag">明</span></span></div></div>
+    <div><div class="hookbox"><b>◎技術：</b>長尺成型・体型カバー。明るいエメラルドで1枚で主役に。</div><div class="price"><span class="up">¥4,900 <small>上代</small></span></div></div>
+  </div>
+  <div class="foot"><span>東和盛泰株式会社　カラーバリエーション</span><span>P.06</span></div></section>
+
+<section class="page"><div class="rhead"><div class="bn">東和盛泰株式会社<small>TOUWASEITAI CO., LTD.</small></div><div class="pg">COLORWAY ・ E</div></div>
+  <div class="type-head"><span class="no">E</span><h2>水色シースルー シアーニット</h2><span class="ent">SAX SHEER KNIT</span></div>
+  <img class="cw-img" src="photos/cw-sax-sheer.jpg" alt="水色シアー カラバリ">
+  <div class="cw-info">
+    <div><div class="specrow"><b>素材/編み</b><br>アクリル・ナイロン混／透かし編み・14〜16GG</div>
+      <div class="colorline" style="margin-top:6px"><span class="c"><span class="swatch" style="background:#bcd4e3"></span>ｻｯｸｽﾌﾞﾙｰ</span><span class="c"><span class="swatch" style="background:#f4f1ea"></span>ﾎﾜｲﾄ</span><span class="c"><span class="swatch" style="background:#bfe0cf"></span>ﾐﾝﾄ</span><span class="c bright"><span class="swatch" style="background:#ecd24a"></span>ﾚﾓﾝｲｴﾛｰ<span class="btag">明</span></span></div></div>
+    <div><div class="hookbox"><b>◎技術：</b>淡色の透かし編みを均一に。水色＋明るいレモンで顔映え・抜け感。</div><div class="price"><span class="up">¥3,900〜4,900 <small>上代</small></span></div></div>
+  </div>
+  <div class="foot"><span>東和盛泰株式会社　カラーバリエーション</span><span>P.07</span></div></section>
+
+<section class="page"><div class="rhead"><div class="bn">東和盛泰株式会社<small>TOUWASEITAI CO., LTD.</small></div><div class="pg">COLORWAY ・ F</div></div>
+  <div class="type-head"><span class="no">F</span><h2>ケーブルカーディガン</h2><span class="ent">CABLE CARDIGAN</span></div>
+  <img class="cw-img" src="photos/cw-cable-cardigan.jpg" alt="ケーブルカーデ カラバリ">
+  <div class="cw-info">
+    <div><div class="specrow"><b>素材/編み</b><br>アクリル・ウール混／ケーブル編み・7GG</div>
+      <div class="colorline" style="margin-top:6px"><span class="c"><span class="swatch" style="background:#f4f1ea"></span>ｵﾌﾎﾜｲﾄ</span><span class="c"><span class="swatch" style="background:#e8dcc4"></span>ﾍﾞｰｼﾞｭ</span><span class="c"><span class="swatch" style="background:#8c8790"></span>ｸﾞﾚｰ</span><span class="c bright"><span class="swatch" style="background:#ecd98a"></span>ﾊﾞﾀｰｲｴﾛｰ<span class="btag">明</span></span></div></div>
+    <div><div class="hookbox"><b>◎技術：</b>立体ケーブルの編立。明るいバターイエローで通年の主役カーデに。</div><div class="price"><span class="up">¥3,900〜4,900 <small>上代</small></span></div></div>
+  </div>
+  <div class="foot"><span>東和盛泰株式会社　カラーバリエーション</span><span>P.08</span></div></section>
+
+<section class="page"><div class="rhead"><div class="bn">東和盛泰株式会社<small>TOUWASEITAI CO., LTD.</small></div><div class="pg">COLORWAY ・ G</div></div>
+  <div class="type-head"><span class="no">G</span><h2>ロングニットガウン</h2><span class="ent">LONG KNIT GOWN</span></div>
+  <img class="cw-img" src="photos/cw-long-gown.jpg" alt="ロングガウン カラバリ">
+  <div class="cw-info">
+    <div><div class="specrow"><b>素材/編み</b><br>アクリル混（とろみ）／天竺〜ミラノリブ・12GG</div>
+      <div class="colorline" style="margin-top:6px"><span class="c"><span class="swatch" style="background:#8a6a52"></span>ﾓｶ</span><span class="c"><span class="swatch" style="background:#cfc6ba"></span>ｸﾞﾚｰｼﾞｭ</span><span class="c"><span class="swatch" style="background:#2c2a2e"></span>ﾌﾞﾗｯｸ</span><span class="c bright"><span class="swatch" style="background:#c0622e"></span>ﾃﾗｺｯﾀ<span class="btag">明</span></span></div></div>
+    <div><div class="hookbox"><b>◎技術：</b>長尺の度目安定・ドレープ。明るいテラコッタで羽織りの主役に。</div><div class="price"><span class="up">¥4,500〜4,900 <small>上代</small></span></div></div>
+  </div>
+  <div class="foot"><span>東和盛泰株式会社　カラーバリエーション</span><span>P.09</span></div></section>
+
+<section class="page"><div class="rhead"><div class="bn">東和盛泰株式会社<small>TOUWASEITAI CO., LTD.</small></div><div class="pg">COLORWAY ・ H</div></div>
+  <div class="type-head"><span class="no">H</span><h2>きれいめタートルネック</h2><span class="ent">TURTLENECK</span></div>
+  <img class="cw-img" src="photos/cw-turtleneck.jpg" alt="タートル カラバリ">
+  <div class="cw-info">
+    <div><div class="specrow"><b>素材/編み</b><br>アクリル主体混／天竺〜ミラノリブ・12GG</div>
+      <div class="colorline" style="margin-top:6px"><span class="c"><span class="swatch" style="background:#6e2230"></span>ﾎﾞﾙﾄﾞｰ</span><span class="c"><span class="swatch" style="background:#2c2a2e"></span>ﾌﾞﾗｯｸ</span><span class="c"><span class="swatch" style="background:#8c8790"></span>ｸﾞﾚｰ</span><span class="c bright"><span class="swatch" style="background:#d62f2f"></span>ｴﾅｼﾞｰﾚｯﾄﾞ<span class="btag">明</span></span></div></div>
+    <div><div class="hookbox"><b>定番枠：</b>30代鉄板のきれいめタートル。明るいレッドで差をつける。</div><div class="price"><span class="up">¥2,990〜3,900 <small>上代</small></span></div></div>
+  </div>
+  <div class="foot"><span>東和盛泰株式会社　カラーバリエーション</span><span>P.10</span></div></section>
+
+<section class="page"><div class="rhead"><div class="bn">東和盛泰株式会社<small>TOUWASEITAI CO., LTD.</small></div><div class="pg">COLORWAY ・ I</div></div>
+  <div class="type-head"><span class="no">I</span><h2>ケーブル柄プルオーバー</h2><span class="ent">CABLE PULLOVER</span></div>
+  <img class="cw-img" src="photos/cw-cable-pullover.jpg" alt="ケーブルプルオーバー カラバリ">
+  <div class="cw-info">
+    <div><div class="specrow"><b>素材/編み</b><br>アクリル・ウール混／ケーブル（アラン）編み・クルーネック・7GG</div>
+      <div class="colorline" style="margin-top:6px"><span class="c"><span class="swatch" style="background:#c08a52"></span>ｷｬﾒﾙ</span><span class="c"><span class="swatch" style="background:#b8b3ab"></span>ｸﾞﾚｰ</span><span class="c bright"><span class="swatch" style="background:#c62828"></span>ﾚｯﾄﾞ<span class="btag">明</span></span></div></div>
+    <div><div class="hookbox"><b>◎技術：</b>立体的なアラン／ケーブル柄を左右対称・均一に編む編立技術。明るいレッドで1枚で主役、展示の引きに。</div><div class="price"><span class="up">¥3,900〜4,900 <small>上代</small></span></div></div>
+  </div>
+  <div class="foot"><span>東和盛泰株式会社　カラーバリエーション</span><span>P.11</span></div></section>
+
+</body>
+</html>

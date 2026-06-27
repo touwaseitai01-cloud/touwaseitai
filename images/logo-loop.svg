@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="東和盛泰 ニットループマーク">
+  <defs>
+    <linearGradient id="tw-loop-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5a4452"/>
+      <stop offset="1" stop-color="#b89484"/>
+    </linearGradient>
+  </defs>
+  <circle cx="60" cy="60" r="58" fill="#fcf8f2"/>
+  <circle cx="60" cy="60" r="57" fill="none" stroke="#e8dcd4" stroke-width="1.5"/>
+  <!-- 2本の糸が編み合うループ＝東和の協業とニットを象徴 -->
+  <g fill="none" stroke-width="9" stroke-linecap="round">
+    <path d="M44 38 C20 50, 20 78, 44 90 C62 99, 62 70, 44 60 C28 51, 28 32, 44 38 Z"
+          stroke="#5a4452"/>
+    <path d="M76 38 C100 50, 100 78, 76 90 C58 99, 58 70, 76 60 C92 51, 92 32, 76 38 Z"
+          stroke="url(#tw-loop-grad)"/>
+  </g>
+</svg>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ニット 工業仕様図（パフスリーブ ニットアンサンブル）｜東和盛泰株式会社</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;700&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#5a4452;--copper:#b89484;--ink:#33333a;--ink-soft:#6a5a62;--line:#d9ccc2;--head:#faf4ee;--gm:#f4eee6;--gm2:#ece3d6;--draw:#33332f;--rib:#b3a08a;--mz:#5f6b73;--mw:#b6a89c;}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Noto Sans JP',sans-serif;color:var(--ink);background:#e7e0d8;line-height:1.6;font-size:13px;padding:24px 12px;-webkit-font-smoothing:antialiased}
+  .toolbar{max-width:980px;margin:0 auto 16px;display:flex;gap:10px;justify-content:flex-end;align-items:center}
+  .toolbar .hint{margin-right:auto;color:#6a5a62;font-size:12px}
+  .btn{background:var(--navy);color:#fff;border:none;cursor:pointer;padding:10px 20px;border-radius:2px;font-size:12.5px;letter-spacing:.05em;font-family:inherit}
+  .btn.alt{background:#fff;color:var(--navy);border:1px solid var(--navy)}
+  .btn:hover{opacity:.88}
+  .sheet{max-width:980px;margin:0 auto;background:#fff;padding:38px 40px 44px;box-shadow:0 18px 50px rgba(0,0,0,.18)}
+  .doc-head{display:flex;justify-content:space-between;align-items:flex-start;border-bottom:2px solid var(--navy);padding-bottom:14px;margin-bottom:6px}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand-mark{width:42px;height:42px;border-radius:50%;flex-shrink:0;background:linear-gradient(135deg,var(--navy),var(--copper));color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Noto Serif JP',serif;font-size:22px;font-weight:700}
+  .brand-name{font-family:'Noto Serif JP',serif;font-size:15px;font-weight:700;color:var(--navy);line-height:1.3}
+  .brand-en{font-family:'Cormorant Garamond',serif;font-size:10px;letter-spacing:.18em;color:var(--copper)}
+  .doc-title{text-align:right}
+  .doc-title .en{display:block;font-size:11px;color:var(--copper);letter-spacing:.3em;margin-bottom:2px}
+  .doc-title h1{font-family:'Noto Serif JP',serif;font-size:18px;color:var(--navy);font-weight:700;letter-spacing:.03em}
+  .hook{display:inline-block;background:var(--copper);color:#fff;font-size:9.5px;letter-spacing:.1em;padding:2px 8px;border-radius:2px;margin-top:4px}
+  .meta-row{display:grid;grid-template-columns:repeat(5,1fr);border:1px solid var(--line);margin:12px 0 4px}
+  .meta-cell{padding:7px 10px;border-right:1px solid var(--line)}
+  .meta-cell:last-child{border-right:none}
+  .meta-cell label{display:block;font-size:9px;color:var(--copper);letter-spacing:.1em;margin-bottom:2px}
+  .meta-cell .v{font-size:12px;color:var(--ink);font-weight:500}
+  .draw-area{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:14px 0 6px;border:1px solid var(--line);padding:10px;background:#fdfbf8}
+  .view{flex:1 1 360px;min-width:280px}
+  .view h3{font-family:'Noto Serif JP',serif;font-size:12px;color:var(--navy);text-align:center;margin-bottom:2px;letter-spacing:.05em}
+  .view svg{width:100%;height:auto;display:block}
+  .sec{margin-top:16px}
+  .sec-title{display:flex;align-items:baseline;gap:10px;border-left:3px solid var(--copper);padding-left:10px;margin-bottom:8px}
+  .sec-title .no{font-family:'Cormorant Garamond',serif;font-size:13px;color:var(--copper);font-weight:600}
+  .sec-title h2{font-family:'Noto Serif JP',serif;font-size:13px;color:var(--navy);font-weight:700}
+  .sec-title .en{font-size:9px;color:var(--ink-soft);letter-spacing:.16em}
+  table{width:100%;border-collapse:collapse;border:1px solid var(--line)}
+  th,td{border:1px solid var(--line);padding:6px 8px;font-size:11.5px;text-align:center}
+  th{background:var(--head);color:var(--navy);font-weight:600;font-family:'Noto Serif JP',serif;white-space:nowrap}
+  td.l,th.l{text-align:left}
+  .code-cell{font-family:'Cormorant Garamond',serif;font-weight:700;color:var(--navy)}
+  .notes{display:grid;grid-template-columns:1fr 1fr;gap:6px 22px;font-size:11.5px;color:var(--ink);list-style:none}
+  .notes li{padding-left:16px;position:relative;line-height:1.7}
+  .notes li::before{content:"";position:absolute;left:2px;top:8px;width:6px;height:6px;background:var(--copper);border-radius:50%}
+  .notes b{color:var(--navy)}
+  .hook-box{background:#f7f1ea;border:1px solid #e7d8cb;border-radius:3px;padding:10px 14px;font-size:11.5px;color:var(--ink);margin-top:10px}
+  .hook-box b{color:var(--navy)}
+  .foot{margin-top:18px;padding-top:10px;border-top:1px solid var(--line);display:flex;justify-content:space-between;font-size:10px;color:var(--ink-soft)}
+  .gm{fill:var(--gm);stroke:var(--draw);stroke-width:2;stroke-linejoin:round}
+  .gm2{fill:var(--gm2);stroke:var(--draw);stroke-width:2;stroke-linejoin:round}
+  .cut{fill:none;stroke:var(--draw);stroke-width:1.2;stroke-linecap:round}
+  .rib{fill:none;stroke:var(--rib);stroke-width:.9;stroke-linecap:round;opacity:.8}
+  .gth{fill:none;stroke:var(--rib);stroke-width:.8;stroke-linecap:round;opacity:.75}
+  .btnD{fill:#fff;stroke:#6f5a4e;stroke-width:1.2}
+  .mz{fill:none;stroke:var(--mz);stroke-width:1;marker-start:url(#arr);marker-end:url(#arr)}
+  .mw{fill:none;stroke:var(--mw);stroke-width:.7;stroke-dasharray:2.5 2}
+  .cf{fill:none;stroke:var(--navy);stroke-width:.8;stroke-dasharray:6 3}
+  .lead{fill:none;stroke:var(--navy);stroke-width:.7}
+  .codeC{fill:#fff;stroke:var(--navy);stroke-width:1}
+  .codeT{font:700 11px 'Cormorant Garamond',serif;fill:var(--navy);text-anchor:middle}
+  .lblT{font:10.5px 'Noto Sans JP';fill:#33333a}
+  .cfT{font:700 9px 'Cormorant Garamond',serif;fill:var(--navy);letter-spacing:.1em}
+  @media print{body{background:#fff;padding:0}.toolbar{display:none}.sheet{box-shadow:none;max-width:100%;padding:10mm}.sec,.draw-area{break-inside:avoid}}
+  @page{size:A4 portrait;margin:0}
+  @media (max-width:720px){.sheet{padding:22px 14px}.notes{grid-template-columns:1fr}.meta-row{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <marker id="arr" markerWidth="9" markerHeight="9" refX="4.5" refY="4.5" orient="auto-start-reverse">
+    <path d="M1.5,1.5 L7.5,4.5 L1.5,7.5" fill="none" stroke="#5f6b73" stroke-width="1"/>
+  </marker>
+</defs></svg>
+
+<div class="toolbar">
+  <span class="hint">▶ 展示会サンプル D：パフスリーブ ニットアンサンブル（2点セット・工業仕様図）。</span>
+  <button class="btn alt" onclick="window.print()">印刷 / PDF保存</button>
+</div>
+
+<div class="sheet">
+
+  <div class="doc-head">
+    <div class="brand">
+      <div class="brand-mark">和</div>
+      <div>
+        <div class="brand-name">東和盛泰株式会社</div>
+        <div class="brand-en">TOUWASEITAI CO., LTD.</div>
+      </div>
+    </div>
+    <div class="doc-title">
+      <span class="en">EXHIBITION SAMPLE ・ D</span>
+      <h1>工業仕様図｜パフスリーブ ニットアンサンブル</h1>
+      <span class="hook">技術フック：統一デザイン2点＋パフ袖成型</span>
+    </div>
+  </div>
+
+  <div class="meta-row">
+    <div class="meta-cell"><label>品番 STYLE</label><div class="v">TW-EX-D01（上下2点）</div></div>
+    <div class="meta-cell"><label>シーズン</label><div class="v">2026 S/S</div></div>
+    <div class="meta-cell"><label>ゲージ GG</label><div class="v">12GG</div></div>
+    <div class="meta-cell"><label>サンプルサイズ</label><div class="v">M（図は概寸）</div></div>
+    <div class="meta-cell"><label>想定上代</label><div class="v">¥4,500〜4,900（2点）</div></div>
+  </div>
+
+  <div class="draw-area">
+
+    <!-- 1: CARDIGAN -->
+    <div class="view">
+      <h3>① パフ袖カーディガン ／ FRONT</h3>
+      <svg viewBox="0 0 420 500" role="img" aria-label="パフ袖カーディガン 前身頃">
+        <!-- body -->
+        <path class="gm" d="M184 72 L150 80
+          C140 110 134 138 138 160
+          C139 250 140 340 142 410
+          C176 424 244 424 278 410
+          C280 340 281 250 282 160
+          C286 138 280 110 270 80 L236 72
+          C220 88 200 88 184 72 Z"/>
+        <!-- puff sleeves (volume cap + narrow cuff) -->
+        <path class="gm2" d="M150 80
+          C120 56 86 64 72 104
+          C64 134 70 170 96 198 L128 188
+          C132 168 138 168 152 162
+          C150 130 150 100 150 80 Z"/>
+        <path class="gm2" d="M270 80
+          C300 56 334 64 348 104
+          C356 134 350 170 324 198 L292 188
+          C288 168 282 168 268 162
+          C270 130 270 100 270 80 Z"/>
+        <!-- puff gather lines (cap) -->
+        <g class="gth"><path d="M104 96 C112 104 118 110 126 112"/><path d="M100 112 C110 118 118 122 128 124"/><path d="M100 130 C112 132 122 134 132 134"/></g>
+        <g class="gth"><path d="M316 96 C308 104 302 110 294 112"/><path d="M320 112 C310 118 302 122 292 124"/><path d="M320 130 C308 132 298 134 288 134"/></g>
+        <!-- cuff rib + gather -->
+        <path class="cut" d="M96 198 L128 188"/>
+        <g class="gth"><path d="M100 192 L104 206"/><path d="M110 189 L114 203"/><path d="M120 186 L124 200"/></g>
+        <path class="cut" d="M324 198 L292 188"/>
+        <g class="gth"><path d="M320 192 L316 206"/><path d="M310 189 L306 203"/><path d="M300 186 L296 200"/></g>
+        <!-- armhole seam -->
+        <path class="cut" d="M150 82 C150 110 150 134 152 162"/>
+        <path class="cut" d="M270 82 C270 110 270 134 268 162"/>
+        <!-- round neck + front bands + buttons (open cardigan) -->
+        <path class="cut" d="M184 76 C200 90 220 90 236 76"/>
+        <line class="cut" x1="202" y1="86" x2="202" y2="412"/>
+        <line class="cut" x1="218" y1="86" x2="218" y2="412"/>
+        <circle class="btnD" cx="210" cy="120" r="3.2"/>
+        <circle class="btnD" cx="210" cy="168" r="3.2"/>
+        <circle class="btnD" cx="210" cy="216" r="3.2"/>
+        <circle class="btnD" cx="210" cy="264" r="3.2"/>
+        <circle class="btnD" cx="210" cy="312" r="3.2"/>
+        <!-- hem rib -->
+        <path class="cut" d="M142 396 C176 410 244 410 278 396"/>
+        <g class="rib"><path d="M158 400 L157 418"/><path d="M180 403 L180 421"/><path d="M210 404 L210 422"/><path d="M240 403 L240 421"/><path d="M262 400 L263 418"/></g>
+        <!-- center front -->
+        <path class="cf" d="M210 86 L210 416"/>
+        <text class="cfT" x="214" y="388">C.F.</text>
+        <!-- measurements -->
+        <path class="mw" d="M184 72 L40 72"/>
+        <path class="mw" d="M142 410 L40 410"/>
+        <line class="mz" x1="48" y1="72" x2="48" y2="410"/>
+        <circle class="codeC" cx="48" cy="241" r="9"/><text class="codeT" x="48" y="245">A</text>
+        <path class="mw" d="M138 160 L138 196"/>
+        <path class="mw" d="M282 160 L282 196"/>
+        <line class="mz" x1="138" y1="188" x2="282" y2="188"/>
+        <circle class="codeC" cx="210" cy="188" r="9"/><text class="codeT" x="210" y="192">B</text>
+        <!-- callouts -->
+        <path class="lead" d="M84 110 L60 240"/>
+        <text class="lblT" x="40" y="236">パフ袖（袖山増目・先細）</text>
+        <path class="lead" d="M218 240 L360 240"/>
+        <text class="lblT" x="364" y="244">前開き5釦</text>
+        <!-- C パフ袖丈 -->
+        <path class="mw" d="M150 80 L132 70"/>
+        <path class="mw" d="M96 198 L78 208"/>
+        <line class="mz" x1="141" y1="75" x2="87" y2="203"/>
+        <circle class="codeC" cx="100" cy="140" r="8.5"/><text class="codeT" x="100" y="143.5">C</text>
+      </svg>
+    </div>
+
+    <!-- 2: INNER -->
+    <div class="view">
+      <h3>② ノースリーブ インナー ／ FRONT</h3>
+      <svg viewBox="0 0 360 500" role="img" aria-label="ノースリーブインナー 前身頃">
+        <path class="gm" d="M150 76 L120 84
+          C112 120 108 150 116 184
+          C118 264 118 344 122 420
+          C160 434 200 434 238 420
+          C242 344 242 264 244 184
+          C252 150 248 120 240 84 L210 76
+          L180 150 L150 76 Z"/>
+        <!-- V/round neck rib -->
+        <path class="cut" d="M154 86 L180 150 L206 86"/>
+        <path class="cut" d="M150 76 L180 142 L210 76"/>
+        <!-- armhole rib -->
+        <path class="cut" d="M124 90 C114 126 110 156 118 188"/>
+        <path class="cut" d="M236 90 C246 126 250 156 242 188"/>
+        <!-- hem rib -->
+        <path class="cut" d="M122 404 C160 418 200 418 238 404"/>
+        <g class="rib"><path d="M138 408 L137 426"/><path d="M160 411 L160 429"/><path d="M180 412 L180 430"/><path d="M200 411 L200 429"/><path d="M222 408 L223 426"/></g>
+        <!-- center front -->
+        <path class="cf" d="M180 150 L180 424"/>
+        <text class="cfT" x="184" y="396">C.F.</text>
+        <!-- measurements -->
+        <path class="mw" d="M150 76 L40 76"/>
+        <path class="mw" d="M122 420 L40 420"/>
+        <line class="mz" x1="48" y1="76" x2="48" y2="420"/>
+        <circle class="codeC" cx="48" cy="248" r="9"/><text class="codeT" x="48" y="252">A</text>
+        <path class="mw" d="M116 184 L116 220"/>
+        <path class="mw" d="M244 184 L244 220"/>
+        <line class="mz" x1="116" y1="212" x2="244" y2="212"/>
+        <circle class="codeC" cx="180" cy="212" r="9"/><text class="codeT" x="180" y="216">B</text>
+        <path class="lead" d="M180 250 L320 250"/>
+        <text class="lblT" x="324" y="254">ベスト型・カーディガンと共地</text>
+      </svg>
+    </div>
+  </div>
+
+  <div class="hook-box">
+    <b>◎ 展示会フック（他社に難しい理由）：</b>カーディガンとインナーを<b>共地・統一デザインの2点セット</b>で仕上げ、さらに<b>パフ袖（袖山の増目成型）</b>を量産で安定させる工程。型紙・度目・袖山のボリューム再現を2点で揃える整合が要る。「きちんと見え」が即完成し、セットでも単品でも売れる訴求。
+  </div>
+
+  <div class="sec">
+    <div class="sec-title"><span class="no">A</span><h2>寸法表（POM）</h2><span class="en">MEASUREMENT ・ cm</span></div>
+    <table>
+      <tr><th>記号</th><th class="l">測定箇所</th><th>S</th><th>M</th><th>L</th><th>XL</th><th>許容差 ±</th></tr>
+      <tr><td class="code-cell">①A</td><td class="l">カーデ着丈（HPS→裾）</td><td>54</td><td>56</td><td>58</td><td>60</td><td>1.5</td></tr>
+      <tr><td class="code-cell">①B</td><td class="l">カーデ身幅（脇下2.5cm）</td><td>47</td><td>50</td><td>53</td><td>56</td><td>2.0</td></tr>
+      <tr><td class="code-cell">①C</td><td class="l">カーデ パフ袖丈（肩先→袖口）</td><td>20</td><td>21</td><td>22</td><td>23</td><td>1.0</td></tr>
+      <tr><td class="code-cell">②A</td><td class="l">インナー着丈（HPS→裾）</td><td>56</td><td>58</td><td>60</td><td>62</td><td>1.5</td></tr>
+      <tr><td class="code-cell">②B</td><td class="l">インナー身幅（脇下2.5cm）</td><td>42</td><td>45</td><td>48</td><td>51</td><td>2.0</td></tr>
+    </table>
+  </div>
+
+  <div class="sec">
+    <div class="sec-title"><span class="no">B</span><h2>素材・縫製注記</h2><span class="en">MATERIAL &amp; CONSTRUCTION</span></div>
+    <ul class="notes">
+      <li><b>糸/組成：</b>アクリル・綿混（綿で春夏の肌触り／アクリルで抗ピリング）／2点共地</li>
+      <li><b>編組織：</b>天竺ベース／カーデ袖=パフ（袖山の増目でふくらませる成型）／12GG</li>
+      <li><b>①カーデ：</b>前開き5釦・丸首・1×1リブ前立て／パフ袖・先リブ細幅</li>
+      <li><b>②インナー：</b>ノースリーブ・丸首〜浅V／衿ぐり・アームホール1×1リブ</li>
+      <li><b>裾（両点）：</b>1×1リブ／<b>接ぎ：</b>肩・脇＝リンキング</li>
+      <li><b>洗濯：</b>手洗い／ネット使用・平干し</li>
+      <li><b>カラー：</b>バターイエロー／バレエピンク／オフホワイト（2点同色）</li>
+      <li><b>品質目標：</b>2点の色ロット統一／左右パフのボリューム対称</li>
+    </ul>
+  </div>
+
+  <div class="foot">
+    <span>東和盛泰株式会社　TOUWASEITAI CO., LTD.　展示会サンプルD（2点セット）　※寸法/原価は要カウンターサンプル承認</span>
+    <span>TEL 084-999-2390 / info@touwaseitai.com</span>
+  </div>
+
+</div>
+
+</body>
+</html>

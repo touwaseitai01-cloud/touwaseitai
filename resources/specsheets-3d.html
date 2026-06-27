@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ニット製品 仕様書（3D写真版・全10型）｜東和盛泰株式会社</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;700&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#5a4452;--copper:#b89484;--ink:#3a2e34;--ink-soft:#6a5a62;--line:#d9ccc2;--head:#faf4ee;}
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body{font-family:'Noto Sans JP',sans-serif;color:var(--ink);background:#cfc7bd;line-height:1.55;font-size:12px;-webkit-font-smoothing:antialiased}
+  .toolbar{max-width:210mm;margin:14px auto;display:flex;gap:10px;justify-content:flex-end}
+  .btn{background:var(--navy);color:#fff;border:none;cursor:pointer;padding:10px 22px;border-radius:2px;font-size:12.5px;letter-spacing:.05em;font-family:inherit}
+  .btn.alt{background:#fff;color:var(--navy);border:1px solid var(--navy)}
+  .page{width:210mm;min-height:297mm;margin:0 auto 16px;background:#fff;padding:14mm 13mm;box-shadow:0 14px 40px rgba(0,0,0,.18);position:relative;overflow:hidden}
+  .serif{font-family:'Noto Serif JP',serif}.en{font-family:'Cormorant Garamond',serif;letter-spacing:.18em}
+  /* header */
+  .dh{display:flex;justify-content:space-between;align-items:flex-start;border-bottom:2px solid var(--navy);padding-bottom:10px;margin-bottom:10px}
+  .brand{display:flex;align-items:center;gap:10px}
+  .mk{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--copper));color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Noto Serif JP',serif;font-size:19px;font-weight:700}
+  .bn{font-family:'Noto Serif JP',serif;font-size:13px;font-weight:700;color:var(--navy);line-height:1.2}
+  .bn small{font-family:'Cormorant Garamond',serif;font-size:8.5px;letter-spacing:.16em;color:var(--copper);display:block}
+  .dt{text-align:right}.dt .en{display:block;font-size:9px;color:var(--copper);letter-spacing:.26em}
+  .dt h1{font-family:'Noto Serif JP',serif;font-size:15px;color:var(--navy);font-weight:700}
+  .dt .no{font-family:'Cormorant Garamond',serif;font-size:11px;color:var(--copper)}
+  /* meta */
+  .meta{display:grid;grid-template-columns:repeat(5,1fr);border:1px solid var(--line);margin-bottom:10px}
+  .meta div{padding:5px 8px;border-right:1px solid var(--line)}.meta div:last-child{border-right:none}
+  .meta label{display:block;font-size:8px;color:var(--copper);letter-spacing:.08em}
+  .meta b{font-size:11.5px;color:var(--ink);font-weight:600}
+  /* body */
+  .sb{display:grid;grid-template-columns:42% 58%;gap:12px;align-items:start}
+  .ph{width:100%;height:150mm;object-fit:contain;background:#efeae3;border:1px solid var(--line);border-radius:3px;display:block}
+  .swl{margin-top:7px;font-size:10.5px;line-height:1.9}
+  .swatch{display:inline-block;width:13px;height:13px;border-radius:50%;margin-right:3px;border:1px solid rgba(0,0,0,.13);vertical-align:-2px}
+  dl.kv{display:grid;grid-template-columns:62px 1fr;gap:3px 8px;font-size:11px;margin-bottom:8px}
+  dl.kv dt{color:var(--copper);font-size:9.5px;letter-spacing:.04em;padding-top:1px}
+  dl.kv dd{color:var(--ink);line-height:1.45}
+  .sect{font-family:'Noto Serif JP',serif;font-size:11px;color:var(--navy);font-weight:700;border-left:3px solid var(--copper);padding-left:7px;margin:8px 0 4px}
+  table{width:100%;border-collapse:collapse;border:1px solid var(--line)}
+  th,td{border:1px solid var(--line);padding:3.5px 5px;font-size:10px;text-align:center}
+  th{background:var(--head);color:var(--navy);font-weight:600;font-family:'Noto Serif JP',serif;white-space:nowrap}
+  td.l,th.l{text-align:left}
+  .notes{font-size:10px;color:var(--ink);line-height:1.6;margin-top:6px}
+  .notes b{color:var(--navy)}
+  .foot{position:absolute;left:13mm;right:13mm;bottom:8mm;border-top:1px solid var(--line);padding-top:6px;display:flex;justify-content:space-between;font-size:9px;color:var(--ink-soft)}
+  /* cover */
+  .cover{display:flex;flex-direction:column;justify-content:center;height:262mm}
+  .cover .mk2{width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--copper));color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Noto Serif JP',serif;font-size:30px;font-weight:700;margin-bottom:30px}
+  .cover .en-sm{font-family:'Cormorant Garamond',serif;letter-spacing:.32em;color:var(--copper);font-size:13px;margin-bottom:12px}
+  .cover h2{font-family:'Noto Serif JP',serif;font-size:34px;color:var(--navy);font-weight:700;line-height:1.4}
+  .cover .sub{margin-top:18px;font-size:14px;color:var(--ink-soft);line-height:1.9}.cover .sub b{color:var(--navy)}
+  .cover table{margin-top:20px;max-width:150mm}
+  @media print{body{background:#fff}.toolbar{display:none}.page{margin:0;box-shadow:none;width:auto;min-height:auto;height:297mm;page-break-after:always}.page:last-child{page-break-after:auto}}
+  @page{size:A4;margin:0}
+</style>
+</head>
+<body>
+<div class="toolbar"><button class="btn alt" onclick="window.print()">印刷 / PDF保存</button></div>
+
+<!-- COVER -->
+<section class="page"><div class="cover">
+  <div class="mk2">和</div>
+  <div class="en-sm">KNIT PRODUCT SPEC ・ 3D / PHOTO ・ 2026–2027</div>
+  <h2>ニット製品 仕様書<br><span style="font-size:22px">全10型（3D写真版）</span></h2>
+  <div class="sub">ターゲット：<b>30代から／レディース</b>　上代：<b>〜5,000円</b><br>各ページ：実写ビジュアル＋素材・編み・寸法表(POM)・カラー・縫製注記</div>
+  <table>
+    <tr><th class="l">No.</th><th class="l">アイテム</th><th>ゲージ</th><th>上代</th></tr>
+    <tr><td class="l">定番</td><td class="l">洗えるリブポロ</td><td>7GG</td><td>¥2,990</td></tr>
+    <tr><td class="l">A</td><td class="l">透かしシアーカーディガン</td><td>14–16GG</td><td>¥3,900〜</td></tr>
+    <tr><td class="l">B</td><td class="l">立体編地切替ベスト</td><td>7GG</td><td>¥3,500〜</td></tr>
+    <tr><td class="l">C</td><td class="l">ジャカード柄ニット</td><td>12GG</td><td>¥3,900〜</td></tr>
+    <tr><td class="l">D</td><td class="l">ニットワンピース</td><td>12GG</td><td>¥4,900</td></tr>
+    <tr><td class="l">E</td><td class="l">水色シースルー シアーニット</td><td>14–16GG</td><td>¥3,900〜</td></tr>
+    <tr><td class="l">F</td><td class="l">ケーブルカーディガン</td><td>7GG</td><td>¥3,900〜</td></tr>
+    <tr><td class="l">G</td><td class="l">ロングニットガウン</td><td>12GG</td><td>¥4,500〜</td></tr>
+    <tr><td class="l">H</td><td class="l">タートルネック</td><td>12GG</td><td>¥2,990〜</td></tr>
+    <tr><td class="l">I</td><td class="l">ケーブル柄プルオーバー</td><td>7GG</td><td>¥3,900〜</td></tr>
+  </table>
+  <div style="margin-top:24px;font-size:11px;color:var(--ink-soft)"><span class="serif" style="color:var(--navy);font-size:13px">東和盛泰株式会社</span>　TOUWASEITAI CO., LTD.　ニット衣料 OEM・ODM　／　TEL 084-999-2390　info@touwaseitai.com</div>
+  <div style="margin-top:8px;font-size:9.5px;color:var(--ink-soft)">※ 寸法・原価・度目は参考値。確定はカウンターサンプル承認後とします。</div>
+</div><div class="foot"><span>東和盛泰株式会社　ニット製品仕様書（3D写真版）</span><span>COVER</span></div></section>
+
+<!-- ========== 定番 RIB POLO ========== -->
+<section class="page">
+  <div class="dh"><div class="brand"><div class="mk">和</div><div class="bn">東和盛泰株式会社<small>TOUWASEITAI CO., LTD.</small></div></div>
+    <div class="dt"><span class="en">KNIT SPEC</span><h1>洗えるリブポロセーター</h1><span class="no">RIB POLO ・ TW-2026AW-001</span></div></div>
+  <div class="meta"><div><label>シーズン</label><b>2026 A/W</b></div><div><label>ゲージ</label><b>7GG</b></div><div><label>組織</label><b>2×2リブ</b></div><div><label>サンプル</label><b>M</b></div><div><label>上代</label><b>¥2,990</b></div></div>
+  <div class="sb">
+    <div><img class="ph" src="photos/cw-ribpolo.jpg" alt="リブポロ">
+      <div class="swl"><b style="color:var(--copper);font-size:9px">カラー</b><br><span class="swatch" style="background:#efe9df"></span>ｵﾌﾎﾜｲﾄ <span class="swatch" style="background:#c8a17a"></span>ﾓｶ <span class="swatch" style="background:#6e2230"></span>ﾎﾞﾙﾄﾞｰ <span class="swatch" style="background:#e8b23a"></span>ｲｴﾛｰ(明)</div></div>
+    <div>
+      <dl class="kv"><dt>糸/組成</dt><dd>アクリル60/ナイロン30/毛8/PU2（抗ピリング・2/48×2本）</dd>
+        <dt>編組織</dt><dd>身頃・袖=2×2リブ／衿・前立て=1×1リブ</dd>
+        <dt>衿/袖</dt><dd>リブ衿・2釦プラケット（開き12cm）／長袖リブ口</dd>
+        <dt>接ぎ</dt><dd>身頃・袖=縫製（ロック＋本縫い）／衿・前立て=リンキング</dd>
+        <dt>洗濯</dt><dd>液温40℃・洗濯機弱／タンブラー不可／日陰平干し（裏返し推奨）</dd></dl>
+      <div class="sect">寸法表（POM）・単位cm</div>
+      <table><tr><th class="l">測定箇所</th><th>S</th><th>M</th><th>L</th><th>XL</th><th>±</th></tr>
+        <tr><td class="l">着丈（HPS→裾）</td><td>63</td><td>65</td><td>67</td><td>69</td><td>1.5</td></tr>
+        <tr><td class="l">身幅（脇下2.5cm）</td><td>46</td><td>49</td><td>52</td><td>55</td><td>2.0</td></tr>
+        <tr><td class="l">肩幅</td><td>37</td><td>39</td><td>41</td><td>43</td><td>1.0</td></tr>
+        <tr><td class="l">袖丈（肩先→袖口）</td><td>58</td><td>59</td><td>60</td><td>61</td><td>1.5</td></tr>
+        <tr><td class="l">袖口幅</td><td>8.0</td><td>8.5</td><td>9.0</td><td>9.5</td><td>0.5</td></tr>
+        <tr><td class="l">裾リブ高</td><td>5.0</td><td>5.0</td><td>5.0</td><td>5.0</td><td>0.5</td></tr></table>
+      <div class="notes"><b>備考：</b>目付 約240g/㎡・中肉。抗ピリングJIS L1076 3-4級以上目標／洗濯収縮 タテヨコ±3%以内。<b>定番枠（できますアピール）。</b></div>
+    </div></div>
+  <div class="foot"><span>東和盛泰株式会社　ニット製品仕様書（3D写真版）</span><span>P.01</span></div></section>
+
+<!-- ========== A SHEER CARDIGAN ========== -->
+<section class="page">
+  <div class="dh"><div class="brand"><div class="mk">和</div><div class="bn">東和盛泰株式会社<small>TOUWASEITAI CO., LTD.</small></div></div>
+    <div class="dt"><span class="en">KNIT SPEC</span><h1>透かし編みシアーカーディガン</h1><span class="no">SHEER CARDIGAN ・ TW-EX-A01</span></div></div>
+  <div class="meta"><div><label>シーズン</label><b>2026 S/S</b></div><div><label>ゲージ</label><b>14–16GG</b></div><div><label>組織</label><b>透かし編み</b></div><div><label>サンプル</label><b>M</b></div><div><label>上代</label><b>¥3,900〜4,900</b></div></div>
+  <div class="sb">
+    <div><img class="ph" src="photos/cw-cardigan.jpg" alt="シアーカーデ">
+      <div class="swl"><b style="color:var(--copper);font-size:9px">カラー</b><br><span class="swatch" style="background:#f4f1ea"></span>ﾎﾜｲﾄ <span class="swatch" style="background:#cfc6ba"></span>ｸﾞﾚｰｼﾞｭ <span class="swatch" style="background:#bfe0cf"></span>ﾐﾝﾄ <span class="swatch" style="background:#ef9a8a"></span>ｺｰﾗﾙ(明)</div></div>
+    <div>
+      <dl class="kv"><dt>糸/組成</dt><dd>アクリル・ナイロン混（シアー感＋抗ピリング）</dd>
+        <dt>編組織</dt><dd>身頃・袖=透かし編み（ポワント／移し目）全面／前立て・裾・袖口=1×1リブ</dd>
+        <dt>衿/前立</dt><dd>Vネック・前立て幅2.5cm・6釦</dd>
+        <dt>接ぎ</dt><dd>肩・脇=リンキング（透かし地は端崩れ防止のためリンキング）</dd>
+        <dt>洗濯</dt><dd>手洗い／ネット使用・平干し（透かし目の変形防止）</dd></dl>
+      <div class="sect">寸法表（POM）・単位cm</div>
+      <table><tr><th class="l">測定箇所</th><th>S</th><th>M</th><th>L</th><th>XL</th><th>±</th></tr>
+        <tr><td class="l">着丈（HPS→裾）</td><td>60</td><td>62</td><td>64</td><td>66</td><td>1.5</td></tr>
+        <tr><td class="l">身幅（脇下2.5cm）</td><td>48</td><td>51</td><td>54</td><td>57</td><td>2.0</td></tr>
+        <tr><td class="l">肩幅</td><td>38</td><td>40</td><td>42</td><td>44</td><td>1.0</td></tr>
+        <tr><td class="l">袖丈（肩先→袖口）</td><td>56</td><td>57</td><td>58</td><td>59</td><td>1.5</td></tr>
+        <tr><td class="l">袖口幅</td><td>8.5</td><td>9.0</td><td>9.5</td><td>10.0</td><td>0.5</td></tr>
+        <tr><td class="l">前立て幅／裾リブ高</td><td>2.5/3.0</td><td>2.5/3.0</td><td>2.5/3.0</td><td>2.5/3.0</td><td>0.3</td></tr></table>
+      <div class="notes"><b>◎技術フック：</b>全面の透かし編みは抜き目が崩れず端が安定するために編成精度・糸選定が要る。<b>「この繊細さを、この価格で」</b>。</div>
+    </div></div>
+  <div class="foot"><span>東和盛泰株式会社　ニット製品仕様書（3D写真版）</span><span>P.02</span></div></section>
+
+<!-- ========== B VEST ========== -->
+<section class="page">
+  <div class="dh"><div class="brand"><div class="mk">和</div><div class="bn">東和盛泰株式会社<small>TOUWASEITAI CO., LTD.</small></div></div>
+    <div class="dt"><span class="en">KNIT SPEC</span><h1>立体編地切替ニットベスト</h1><span class="no">TEXTURED VEST ・ TW-EX-B01</span></div></div>
+  <div class="meta"><div><label>シーズン</label><b>2026 A/W</b></div><div><label>ゲージ</label><b>7GG</b></div><div><label>組織</label><b>編地切替</b></div><div><label>サンプル</label><b>M</b></div><div><label>上代</label><b>¥3,500〜4,500</b></div></div>
+  <div class="sb">
+    <div><img class="ph" src="photos/cw-vest.jpg" alt="ベスト">
+      <div class="swl"><b style="color:var(--copper);font-size:9px">カラー</b><br><span class="swatch" style="background:#d8c3a3"></span>ｻﾝﾄﾞﾍﾞｰｼﾞｭ <span class="swatch" style="background:#cfc6ba"></span>ｸﾞﾚｰｼﾞｭ <span class="swatch" style="background:#8a6a52"></span>ﾌﾞﾗｳﾝ <span class="swatch" style="background:#c0622e"></span>ﾃﾗｺｯﾀ(明)</div></div>
+    <div>
+      <dl class="kv"><dt>糸/組成</dt><dd>アクリル・ウール混（立体感・抗ピリング）</dd>
+        <dt>編組織</dt><dd>中央=ケーブル／脇=リブ／肩ヨーク=メッシュ（全体7GG単一ゲージ）</dd>
+        <dt>衿/AH</dt><dd>Vネック・衿ぐり/アームホール=1×1リブ・くるみ始末</dd>
+        <dt>接ぎ</dt><dd>肩・脇=リンキング／編地切替の境は度目調整で段差防止</dd>
+        <dt>洗濯</dt><dd>手洗い／平干し（ウール混）</dd></dl>
+      <div class="sect">寸法表（POM）・単位cm</div>
+      <table><tr><th class="l">測定箇所</th><th>S</th><th>M</th><th>L</th><th>XL</th><th>±</th></tr>
+        <tr><td class="l">着丈（HPS→裾）</td><td>58</td><td>60</td><td>62</td><td>64</td><td>1.5</td></tr>
+        <tr><td class="l">身幅（脇下2.5cm）</td><td>47</td><td>50</td><td>53</td><td>56</td><td>2.0</td></tr>
+        <tr><td class="l">肩幅</td><td>33</td><td>35</td><td>37</td><td>39</td><td>1.0</td></tr>
+        <tr><td class="l">アームホール（直線）</td><td>23</td><td>24</td><td>25</td><td>26</td><td>1.0</td></tr>
+        <tr><td class="l">前V衿ぐり深さ</td><td>17</td><td>18</td><td>19</td><td>20</td><td>0.7</td></tr>
+        <tr><td class="l">裾リブ高</td><td>4.0</td><td>4.0</td><td>4.0</td><td>4.0</td><td>0.5</td></tr></table>
+      <div class="notes"><b>◎技術フック：</b>ケーブル×リブ×メッシュの3編地切替を1枚で立体的に。編成プログラムと度目調整が複雑で<b>技術力が一目で伝わる</b>。</div>
+    </div></div>
+  <div class="foot"><span>東和盛泰株式会社　ニット製品仕様書（3D写真版）</span><span>P.03</span></div></section>
+
+<!-- ========== C JACQUARD ========== -->
+<section class="page">
+  <div class="dh"><div class="brand"><div class="mk">和</div><div class="bn">東和盛泰株式会社<small>TOUWASEITAI CO., LTD.</small></div></div>
+    <div class="dt"><span class="en">KNIT SPEC</span><h1>ジャカード柄ニット</h1><span class="no">JACQUARD KNIT ・ TW-EX-C01</span></div></div>
+  <div class="meta"><div><label>シーズン</label><b>2026 A/W</b></div><div><label>ゲージ</label><b>12GG</b></div><div><label>組織</label><b>ジャカード</b></div><div><label>サンプル</label><b>M</b></div><div><label>上代</label><b>¥3,900〜4,900</b></div></div>
+  <div class="sb">
+    <div><img class="ph" src="photos/cw-jacquard.jpg" alt="ジャカード">
+      <div class="swl"><b style="color:var(--copper);font-size:9px">カラー</b><br><span class="swatch" style="background:#e8dcc4"></span>ﾍﾞｰｼﾞｭ×ﾌﾞﾗｳﾝ <span class="swatch" style="background:#8c8790"></span>ｸﾞﾚｰ系 <span class="swatch" style="background:#b23a3a"></span>ﾚｯﾄﾞ系(明)</div></div>
+    <div>
+      <dl class="kv"><dt>糸/組成</dt><dd>アクリル混（抗ピリング）・多色</dd>
+        <dt>編組織</dt><dd>地=天竺／柄=ジャカード（編み込み柄）・幾何/ダイヤ調／衿・裾・袖口=リブ</dd>
+        <dt>衿/袖</dt><dd>クルーネック・1×1リブ衿／長袖リブ口</dd>
+        <dt>接ぎ</dt><dd>肩・脇=リンキング／柄の裏渡り糸はパッカリング防止処理</dd>
+        <dt>洗濯</dt><dd>洗濯機弱・ネット使用／日陰平干し</dd></dl>
+      <div class="sect">寸法表（POM）・単位cm</div>
+      <table><tr><th class="l">測定箇所</th><th>S</th><th>M</th><th>L</th><th>XL</th><th>±</th></tr>
+        <tr><td class="l">着丈（HPS→裾）</td><td>58</td><td>60</td><td>62</td><td>64</td><td>1.5</td></tr>
+        <tr><td class="l">身幅（脇下2.5cm）</td><td>47</td><td>50</td><td>53</td><td>56</td><td>2.0</td></tr>
+        <tr><td class="l">肩幅</td><td>37</td><td>39</td><td>41</td><td>43</td><td>1.0</td></tr>
+        <tr><td class="l">袖丈（肩先→袖口）</td><td>57</td><td>58</td><td>59</td><td>60</td><td>1.5</td></tr>
+        <tr><td class="l">袖口幅</td><td>8.0</td><td>8.5</td><td>9.0</td><td>9.5</td><td>0.5</td></tr>
+        <tr><td class="l">裾リブ高</td><td>5.0</td><td>5.0</td><td>5.0</td><td>5.0</td><td>0.5</td></tr></table>
+      <div class="notes"><b>◎技術フック：</b>柄を編み込み（ジャカード）で表現するには柄の目数管理と裏処理の精度が要る。柄物は展示会で目を引く。</div>
+    </div></div>
+  <div class="foot"><span>東和盛泰株式会社　ニット製品仕様書（3D写真版）</span><span>P.04</span></div></section>
+
+<!-- ========== D KNIT DRESS ========== -->
+<section class="page">
+  <div class="dh"><div class="brand"><div class="mk">和</div><div class="bn">東和盛泰株式会社<small>TOUWASEITAI CO., LTD.</small></div></div>
+    <div class="dt"><span class="en">KNIT SPEC</span><h1>ニットワンピース</h1><span class="no">KNIT DRESS ・ TW-EX-D01</span></div></div>
+  <div class="meta"><div><label>シーズン</label><b>2026 A/W</b></div><div><label>ゲージ</label><b>12GG</b></div><div><label>組織</label><b>天竺・切替</b></div><div><label>サンプル</label><b>M</b></div><div><label>上代</label><b>¥4,900</b></div></div>
+  <div class="sb">
+    <div><img class="ph" src="photos/cw-dress.jpg" alt="ニットワンピース">
+      <div class="swl"><b style="color:var(--copper);font-size:9px">カラー</b><br><span class="swatch" style="background:#8a6a52"></span>ﾓｶ <span class="swatch" style="background:#cfc6ba"></span>ｸﾞﾚｰｼﾞｭ <span class="swatch" style="background:#2c2a2e"></span>ﾌﾞﾗｯｸ <span class="swatch" style="background:#2e8b6e"></span>ｴﾒﾗﾙﾄﾞ(明)</div></div>
+    <div>
+      <dl class="kv"><dt>糸/組成</dt><dd>アクリル混（とろみ・抗ピリング）</dd>
+        <dt>編組織</dt><dd>天竺ベース／ウエスト切替（フレア）／衿・裾・袖口=リブ</dd>
+        <dt>衿/袖</dt><dd>Vネック・長袖／ミドル〜ロング丈</dd>
+        <dt>接ぎ</dt><dd>肩・脇=リンキング／長尺は度目安定で型崩れ防止</dd>
+        <dt>洗濯</dt><dd>手洗い／平干し</dd></dl>
+      <div class="sect">寸法表（POM）・単位cm</div>
+      <table><tr><th class="l">測定箇所</th><th>S</th><th>M</th><th>L</th><th>XL</th><th>±</th></tr>
+        <tr><td class="l">着丈（HPS→裾）</td><td>95</td><td>98</td><td>101</td><td>104</td><td>2.0</td></tr>
+        <tr><td class="l">身幅（脇下2.5cm）</td><td>44</td><td>47</td><td>50</td><td>53</td><td>2.0</td></tr>
+        <tr><td class="l">肩幅</td><td>36</td><td>38</td><td>40</td><td>42</td><td>1.0</td></tr>
+        <tr><td class="l">袖丈（肩先→袖口）</td><td>57</td><td>58</td><td>59</td><td>60</td><td>1.5</td></tr>
+        <tr><td class="l">ウエスト切替位置（HPSから）</td><td>40</td><td>41</td><td>42</td><td>43</td><td>1.0</td></tr>
+        <tr><td class="l">裾幅</td><td>52</td><td>55</td><td>58</td><td>61</td><td>2.0</td></tr></table>
+      <div class="notes"><b>◎技術フック：</b>長尺の成型を度目安定させ、ウエスト切替で体型カバー。長いニットは伸び・型崩れとの戦いで工場差が出る。</div>
+    </div></div>
+  <div class="foot"><span>東和盛泰株式会社　ニット製品仕様書（3D写真版）</span><span>P.05</span></div></section>
+
+<!-- ========== E SAX SHEER ========== -->
+<section class="page">
+  <div class="dh"><div class="brand"><div class="mk">和</div><div class="bn">東和盛泰株式会社<small>TOUWASEITAI CO., LTD.</small></div></div>
+    <div class="dt"><span class="en">KNIT SPEC</span><h1>水色シースルー シアーニット</h1><span class="no">SAX SHEER KNIT ・ TW-EX-E01</span></div></div>
+  <div class="meta"><div><label>シーズン</label><b>2026 S/S</b></div><div><label>ゲージ</label><b>14–16GG</b></div><div><label>組織</label><b>透かし編み</b></div><div><label>サンプル</label><b>M</b></div><div><label>上代</label><b>¥3,900〜4,900</b></div></div>
+  <div class="sb">
+    <div><img class="ph" src="photos/cw-sax-sheer.jpg" alt="水色シアー">
+      <div class="swl"><b style="color:var(--copper);font-size:9px">カラー</b><br><span class="swatch" style="background:#bcd4e3"></span>ｻｯｸｽﾌﾞﾙｰ <span class="swatch" style="background:#f4f1ea"></span>ﾎﾜｲﾄ <span class="swatch" style="background:#bfe0cf"></span>ﾐﾝﾄ <span class="swatch" style="background:#ecd24a"></span>ﾚﾓﾝ(明)</div></div>
+    <div>
+      <dl class="kv"><dt>糸/組成</dt><dd>アクリル・ナイロン混（シアー感＋抗ピリング）</dd>
+        <dt>編組織</dt><dd>身頃・袖=透かし編み（移し目）全面・プルオーバー／衿・裾・袖口=リブ</dd>
+        <dt>衿/袖</dt><dd>クルーネック／長袖</dd>
+        <dt>接ぎ</dt><dd>肩・脇=リンキング（透かし地は端崩れ防止）</dd>
+        <dt>洗濯</dt><dd>手洗い／ネット使用・平干し</dd></dl>
+      <div class="sect">寸法表（POM）・単位cm</div>
+      <table><tr><th class="l">測定箇所</th><th>S</th><th>M</th><th>L</th><th>XL</th><th>±</th></tr>
+        <tr><td class="l">着丈（HPS→裾）</td><td>58</td><td>60</td><td>62</td><td>64</td><td>1.5</td></tr>
+        <tr><td class="l">身幅（脇下2.5cm）</td><td>46</td><td>49</td><td>52</td><td>55</td><td>2.0</td></tr>
+        <tr><td class="l">肩幅</td><td>37</td><td>39</td><td>41</td><td>43</td><td>1.0</td></tr>
+        <tr><td class="l">袖丈（肩先→袖口）</td><td>57</td><td>58</td><td>59</td><td>60</td><td>1.5</td></tr>
+        <tr><td class="l">袖口幅</td><td>8.5</td><td>9.0</td><td>9.5</td><td>10.0</td><td>0.5</td></tr>
+        <tr><td class="l">裾リブ高</td><td>3.0</td><td>3.0</td><td>3.0</td><td>3.0</td><td>0.5</td></tr></table>
+      <div class="notes"><b>◎技術フック：</b>淡い水色の透かし編みは編み目の不揃い・色ムラが目立つため均一に編む技術が要る。透け感で抜けを作る。</div>
+    </div></div>
+  <div class="foot"><span>東和盛泰株式会社　ニット製品仕様書（3D写真版）</span><span>P.06</span></div></section>
+
+<!-- ========== F CABLE CARDIGAN ========== -->
+<section class="page">
+  <div class="dh"><div class="brand"><div class="mk">和</div><div class="bn">東和盛泰株式会社<small>TOUWASEITAI CO., LTD.</small></div></div>
+    <div class="dt"><span class="en">KNIT SPEC</span><h1>ケーブルニットカーディガン</h1><span class="no">CABLE CARDIGAN ・ TW-EX-F01</span></div></div>
+  <div class="meta"><div><label>シーズン</label><b>2026 A/W</b></div><div><label>ゲージ</label><b>7GG</b></div><div><label>組織</label><b>ケーブル</b></div><div><label>サンプル</label><b>M</b></div><div><label>上代</label><b>¥3,900〜4,900</b></div></div>
+  <div class="sb">
+    <div><img class="ph" src="photos/cw-cable-cardigan.jpg" alt="ケーブルカーデ">
+      <div class="swl"><b style="color:var(--copper);font-size:9px">カラー</b><br><span class="swatch" style="background:#f4f1ea"></span>ｵﾌﾎﾜｲﾄ <span class="swatch" style="background:#e8dcc4"></span>ﾍﾞｰｼﾞｭ <span class="swatch" style="background:#8c8790"></span>ｸﾞﾚｰ <span class="swatch" style="background:#ecd98a"></span>ﾊﾞﾀｰ(明)</div></div>
+    <div>
+      <dl class="kv"><dt>糸/組成</dt><dd>アクリル・ウール混（立体感・抗ピリング）</dd>
+        <dt>編組織</dt><dd>ケーブル（アラン）編み／前立て・裾・袖口=リブ</dd>
+        <dt>衿/前立</dt><dd>Vネック・前開き釦／ゆったりシルエット</dd>
+        <dt>接ぎ</dt><dd>肩・脇=リンキング／ケーブルは左右対称・度目均一</dd>
+        <dt>洗濯</dt><dd>手洗い／平干し（ウール混）</dd></dl>
+      <div class="sect">寸法表（POM）・単位cm</div>
+      <table><tr><th class="l">測定箇所</th><th>S</th><th>M</th><th>L</th><th>XL</th><th>±</th></tr>
+        <tr><td class="l">着丈（HPS→裾）</td><td>58</td><td>60</td><td>62</td><td>64</td><td>1.5</td></tr>
+        <tr><td class="l">身幅（脇下2.5cm）</td><td>50</td><td>53</td><td>56</td><td>59</td><td>2.0</td></tr>
+        <tr><td class="l">肩幅（ドロップ）</td><td>42</td><td>44</td><td>46</td><td>48</td><td>1.0</td></tr>
+        <tr><td class="l">袖丈（肩先→袖口）</td><td>54</td><td>55</td><td>56</td><td>57</td><td>1.5</td></tr>
+        <tr><td class="l">袖口幅</td><td>9.0</td><td>9.5</td><td>10.0</td><td>10.5</td><td>0.5</td></tr>
+        <tr><td class="l">前立て幅／裾リブ高</td><td>2.5/5.0</td><td>2.5/5.0</td><td>2.5/5.0</td><td>2.5/5.0</td><td>0.3</td></tr></table>
+      <div class="notes"><b>◎技術フック：</b>立体ケーブルを左右対称・均一に編む編立技術。ケーブルは編立時間がかかりねじれ・歪みが出やすく工場差が出る。</div>
+    </div></div>
+  <div class="foot"><span>東和盛泰株式会社　ニット製品仕様書（3D写真版）</span><span>P.07</span></div></section>
+
+<!-- ========== G LONG GOWN ========== -->
+<section class="page">
+  <div class="dh"><div class="brand"><div class="mk">和</div><div class="bn">東和盛泰株式会社<small>TOUWASEITAI CO., LTD.</small></div></div>
+    <div class="dt"><span class="en">KNIT SPEC</span><h1>ロングニットガウン</h1><span class="no">LONG KNIT GOWN ・ TW-EX-G01</span></div></div>
+  <div class="meta"><div><label>シーズン</label><b>2026 A/W</b></div><div><label>ゲージ</label><b>12GG</b></div><div><label>組織</label><b>天竺/ミラノ</b></div><div><label>サンプル</label><b>M</b></div><div><label>上代</label><b>¥4,500〜4,900</b></div></div>
+  <div class="sb">
+    <div><img class="ph" src="photos/cw-long-gown.jpg" alt="ロングガウン">
+      <div class="swl"><b style="color:var(--copper);font-size:9px">カラー</b><br><span class="swatch" style="background:#8a6a52"></span>ﾓｶ <span class="swatch" style="background:#cfc6ba"></span>ｸﾞﾚｰｼﾞｭ <span class="swatch" style="background:#2c2a2e"></span>ﾌﾞﾗｯｸ <span class="swatch" style="background:#c0622e"></span>ﾃﾗｺｯﾀ(明)</div></div>
+    <div>
+      <dl class="kv"><dt>糸/組成</dt><dd>アクリル混（とろみ・抗ピリング）</dd>
+        <dt>編組織</dt><dd>天竺〜ミラノリブ・前開き（ノーカラー）／裾・袖口=リブ</dd>
+        <dt>丈/形</dt><dd>ロング丈・ドレープ／羽織り</dd>
+        <dt>接ぎ</dt><dd>肩・脇=リンキング／長尺は度目安定でドレープ確保</dd>
+        <dt>洗濯</dt><dd>手洗い／平干し</dd></dl>
+      <div class="sect">寸法表（POM）・単位cm</div>
+      <table><tr><th class="l">測定箇所</th><th>S</th><th>M</th><th>L</th><th>XL</th><th>±</th></tr>
+        <tr><td class="l">着丈（HPS→裾）</td><td>95</td><td>98</td><td>101</td><td>104</td><td>2.0</td></tr>
+        <tr><td class="l">身幅（脇下2.5cm）</td><td>52</td><td>55</td><td>58</td><td>61</td><td>2.0</td></tr>
+        <tr><td class="l">肩幅（ドロップ）</td><td>44</td><td>46</td><td>48</td><td>50</td><td>1.0</td></tr>
+        <tr><td class="l">袖丈（肩先→袖口）</td><td>54</td><td>55</td><td>56</td><td>57</td><td>1.5</td></tr>
+        <tr><td class="l">裾幅（片側・開）</td><td>56</td><td>59</td><td>62</td><td>65</td><td>2.0</td></tr>
+        <tr><td class="l">前立て幅</td><td>4.0</td><td>4.0</td><td>4.0</td><td>4.0</td><td>0.3</td></tr></table>
+      <div class="notes"><b>◎技術フック：</b>長尺をたわませず度目を安定させ、とろみのドレープを出す設計。羽織るだけで様になる縦長効果。</div>
+    </div></div>
+  <div class="foot"><span>東和盛泰株式会社　ニット製品仕様書（3D写真版）</span><span>P.08</span></div></section>
+
+<!-- ========== H TURTLENECK ========== -->
+<section class="page">
+  <div class="dh"><div class="brand"><div class="mk">和</div><div class="bn">東和盛泰株式会社<small>TOUWASEITAI CO., LTD.</small></div></div>
+    <div class="dt"><span class="en">KNIT SPEC</span><h1>きれいめタートルネック</h1><span class="no">TURTLENECK ・ TW-EX-H01</span></div></div>
+  <div class="meta"><div><label>シーズン</label><b>2026 A/W</b></div><div><label>ゲージ</label><b>12GG</b></div><div><label>組織</label><b>天竺/ミラノ</b></div><div><label>サンプル</label><b>M</b></div><div><label>上代</label><b>¥2,990〜3,900</b></div></div>
+  <div class="sb">
+    <div><img class="ph" src="photos/cw-turtleneck.jpg" alt="タートル">
+      <div class="swl"><b style="color:var(--copper);font-size:9px">カラー</b><br><span class="swatch" style="background:#6e2230"></span>ﾎﾞﾙﾄﾞｰ <span class="swatch" style="background:#2c2a2e"></span>黒 <span class="swatch" style="background:#8c8790"></span>ｸﾞﾚｰ <span class="swatch" style="background:#d62f2f"></span>ﾚｯﾄﾞ(明)</div></div>
+    <div>
+      <dl class="kv"><dt>糸/組成</dt><dd>アクリル主体混（保温・発色・抗ピリング）</dd>
+        <dt>編組織</dt><dd>天竺〜ミラノリブ／衿=折り返しタートル（ぴったりすぎない設計）</dd>
+        <dt>衿/袖</dt><dd>タートルネック・長袖／裾・袖口=リブ</dd>
+        <dt>接ぎ</dt><dd>肩・脇=リンキング／衿は伸び止め配慮</dd>
+        <dt>洗濯</dt><dd>洗濯機弱・ネット使用／日陰平干し</dd></dl>
+      <div class="sect">寸法表（POM）・単位cm</div>
+      <table><tr><th class="l">測定箇所</th><th>S</th><th>M</th><th>L</th><th>XL</th><th>±</th></tr>
+        <tr><td class="l">着丈（HPS→裾）</td><td>60</td><td>62</td><td>64</td><td>66</td><td>1.5</td></tr>
+        <tr><td class="l">身幅（脇下2.5cm）</td><td>44</td><td>47</td><td>50</td><td>53</td><td>2.0</td></tr>
+        <tr><td class="l">肩幅</td><td>36</td><td>38</td><td>40</td><td>42</td><td>1.0</td></tr>
+        <tr><td class="l">袖丈（肩先→袖口）</td><td>58</td><td>59</td><td>60</td><td>61</td><td>1.5</td></tr>
+        <tr><td class="l">衿高（折返し前）</td><td>16</td><td>16</td><td>17</td><td>17</td><td>1.0</td></tr>
+        <tr><td class="l">裾リブ高</td><td>4.0</td><td>4.0</td><td>4.0</td><td>4.0</td><td>0.5</td></tr></table>
+      <div class="notes"><b>位置づけ：</b>30代鉄板の定番。ネックの立ち上がりをきれいに成型し、ぴったりすぎない今っぽいシルエット。</div>
+    </div></div>
+  <div class="foot"><span>東和盛泰株式会社　ニット製品仕様書（3D写真版）</span><span>P.09</span></div></section>
+
+<!-- ========== I CABLE PULLOVER ========== -->
+<section class="page">
+  <div class="dh"><div class="brand"><div class="mk">和</div><div class="bn">東和盛泰株式会社<small>TOUWASEITAI CO., LTD.</small></div></div>
+    <div class="dt"><span class="en">KNIT SPEC</span><h1>ケーブル柄プルオーバー</h1><span class="no">CABLE PULLOVER ・ TW-EX-I01</span></div></div>
+  <div class="meta"><div><label>シーズン</label><b>2026 A/W</b></div><div><label>ゲージ</label><b>7GG</b></div><div><label>組織</label><b>ケーブル</b></div><div><label>サンプル</label><b>M</b></div><div><label>上代</label><b>¥3,900〜4,900</b></div></div>
+  <div class="sb">
+    <div><img class="ph" src="photos/cw-cable-pullover.jpg" alt="ケーブルプルオーバー">
+      <div class="swl"><b style="color:var(--copper);font-size:9px">カラー</b><br><span class="swatch" style="background:#c08a52"></span>ｷｬﾒﾙ <span class="swatch" style="background:#b8b3ab"></span>ｸﾞﾚｰ <span class="swatch" style="background:#c62828"></span>ﾚｯﾄﾞ(明)</div></div>
+    <div>
+      <dl class="kv"><dt>糸/組成</dt><dd>アクリル・ウール混（立体感・抗ピリング）</dd>
+        <dt>編組織</dt><dd>ケーブル（アラン）編み・クルーネック／衿・裾・袖口=リブ</dd>
+        <dt>衿/袖</dt><dd>クルーネック・1×1リブ衿／長袖リブ口</dd>
+        <dt>接ぎ</dt><dd>肩・脇=リンキング／ケーブルは左右対称・度目均一</dd>
+        <dt>洗濯</dt><dd>手洗い／平干し（ウール混）</dd></dl>
+      <div class="sect">寸法表（POM）・単位cm</div>
+      <table><tr><th class="l">測定箇所</th><th>S</th><th>M</th><th>L</th><th>XL</th><th>±</th></tr>
+        <tr><td class="l">着丈（HPS→裾）</td><td>58</td><td>60</td><td>62</td><td>64</td><td>1.5</td></tr>
+        <tr><td class="l">身幅（脇下2.5cm）</td><td>50</td><td>53</td><td>56</td><td>59</td><td>2.0</td></tr>
+        <tr><td class="l">肩幅（ドロップ）</td><td>42</td><td>44</td><td>46</td><td>48</td><td>1.0</td></tr>
+        <tr><td class="l">袖丈（肩先→袖口）</td><td>54</td><td>55</td><td>56</td><td>57</td><td>1.5</td></tr>
+        <tr><td class="l">袖口幅</td><td>9.0</td><td>9.5</td><td>10.0</td><td>10.5</td><td>0.5</td></tr>
+        <tr><td class="l">裾リブ高</td><td>5.0</td><td>5.0</td><td>5.0</td><td>5.0</td><td>0.5</td></tr></table>
+      <div class="notes"><b>◎技術フック：</b>立体的なアラン／ケーブル柄を左右対称・均一に編む編立技術。1枚で主役、展示の引きに。</div>
+    </div></div>
+  <div class="foot"><span>東和盛泰株式会社　ニット製品仕様書（3D写真版）</span><span>P.10</span></div></section>
+
+</body>
+</html>
